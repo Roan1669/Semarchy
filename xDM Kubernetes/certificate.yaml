@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: example-app
+  namespace: default
+spec:
+  dnsNames:
+    - semarchy.amplifiuk.com
+    - active.semarchy.amplifiuk.com
+  secretName: kubernetestest
+  issuerRef:
+    name: letsencrypt-cluster-issuer
+    kind: ClusterIssuer

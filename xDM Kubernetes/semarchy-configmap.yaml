@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: semarchy-config
+data:
+  # PostgreSQL Connection
+  SEMARCHY_SETUP_TOKEN: mySecretValue
+  XDM_REPOSITORY_DRIVER: org.postgresql.Driver
+  XDM_REPOSITORY_USERNAME: semarchy_repository@kubernetespostgres
+  XDM_REPOSITORY_PASSWORD: semarchy_repository
+  XDM_REPOSITORY_READONLY_USERNAME: semarchy_repository_ro@kubernetespostgres
+  XDM_REPOSITORY_READONLY_PASSWORD: semarchy_repository_ro
+  XDM_REPOSITORY_URL: jdbc:postgresql://kubernetespostgres.postgres.database.azure.com:5432/postgres
+  # -----------------------------------------------------------------------------
+  # # Azure SQL Server Example 
+  # SEMARCHY_SETUP_TOKEN: mySecretValue
+  # XDM_REPOSITORY_DRIVER: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  # XDM_REPOSITORY_USERNAME: semarchy_repository
+  # XDM_REPOSITORY_PASSWORD: Test@123
+  # XDM_REPOSITORY_READONLY_USERNAME: semarchy_repository_ro
+  # XDM_REPOSITORY_READONLY_PASSWORD: Test@123
+  # XDM_REPOSITORY_URL: jdbc:sqlserver://uniphar-ansible-sqlserver.database.windows.net:1433;databaseName=semarchy_repository
+  # -----------------------------------------------------------------------------
+  # Configure Tomcat Memory
+  # The first part -Xmx4G sets the Tomcat memory to 4 gb
+  # The second part sets the max import size at 300 mb
+  # The third part allows the deletion of closed model editions
+  CATALINA_OPTS: "-Xmx4G -DallowXForwardedHeaders=true -Dcom.semarchy.mdm.maxImportSize=300 -Dcom.semarchy.feature.delete.closed.model.editions=true"
+  # CATALINA_OPTS: "-Xmx4G" 
+  # -----------------------------------------------------------------------------
+  # Sample Secrets Manager: SemarchyKubernetes
+  # External secrets manager using the Azure Key Vault Secrets Manager.
+  # Uncomment this section to configure and use this secrets manager technology.
+  # -----------------------------------------------------------------------------
+  XDM_SECRETS_EXTERNAL_SEMARCHYKUBERNETES_TYPE: AZURE
+  XDM_SECRETS_EXTERNAL_SEMARCHYKUBERNETES_VAULTURL: https://semarchykubernetes.vault.azure.net/
+# # Optional credentials using a clientid and client secret.
+  XDM_SECRETS_EXTERNAL_SEMARCHYKUBERNETES_CREDENTIALS_TENANTID: dad4bd65-2e3e-4798-bcf9-a42d7e809702
+  XDM_SECRETS_EXTERNAL_SEMARCHYKUBERNETES_CREDENTIALS_CLIENTID: 5572756288004f45b7f6cd6bfbaa3873
+  XDM_SECRETS_EXTERNAL_SEMARCHYKUBERNETES_CREDENTIALS_CLIENTSECRET: Test123
+# # Optional credentials using a username and password
+#   XDM_SECRETS_EXTERNAL_AZURESECRETS_CREDENTIALS_USERNAME : user_name
+#   XDM_SECRETS_EXTERNAL_AZURESECRETS_CREDENTIALS_PASSWORD : password

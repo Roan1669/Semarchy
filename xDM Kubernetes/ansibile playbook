@@ -1,0 +1,58 @@
+#SSH into VM
+ssh -i /Users/roan1669/Downloads/Semarchy-XDI-Ansible_key.pem azureuser@51.142.179.163
+ssh -i /Users/roan1669/Downloads/Semarchy-Docker.pem Roan1669@20.254.165.143
+
+
+#Download semarchy
+wget https://www.semarchy.com/downloads/products/2023.2/semarchy-xdi-runtime-2023.2.0-20230313_073712.zip
+
+#Download unzip
+sudo yum install unzip
+
+#Unzip Semarchy
+unzip semarchy-xdi-runtime-2023.2.0-20230313_073712.zip
+
+#Download Java 11
+sudo yum install java-11-openjdk
+
+#Saying yes to install size
+y
+
+
+
+---
+- hosts: your_vm_hostname
+  become: true
+
+  tasks:
+    - name: Download Semarchy
+      shell: wget https://www.semarchy.com/downloads/products/2023.2/semarchy-xdi-runtime-2023.2.0-20230313_073712.zip
+      
+    - name: Install unzip
+      yum:
+        name: unzip
+        state: present
+      
+    - name: Unzip Semarchy
+      shell: unzip semarchy-xdi-runtime-2023.2.0-20230313_073712.zip
+      
+    - name: Install Java 11
+      yum:
+        name: java-11-openjdk
+        state: present
+      
+    - name: Confirm install size
+      expect:
+        command: yes
+        responses:
+          "(?i)yes/no": "yes"
+
+This playbook assumes that you have already configured your target VM as an Ansible host, 
+and have SSH access to it with a user account that has sudo permissions. 
+You should replace your_vm_hostname with the hostname or IP address of your target VM.
+
+Save the above code to a file with the .yml extension (e.g. deploy_semarchy.yml), and run it with the following command:
+
+Copy code
+ansible-playbook deploy_semarchy.yml
+This will execute the playbook and perform the necessary steps on your target VM.

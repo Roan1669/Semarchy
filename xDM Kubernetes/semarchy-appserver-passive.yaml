@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: semarchy-appserver-passive
+  labels:
+    app: semarchy-appserver-passive
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: semarchy-appserver-passive
+  template:
+    metadata:
+      labels:
+        app: semarchy-appserver-passive
+    spec:
+      containers:
+        - image: semarchy/xdm:2024.1.1-passive
+          name: semarchy-appserver-passive
+          resources:
+            requests:
+              memory: "4Gi"
+            limits:
+              memory: "5Gi"
+          envFrom:
+              - configMapRef:
+                  name: semarchy-config
+          ports:
+          - containerPort: 8080
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: semarchy-appserver-passive
+  labels:
+    app: semarchy-appserver-passive
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: semarchy-appserver-passive
