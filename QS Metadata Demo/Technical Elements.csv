@@ -1,0 +1,29 @@
+﻿Name,ID,Label,Description,Calculated,Mandatory,Scale,Precision,Min Length,Max Length,Status,Indexed,Technical Element Type   (Foreign ID),Technical Element Type  ,Data Type   (Foreign ID),Data Type  ,Application   (Foreign ID),Application  
+SchoolID,30,SchoolID,SchoolID,false,true,,,,,,false,1,Attribute,8,LongText,2,Hub 1.0
+ADDRESS_LINE1,58,Address Line 1,,false,false,0,0,0,2,,false,1,Attribute,10,String,4,Semarchy
+AVERAGE_TUITION_FEE,59,Average Tuition Fee,,true,false,0,10,0,8,,false,1,Attribute,6,Integer,4,Semarchy
+AVERAGE_TUITION_FEE_JUNIORS,60,Junior Average Tuition Fee,,true,false,,,,32,,false,1,Attribute,6,Integer,3,ES Oracle DB
+AVERAGE_TUITION_FEE_SENIORS,61,Average Senior Tuition Fee,,true,false,0,0,,32,,false,1,Attribute,6,Integer,3,ES Oracle DB
+CITY,62,City,,false,false,0,0,0,128,,false,1,Attribute,10,String,4,Semarchy
+EMAIL,63,Email,,false,false,0,0,0,128,,false,1,Attribute,10,String,3,ES Oracle DB
+ENABLE_DEMO_SERVER_ACCESS,64,Enable Demo Server Access,,false,false,,,,,,false,1,Attribute,2,Boolean,3,ES Oracle DB
+ENABLE_PARTNER_CENTER_ACCESS,65,Enable Partner Center Access,,false,false,,,,,,false,1,Attribute,2,Boolean,3,ES Oracle DB
+FIRST_NAME,66,First Name,,false,true,0,0,2,64,,false,1,Attribute,10,String,3,ES Oracle DB
+GOOGLE_PLACE_URL,67,Google Place URL,,false,false,0,0,0,2,,false,1,Attribute,10,String,4,Semarchy
+IS_PARTNER_ADMIN,68,Is Partner Admin,,false,false,,,,,,false,1,Attribute,2,Boolean,3,ES Oracle DB
+JOB_ROLE,69,Job Role,,false,false,0,0,0,32,,false,1,Attribute,10,String,4,Semarchy
+JOB_TITLE,70,Job Title,,false,false,0,0,0,128,,false,1,Attribute,10,String,3,ES Oracle DB
+LAST_NAME,71,Last Name,,false,true,0,0,2,64,,false,1,Attribute,10,String,3,ES Oracle DB
+LATITUDE,72,Latitude,,false,false,6,20,0,6,,false,1,Attribute,5,Decimal,4,Semarchy
+LINKEDIN_URL,73,Linkedin URL,,false,false,0,0,0,128,,false,1,Attribute,10,String,3,ES Oracle DB
+LONGITUDE,74,Longitude,,false,false,6,20,0,6,,false,1,Attribute,5,Decimal,4,Semarchy
+PARENT_PARTY,75,Parent Party  ,,false,false,0,0,0,128,,false,1,Attribute,10,String,3,ES Oracle DB
+PARENT_PARTY_(FOREIGN_ID),76,Parent Party   (Foreign ID),,false,false,0,0,0,4,,false,1,Attribute,6,Integer,3,ES Oracle DB
+PRIMARY_PHONE,77,Primary Phone,,false,true,0,0,0,16,,false,1,Attribute,10,String,3,ES Oracle DB
+SCHOOL_ID,78,School ID,,false,true,0,38,1,8,,false,1,Attribute,10,String,4,Semarchy
+SECONDARY_PHONE,79,Secondary Phone,,false,false,0,0,0,16,,false,1,Attribute,10,String,3,ES Oracle DB
+STATE,80,State,,false,false,0,0,0,128,,false,1,Attribute,10,String,4,Semarchy
+SUBSIDIARY,81,Subsidiary  ,,false,false,0,0,0,128,,false,1,Attribute,10,String,3,ES Oracle DB
+SUBSIDIARY_(FOREIGN_ID),82,Subsidiary   (Foreign ID),,false,false,0,0,0,4,,false,1,Attribute,6,Integer,3,ES Oracle DB
+TRAINING_LEVEL,83,Training Level,,false,false,0,0,0,36,,false,1,Attribute,10,String,3,ES Oracle DB
+TUITION_FEE_AMOUNT,84,Tuition Fee Amount,,true,false,,,,32,,false,1,Attribute,6,Integer,3,ES Oracle DB

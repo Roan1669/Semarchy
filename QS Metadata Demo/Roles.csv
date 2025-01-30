@@ -1,0 +1,5 @@
+Role ID,Name,Description,Manager,Class Name,Batch ID,Created On,Updated On,Created By,Updated By,Golden Type,View Type
+1,INTO_ADMIN,,,Role,100,"Apr 7, 2022, 11:50:12 AM British Summer Time","Apr 7, 2022, 11:51:51 AM British Summer Time",semadmin,semadmin,DE_BASED,GD
+2,QS_STEWARD,,,Role,101,"Apr 7, 2022, 11:53:25 AM British Summer Time","Apr 7, 2022, 11:53:25 AM British Summer Time",semadmin,semadmin,DE_BASED,GD
+4,semarchyAdmin,,,Role,103,"Apr 7, 2022, 11:53:55 AM British Summer Time","Apr 7, 2022, 11:53:55 AM British Summer Time",semadmin,semadmin,DE_BASED,GD
+6,QS_USER,,,Role,105,"Apr 7, 2022, 11:54:40 AM British Summer Time","Apr 7, 2022, 12:00:58 PM British Summer Time",semadmin,semadmin,DE_BASED,GD
