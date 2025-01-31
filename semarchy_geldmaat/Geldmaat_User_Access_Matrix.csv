@@ -1,0 +1,349 @@
+"Model","Entity","Entity Privilege","Role","Access Type","Filter","Checkout","Create","Delete","Export"
+geldmaat masterdata,Accessibility,Accessibility,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Accessibility,Accessibility,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Accessibility,Accessibility,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Accessibility,Accessibility,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Accessibility,Accessibility,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Accessibility,Accessibility,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Additional Dispenser Security Hardware,Additional Dispenser Security Hardware,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Additional Dispenser Security Hardware,Additional Dispenser Security Hardware,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Additional Dispenser Security Hardware,Additional Dispenser Security Hardware,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Additional Dispenser Security Hardware,Additional Dispenser Security Hardware,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Additional Dispenser Security Hardware,Additional Dispenser Security Hardware,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Additional Dispenser Security Hardware,Additional Dispenser Security Hardware,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Address,Address,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Address,Address,Data Steward,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Address,Address,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Address,Address,Geldmaat API User,READ,FILTERED,NO,NO,NO,NO
+geldmaat masterdata,Address,Address - Address2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Address,Address,Geldmaat Change Desk Manager,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Address,Address,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Address Type,Address Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Address Type,Address Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Address Type,Address Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Address Type,Address Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Address Type,Address Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Address Type,Address Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Antiskimming Device,Antiskimming Device,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Antiskimming Device,Antiskimming Device,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Antiskimming Device,Antiskimming Device,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Antiskimming Device,Antiskimming Device,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Antiskimming Device,Antiskimming Device,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Antiskimming Device,Antiskimming Device,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Audio Guidance Adjust Volume,Audio Guidance Adjust Volume,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Adjust Volume,Audio Guidance Adjust Volume,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Audio Guidance Adjust Volume,Audio Guidance Adjust Volume,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Adjust Volume,Audio Guidance Adjust Volume,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Adjust Volume,Audio Guidance Adjust Volume,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Adjust Volume,Audio Guidance Adjust Volume,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Audio Guidance Supported,Audio Guidance Supported,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Supported,Audio Guidance Supported,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Audio Guidance Supported,Audio Guidance Supported,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Supported,Audio Guidance Supported,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Supported,Audio Guidance Supported,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Audio Guidance Supported,Audio Guidance Supported,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Area,Cash Area,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Area,Cash Area,Data Steward,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Area,Cash Area,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Cash Area,Cash Area,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Area,Cash Area - CashArea2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Area,Cash Area,Geldmaat Change Desk Manager,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Cash Area,Cash Area,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Center,Cash Center,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Center,Cash Center,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Center,Cash Center,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Center,Cash Center,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Center,Cash Center,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Center,Cash Center,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Feed Method,Cash Feed Method,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Feed Method,Cash Feed Method,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Feed Method,Cash Feed Method,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Feed Method,Cash Feed Method,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Feed Method,Cash Feed Method,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Feed Method,Cash Feed Method,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Point,Cash Point,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Point,Cash Point,Data Steward,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point,Cash Point,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Cash Point,Cash Point,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point,Cash Point,Geldmaat Change Desk Manager,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Cash Point,Cash Point,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Point Deviations,Cash Point Deviations,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Deviations,Cash Point Deviations,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Point Deviations,Cash Point Deviations,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Deviations,Cash Point Deviations,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Deviations,Cash Point Deviations,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Deviations,Cash Point Deviations,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Point Groups,Cash Point Groups,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Groups,Cash Point Groups,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Point Groups,Cash Point Groups,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Groups,Cash Point Groups,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Groups,Cash Point Groups,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Groups,Cash Point Groups,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Point Type,Cash Point Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Type,Cash Point Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Point Type,Cash Point Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Type,Cash Point Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Type,Cash Point Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Point Type,Cash Point Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Region,Cash Region,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Region,Cash Region,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Region,Cash Region,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Region,Cash Region,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Region,Cash Region,Geldmaat Change Desk Manager,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Cash Region,Cash Region,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Cash Replenishment Method,Cash Replenishment Method,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Replenishment Method,Cash Replenishment Method,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Cash Replenishment Method,Cash Replenishment Method,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Replenishment Method,Cash Replenishment Method,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Replenishment Method,Cash Replenishment Method,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Cash Replenishment Method,Cash Replenishment Method,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,CIT,CIT,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,CIT,CIT,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,CIT,CIT,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,CIT,CIT,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,CIT,CIT,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,CIT,CIT,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Day,Day,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Day,Day,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Day,Day,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Day,Day,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Day,Day - Day2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Day,Day,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Day,Day,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Facility,Facility,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Facility,Facility - Facilty,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Facility,Facility,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Facility,Facility - Facilty,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Facility,Facility - Facilty,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Facility,Facility - Facilty,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Group,Group,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Group,Group,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Group,Group,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Group,Group,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Group,Group,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Group,Group,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,IBNS,IBNS,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,IBNS,IBNS,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,IBNS,IBNS,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,IBNS,IBNS,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,IBNS,IBNS,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,IBNS,IBNS,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location,Location,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location,Location,Data Steward,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location,Location,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Location,Location,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location,Location - Location2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location,Location,Geldmaat Change Desk Manager,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Location,Location,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Contract,Location Contract,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract,Location Contract,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Contract,Location Contract,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract,Location Contract,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract,Location Contract,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract,Location Contract,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Contract Building,Location Contract Building,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Building,Location Contract Building,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Contract Building,Location Contract Building,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Building,Location Contract Building,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Building,Location Contract Building,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Building,Location Contract Building,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Contract Financial,Location Contract Financial,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Financial,Location Contract Financial,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Contract Financial,Location Contract Financial,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Financial,Location Contract Financial,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Financial,Location Contract Financial,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Financial,Location Contract Financial,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Contract IFRS16,Location Contract IFRS16,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract IFRS16,Location Contract IFRS16,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Contract IFRS16,Location Contract IFRS16,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract IFRS16,Location Contract IFRS16,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract IFRS16,Location Contract IFRS16,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract IFRS16,Location Contract IFRS16,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Contract Index,Location Contract Index,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Index,Location Contract Index,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Contract Index,Location Contract Index,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Index,Location Contract Index,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Index,Location Contract Index,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Index,Location Contract Index,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Contract Relation,Location Contract Relation,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Relation,Location Contract Relation,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Contract Relation,Location Contract Relation,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Relation,Location Contract Relation,Geldmaat API User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Relation,Location Contract Relation,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Contract Relation,Location Contract Relation,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Service Party,Location Service Party,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Service Party,Location Service Party,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Service Party,Location Service Party,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Location Service Party,Location Service Party,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Service Party,Location Service Party - LocationServiceParty2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Service Party,Location Service Party,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Service Party,Location Service Party,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Status,Location Status,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Status,Location Status,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Status,Location Status,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Status,Location Status,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Status,Location Status - LocationStatus2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Status,Location Status,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Status,Location Status,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Timetable,Location Timetable,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Timetable,Location Timetable,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Timetable,Location Timetable,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Location Timetable,Location Timetable,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Timetable,Location Timetable - LocationTimetable2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Timetable,Location Timetable,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Timetable,Location Timetable,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Location Type,Location Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Type,Location Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Location Type,Location Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Type,Location Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Type,Location Type - LocationType2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Type,Location Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Location Type,Location Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Manufacturer,Manufacturer,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Manufacturer,Manufacturer,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Manufacturer,Manufacturer,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Manufacturer,Manufacturer,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Manufacturer,Manufacturer,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Manufacturer,Manufacturer,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Max Consecutive Customer Cancel,Max Consecutive Customer Cancel,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Consecutive Customer Cancel,Max Consecutive Customer Cancel,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Max Consecutive Customer Cancel,Max Consecutive Customer Cancel,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Consecutive Customer Cancel,Max Consecutive Customer Cancel,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Consecutive Customer Cancel,Max Consecutive Customer Cancel,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Consecutive Customer Cancel,Max Consecutive Customer Cancel,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Max Days Between Orders,Max Days Between Orders,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Days Between Orders,Max Days Between Orders,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Max Days Between Orders,Max Days Between Orders,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Days Between Orders,Max Days Between Orders,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Days Between Orders,Max Days Between Orders,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Max Days Between Orders,Max Days Between Orders,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Overnight Depot,Overnight Depot,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Overnight Depot,Overnight Depot,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Overnight Depot,Overnight Depot,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Overnight Depot,Overnight Depot,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Overnight Depot,Overnight Depot,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Overnight Depot,Overnight Depot,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Packing Done By,Packing Done By,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Packing Done By,Packing Done By,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Packing Done By,Packing Done By,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Packing Done By,Packing Done By,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Packing Done By,Packing Done By,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Packing Done By,Packing Done By,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Retract,Retract,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Retract,Retract,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Retract,Retract,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Retract,Retract,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Retract,Retract,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Retract,Retract,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Router,Router,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Router,Router,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Router,Router,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Router,Router,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Router,Router - Router2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Router,Router,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Router,Router,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Service Party,Service Party,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party,Service Party,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Service Party,Service Party,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party,Service Party,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party,Service Party - ServiceParty2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party,Service Party,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party,Service Party,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate - ServicePartyNameServicePartyTypeAggregate2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate - ServicePartyNameServicePartyTypeAggregate3,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Name Service Party Type Aggregate,Service Party Name Service Party Type Aggregate,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Service Party Type,Service Party Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Type,Service Party Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Service Party Type,Service Party Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Type,Service Party Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Type,Service Party Type - ServicePartyType2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Type,Service Party Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Service Party Type,Service Party Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Stack Size Reduction Rule,Stack Size Reduction Rule,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Stack Size Reduction Rule,Stack Size Reduction Rule,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Stack Size Reduction Rule,Stack Size Reduction Rule,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Stack Size Reduction Rule,Stack Size Reduction Rule,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Stack Size Reduction Rule,Stack Size Reduction Rule,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Stack Size Reduction Rule,Stack Size Reduction Rule,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Take Money With Shutter Info,Take Money With Shutter Info,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Take Money With Shutter Info,Take Money With Shutter Info,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Take Money With Shutter Info,Take Money With Shutter Info,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Take Money With Shutter Info,Take Money With Shutter Info,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Take Money With Shutter Info,Take Money With Shutter Info,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Take Money With Shutter Info,Take Money With Shutter Info,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Terminal,Terminal,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Terminal,Terminal,Data Steward,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Terminal,Terminal,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Terminal,Terminal,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal,Terminal,Geldmaat Change Desk Manager,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Terminal,Terminal,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Terminal Cassette,Terminal Cassette,Change Desk,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Terminal Cassette,Terminal Cassette,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Terminal Cassette,Terminal Cassette,Emergency Change User,READ_WRITE,ALL DATA,YES,YES,NO,YES
+geldmaat masterdata,Terminal Cassette,Terminal Cassette,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Cassette,Terminal Cassette,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Cassette,Terminal Cassette,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Terminal Model,Terminal Model,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Model,Terminal Model,Data Steward,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Model,Terminal Model,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Model,Terminal Model,Geldmaat API User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Model,Terminal Model,Geldmaat Change Desk Manager,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Model,Terminal Model,Geldmaat DMO,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Type,Terminal Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Type,Terminal Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Terminal Type,Terminal Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Type,Terminal Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Type,Terminal Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Terminal Type,Terminal Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Third Party Access,Third Party Access,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Access,Third Party Access,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Third Party Access,Third Party Access,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Access,Third Party Access,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Access,Third Party Access - ThirdPartyAccess2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Access,Third Party Access,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Access,Third Party Access,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Third Party Name,Third Party Name,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Name,Third Party Name,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Third Party Name,Third Party Name,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Name,Third Party Name,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Name,Third Party Name - ThirdPartyName2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Name,Third Party Name,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Name,Third Party Name,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Third Party Type,Third Party Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Type,Third Party Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Third Party Type,Third Party Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Type,Third Party Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Type,Third Party Type - ThirdPartyType2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Type,Third Party Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Third Party Type,Third Party Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Time Table Type,Time Table Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Time Table Type,Time Table Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Time Table Type,Time Table Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Time Table Type,Time Table Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Time Table Type,Time Table Type - TimeTableType2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Time Table Type,Time Table Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Time Table Type,Time Table Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Training,Training,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Training,Training,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Training,Training,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Training,Training,Geldmaat API User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Training,Training,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Training,Training,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Transport Type,Transport Type,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Transport Type,Transport Type,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Transport Type,Transport Type,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Transport Type,Transport Type,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Transport Type,Transport Type - TransportType2,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Transport Type,Transport Type,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Transport Type,Transport Type,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
+geldmaat masterdata,Withdrawal Max Bills,Withdrawal Max Bills,Change Desk,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Withdrawal Max Bills,Withdrawal Max Bills,Data Steward,READ_WRITE,ALL DATA,YES,YES,YES,YES
+geldmaat masterdata,Withdrawal Max Bills,Withdrawal Max Bills,Emergency Change User,DENIED,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Withdrawal Max Bills,Withdrawal Max Bills,Geldmaat API User,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Withdrawal Max Bills,Withdrawal Max Bills,Geldmaat Change Desk Manager,READ,ALL DATA,NO,NO,NO,NO
+geldmaat masterdata,Withdrawal Max Bills,Withdrawal Max Bills,Geldmaat DMO,READ,ALL DATA,NO,NO,NO,YES
