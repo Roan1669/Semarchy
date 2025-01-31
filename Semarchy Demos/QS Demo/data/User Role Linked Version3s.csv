@@ -1,0 +1,5 @@
+﻿User Role Linked Version3 ID,Role   (Foreign ID),Role  ,USERR   (Foreign ID),USERR  
+1,1,INTO_ADMIN,2,INTO_ADMIN
+2,2,QS_STEWARD,3,QS_STEWARD
+3,6,QS_USER,4,QS_USER
+4,4,semarchyAdmin,5,semarchyAdmin
