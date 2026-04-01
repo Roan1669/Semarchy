@@ -1,0 +1,11 @@
+_package: CustomerB2B.entities.Customer.enrichers
+_name: NormalizeName
+_type: SemQLEnricher
+entity: CustomerB2B.entities.Customer.Customer
+label: Normalize Name
+description: Upper case the Customer Name and remove punctuation
+enricherExecutionScope: PRE_CONSO
+semQlEnricherExpressions:
+  - attributeName: NormalizedName
+    expression: UPPER( REGEXP_REPLACE( CustomerName, '[[:punct:]]','','g' ))
+  

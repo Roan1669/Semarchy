@@ -1,0 +1,37 @@
+_package: CustomerB2B.entities.Sector
+_type: Entity
+_name: Sector
+label: Sector
+pluralLabel: Sector
+entityType: BASIC
+physicalTableName: SECTOR
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _name: SectorID
+    _type: EntityAttribute
+    label: Sector ID
+    physicalName: SECTOR_ID
+    dataType: String
+    length: 12
+    mandatory: true
+    searchable: true
+  - _name: SectorName
+    _type: EntityAttribute
+    label: Sector Name
+    physicalName: SECTOR_NAME
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1
+
+primaryKey: CustomerB2B.entities.Sector.Sector.SectorID

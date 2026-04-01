@@ -1,0 +1,18 @@
+_package: CustomerB2B.entities.Customer.search_forms
+_name: CustomerSearchForm
+_type: SearchForm
+entity: CustomerB2B.entities.Customer.Customer
+label: Customer Search Form
+searchParameters:
+  - _name: CustomerName
+    _type: SearchParameter
+    bindVariableName: SEARCH_PARAM_CUSTOMER_NAME 
+    displayCount: true
+    displayType: TEXT_FIELD
+    lookupEntity: CustomerB2B.entities.Customer.Customer
+    primaryTextExpression: ""
+    label: Customer Name
+    dataType:  String
+    length: 128
+    useDistinct: true
+semQlCondition: lower(CustomerName) LIKE '%' || lower(:SEARCH_PARAM_CUSTOMER_NAME) || '%'

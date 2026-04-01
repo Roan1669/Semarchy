@@ -1,0 +1,17 @@
+_package: CustomerB2B.entities.Customer.survivorship_rules
+_name: TotalRevenueRule
+_type: StandardSurvivorshipRule
+label: Total Revenue Rule
+consolidationSkipNulls: false
+defaultRule: false
+entity: CustomerB2B.entities.Customer.Customer
+
+attributes:
+  - attributeName: TotalRevenue
+consolidationStrategy: LARGEST_VALUE
+overrideStrategy: NO_OVERRIDE
+
+description: ""
+documentation: ""
+
+

@@ -1,0 +1,8 @@
+_package: CustomerB2B.publishers
+_name: ERP
+_type: Publisher
+label: NetSuiteERP
+active: true
+code: ERP
+color: md:yellow
+

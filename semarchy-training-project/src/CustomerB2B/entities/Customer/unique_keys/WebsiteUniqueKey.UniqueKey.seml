@@ -1,0 +1,10 @@
+_package: CustomerB2B.entities.Customer.unique_keys
+_name: WebsiteUniqueKey
+_type: UniqueKey
+entity: CustomerB2B.entities.Customer.Customer
+label: Unique Key for Customer Website
+description: Validation to check website uniqueness
+keyAttributes: 
+- attribute: CustomerB2B.entities.Customer.Customer.Website
+validationLabel: This website is already in use!
+validationScope: POST_CONSO

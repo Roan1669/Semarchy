@@ -1,0 +1,7 @@
+_package: CustomerB2B.publishers
+_name: CRM
+_type: Publisher
+label: CRM
+active: true
+code: CRM
+color: md:red

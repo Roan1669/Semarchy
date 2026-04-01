@@ -1,0 +1,212 @@
+_package: CustomerB2B.entities.Customer.forms
+_type: Form
+_name: CustomerEditForm
+default: true
+entity: CustomerB2B.entities.Customer.Customer
+description: Different form for editing
+documentation: Customer Edit Form
+formTabs:
+  - _type: FormTab
+    _name: Customer
+    label: Customer
+    iconUrl: images://mdi/account-outline.svg
+    displayFormTabAs: ICON_LABEL
+    visibleValue: "1"
+    documentationInterpreter: LITERAL
+    visibleValueInterpreter: LITERAL
+    content:
+      - _type: FormContainer
+        _name: Container
+        layoutDirection: ROW
+        content:
+          - _name: CustomerSection
+            _type: FormSection            
+            label: Customer Section
+            layoutDirection: COLUMN
+            visibleValue: "1"
+            labelWidth: 120px
+            visibleValueInterpreter: LITERAL
+            content:
+              - _name: CustomerID
+                _type: IdField
+                value: CustomerID
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                dataType: LONG_INTEGER
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: CustomerName
+                _type: TextField
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: CustomerName
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: PhoneticName
+                _type: TextField
+                label: Phonetic Name
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: PhoneticName
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'      
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: Website
+                _type: TextField
+                label: Website
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: Website
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: TotalRevenue
+                _type: TextField
+                label: TotalRevenue
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: TotalRevenue
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+          - _name: AddressSection
+            _type: FormSection               
+            label: Address
+            layoutDirection: COLUMN
+            visibleValue: "1"
+            labelWidth: 100px
+            visibleValueInterpreter: LITERAL
+            content:
+              - _name: StreetName
+                _type: TextField
+                label: Street Name
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: true
+                value: BillingAddress.StreetName
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: City
+                _type: TextField
+                label: City
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: true
+                value: BillingAddress.City
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: Country
+                _type: MenuField
+                label: Country
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: true
+                value: BillingAddress.Country
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  listSort: none
+
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+              - _name: PostalCode
+                _type: TextField
+                label: Postal Code
+                dataType: STRING
+                documentationInterpreter: LITERAL
+                useCustomLabel: true
+                value: BillingAddress.PostalCode
+                visibleValueInterpreter: LITERAL
+                visibleValue: "1"
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption

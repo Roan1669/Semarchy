@@ -1,0 +1,2786 @@
+{
+    "dataHubModelSchemaVersion": "1.1.0",
+    "dataHubModel": {
+        "qualifiedName": "CustomerB2B",
+        "label": "Customer B2B",
+        "modelConfiguration": {
+            "type": "POSTGRESQL"
+        },
+        "retentionPolicy": {
+            "deletionsDuration": 0,
+            "deletionsType": "FOREVER",
+            "deletionsUnit": "DAY",
+            "historyDuration": 0,
+            "historyType": "FOREVER",
+            "historyUnit": "DAY",
+            "sourceDataDuration": 0,
+            "sourceDataType": "FOREVER",
+            "sourceDataUnit": "DAY",
+            "sourceErrorsDuration": 0,
+            "sourceErrorsType": "FOREVER",
+            "sourceErrorsUnit": "DAY"
+        },
+        "applications": [
+            {
+                "qualifiedName": "CustomerB2B.applications.DefaultApplication",
+                "activitiesSectionEnabled": true,
+                "applicationTitle": "Default Application",
+                "avatarImageUrl": "images://default/default-data-app-icon.svg",
+                "certificationQueueEnabled": true,
+                "coverImageUrl": "images://default/cover.png",
+                "dashboardEnabled": true,
+                "dashboardScope": "MODEL",
+                "defaultAction": "CustomerB2B.applications.DefaultApplication.Root",
+                "entitiesListEnabled": true,
+                "errorsNavigationEnabled": true,
+                "favIcon": "images://default/dm-favicon.svg",
+                "historyBrowsingEnabled": false,
+                "historyBrowsingRequiredRole": "",
+                "homeSectionEnabled": true,
+                "lineageEnabled": true,
+                "logoUrl": "images://default/semarchy-logo-navy.svg",
+                "visibility": "VISIBLE",
+                "label": "Default Application",
+                "sortStrategy": "POSITION",
+                "documentationConfig": {
+                    "documentation": ""
+                },
+                "globalSearchConfig": {
+                    "displaySearchForDropdown": true,
+                    "sortBoViewsAlphabetically": true
+                },
+                "navigationConfig": {
+                    "navigationGroups": [
+                        {
+                            "qualifiedName": "CustomerB2B.applications.DefaultApplication.Customer",
+                            "_type": "FolderNavigationGroup",
+                            "dividerVisible": true,
+                            "labelVisible": true,
+                            "position": 0,
+                            "underlyingFolder": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder"
+                        }
+                    ]
+                },
+                "abstractAppActions": [
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root",
+                        "_type": "FolderAction",
+                        "useCustomLabel": true,
+                        "image": "images://mdi/folder.svg",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Root Folder"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.GlobalSearch",
+                        "posInFolder": 0,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root",
+                        "_type": "GlobalSearchAction",
+                        "useCustomLabel": false,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.MyTasks",
+                        "posInFolder": 1,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root",
+                        "_type": "MyTasksAction",
+                        "useCustomLabel": false,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "badgeVisible": false
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.Entities",
+                        "posInFolder": 2,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root",
+                        "_type": "BrowseEntitiesFolderAction",
+                        "useCustomLabel": false,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "lineageEnabled": true
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder",
+                        "posInFolder": 3,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root",
+                        "_type": "FolderAction",
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Customers"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.SectorFolder",
+                        "posInFolder": 4,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root",
+                        "_type": "FolderAction",
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Sector"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder.BrowseCustomer",
+                        "posInFolder": 0,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView",
+                        "nbRecordsBadgeVisible": true,
+                        "useCustomLabel": true,
+                        "icon": "images://mdi/account-multiple.svg",
+                        "iconColor": "md:amber",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Customers (Golden)",
+                        "labelColor": "md:amber",
+                        "nbRecordsBadgeBackgroundColor": "md:amber",
+                        "viewType": "GD"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder.ImportCustomer",
+                        "posInFolder": 1,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder",
+                        "_type": "ImportDataAppAction",
+                        "useCustomLabel": true,
+                        "label": "Import Customer",
+                        "importAction": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.ImportAuthorCustomers"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder.InvalidCustomers",
+                        "posInFolder": 2,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "icon": "images://mdi/account-alert.svg",
+                        "iconColor": "md:red",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Invalid Customers",
+                        "labelColor": "md:red",
+                        "nbRecordsBadgeBackgroundColor": "md:red",
+                        "viewType": "SDWE"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder.ConfirmGoldens",
+                        "posInFolder": 3,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root.CustomersFolder",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView",
+                        "nbRecordsBadgeVisible": true,
+                        "useCustomLabel": true,
+                        "icon": "images://mdi/account-alert.svg",
+                        "iconColor": "md:amber",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Confirm Goldens",
+                        "labelColor": "md:amber",
+                        "nbRecordsBadgeBackgroundColor": "md:amber",
+                        "viewType": "GD"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.applications.DefaultApplication.Root.SectorFolder.BrowseSectors",
+                        "posInFolder": 0,
+                        "parentFolder": "CustomerB2B.applications.DefaultApplication.Root.SectorFolder",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "CustomerB2B.entities.Sector.business_views.SectorBusinessView",
+                        "nbRecordsBadgeVisible": true,
+                        "useCustomLabel": true,
+                        "icon": "images://mdi/account-multiple.svg",
+                        "iconColor": "md:amber",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Sector (Golden)",
+                        "labelColor": "md:amber",
+                        "nbRecordsBadgeBackgroundColor": "md:green",
+                        "viewType": "GD"
+                    }
+                ]
+            }
+        ],
+        "complexTypes": [
+            {
+                "qualifiedName": "CustomerB2B.complex_types.AddressType",
+                "label": "Address Type",
+                "subjectName": {
+                    "qualifiedName": "CustomerB2B.complex_types.AddressType.AddressType",
+                    "_type": "ComplexTypeSubjectName",
+                    "separator": ", ",
+                    "subjectNameAttributes": [
+                        {
+                            "abstractAttribute": "CustomerB2B.complex_types.AddressType.StreetName"
+                        },
+                        {
+                            "abstractAttribute": "CustomerB2B.complex_types.AddressType.City"
+                        },
+                        {
+                            "abstractAttribute": "CustomerB2B.complex_types.AddressType.Country"
+                        },
+                        {
+                            "abstractAttribute": "CustomerB2B.complex_types.AddressType.PostalCode"
+                        }
+                    ]
+                },
+                "definitionAttributes": [
+                    {
+                        "qualifiedName": "CustomerB2B.complex_types.AddressType.StreetName",
+                        "_type": "DefinitionAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "multiValued": false,
+                        "physicalColName": "STREET_NAME",
+                        "valueSeparator": "",
+                        "description": "The name of the street.",
+                        "label": "Street Name",
+                        "length": 80,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.complex_types.AddressType.City",
+                        "_type": "DefinitionAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "multiValued": false,
+                        "physicalColName": "CITY",
+                        "valueSeparator": "",
+                        "label": "City",
+                        "length": 80,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.complex_types.AddressType.PostalCode",
+                        "_type": "DefinitionAttribute",
+                        "abstractAtomicType": "CustomerB2B.user_defined_types.PostalCodeType",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "multiValued": false,
+                        "physicalColName": "POSTAL_CODE",
+                        "valueSeparator": "",
+                        "label": "Postal Code",
+                        "length": 16,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.complex_types.AddressType.Country",
+                        "_type": "DefinitionAttribute",
+                        "abstractAtomicType": "CustomerB2B.list_of_values.CountryCodeType",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "multiValued": false,
+                        "physicalColName": "COUNTRY",
+                        "valueSeparator": "",
+                        "label": "Country",
+                        "length": 2,
+                        "searchable": true
+                    }
+                ]
+            }
+        ],
+        "sqlFunctions": [],
+        "databaseViews": [],
+        "enricherCaches": [],
+        "lovTypes": [
+            {
+                "qualifiedName": "CustomerB2B.list_of_values.CountryCodeType",
+                "_type": "LOVType",
+                "description": "",
+                "label": "Country Code",
+                "validationLabel": "",
+                "length": 2,
+                "lovValues": [
+                    {
+                        "description": "",
+                        "label": "United Kingdom",
+                        "code": "GB"
+                    },
+                    {
+                        "description": "",
+                        "label": "France",
+                        "code": "FR"
+                    },
+                    {
+                        "description": "",
+                        "label": "United States",
+                        "code": "US"
+                    },
+                    {
+                        "description": "",
+                        "label": "Italy",
+                        "code": "IT"
+                    },
+                    {
+                        "description": "",
+                        "label": "South Africa",
+                        "code": "ZA"
+                    }
+                ]
+            }
+        ],
+        "modelDiagrams": [],
+        "modelEditionVariables": [],
+        "modelJobs": [],
+        "modelPrivGrants": [
+            {
+                "qualifiedName": "CustomerB2B.model_priv_grants.semarchyAdmin",
+                "allowApiPublishingAsUser": true,
+                "dataAdminRole": true,
+                "integrationWsRole": true,
+                "label": "semarchy Admin",
+                "roleName": "semarchyAdmin"
+            }
+        ],
+        "namedQueries": [],
+        "publishers": [
+            {
+                "qualifiedName": "CustomerB2B.publishers.CRM",
+                "active": true,
+                "code": "CRM",
+                "color": "md:red",
+                "label": "CRM"
+            },
+            {
+                "qualifiedName": "CustomerB2B.publishers.ERP",
+                "active": true,
+                "code": "ERP",
+                "color": "md:yellow",
+                "label": "NetSuiteERP"
+            },
+            {
+                "qualifiedName": "CustomerB2B.publishers.MKT",
+                "active": true,
+                "code": "MKT",
+                "color": "md:blue",
+                "label": "Marketing"
+            },
+            {
+                "qualifiedName": "CustomerB2B.publishers.Marketing",
+                "active": true,
+                "code": "Marketing",
+                "color": "md:green",
+                "label": "Marketing"
+            }
+        ],
+        "referenceRels": [
+            {
+                "qualifiedName": "CustomerB2B.references.CustomerBelongsToSector",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "CustomerB2B.entities.Customer.Customer",
+                "fromRoleName": "Customers",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "CUSTOMERS_SECTOR",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "CustomerB2B.entities.Sector.Sector",
+                "toRoleName": "Sector",
+                "toRolePhysicalName": "SECTOR",
+                "validationScope": "PRE_CONSO",
+                "description": "Reference to the Sector of the Customer",
+                "fromRoleLabel": "Customer",
+                "fromRolePluralLabel": "Customers",
+                "label": "Customer Belongs To Sector",
+                "toRoleLabel": "Sector",
+                "foreignAttribute": {
+                    "qualifiedName": "CustomerB2B.references.CustomerBelongsToSector.Sector",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "SECTOR",
+                    "label": "Sector"
+                }
+            }
+        ],
+        "userDefinedTypes": [
+            {
+                "qualifiedName": "CustomerB2B.user_defined_types.PostalCodeType",
+                "_type": "UserDefinedType",
+                "builtInType": "String",
+                "label": "Postal Code Type",
+                "length": 16
+            }
+        ],
+        "workflows": [],
+        "entities": [
+            {
+                "qualifiedName": "CustomerB2B.entities.Sector.Sector",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/book.svg",
+                "label": "Sector",
+                "physicalTableName": "SECTOR",
+                "pluralLabel": "Sector",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.Sector.SectorID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "SECTOR_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "MANUAL",
+                        "idSequenceStartsWith": 1,
+                        "label": "Sector ID",
+                        "length": 12,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.Sector.SectorName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "SECTOR_NAME",
+                        "valueSeparator": "",
+                        "label": "Sector Name",
+                        "length": 128,
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Sector Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.CreateAuthorSectors",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerB2B.entities.Sector.steppers.AuthorSectors"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.EditAuthorSectors",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerB2B.entities.Sector.steppers.AuthorSectors"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.MassUpdateAuthorSectors",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerB2B.entities.Sector.steppers.AuthorSectors",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.ImportAuthorSectors",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerB2B.entities.Sector.steppers.AuthorSectors"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.action_sets.SectorActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": true,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector",
+                        "rootDescription": "",
+                        "rootLabel": "Sectors",
+                        "rootPluralLabel": "Sectors",
+                        "useHierarchyOnOpen": true,
+                        "visible": true,
+                        "label": "Sector",
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector",
+                                "collection": "CustomerB2B.entities.Sector.collection_views.SectorCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerB2B.entities.Sector.Sector",
+                                "form": "CustomerB2B.entities.Sector.forms.SectorForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerB2B.entities.Sector.action_sets.SectorActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ],
+                                "displayCard": "CustomerB2B.entities.Sector.display_cards.SectorDisplayCard",
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.Customers",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1=1",
+                                        "targetBoViewEntity": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.Customers.MasterRecords",
+                                        "transitionPath": "Customers",
+                                        "useCustomLabel": false,
+                                        "displayFormTabAs": "ICON_LABEL",
+                                        "displayTransitionNodeAs": "ICON_LABEL",
+                                        "enableHierarchy": "1",
+                                        "iconUrl": "images://mdi/account-multiple.svg",
+                                        "label": "Customers",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "transitionVisible": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.business_views.SectorBusinessView.Sector.Customers.MasterRecords",
+                                "collection": "CustomerB2B.entities.Sector.collection_views.SectorCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerB2B.entities.Sector.Sector",
+                                "form": "CustomerB2B.entities.Sector.forms.SectorForm",
+                                "gridAllowed": false,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "SectorID DESC",
+                                "tableAllowed": true,
+                                "displayCard": "CustomerB2B.entities.Sector.display_cards.SectorDisplayCard"
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.collection_views.SectorCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Sector",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerB2B.entities.Sector.display_cards.SectorDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.collection_views.SectorCollectionView.SectorID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "SectorID",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.collection_views.SectorCollectionView.SectorName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "SectorName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.display_cards.SectorDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "SectorName",
+                        "secondaryTextExpression": "SectorID"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerB2B.entities.Sector.forms.SectorForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.forms.SectorForm.Sector",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Sector",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.forms.SectorForm.Sector.SectorID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "SectorID",
+                                "parentFormContainer": "CustomerB2B.entities.Sector.forms.SectorForm.Sector",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.forms.SectorForm.Sector.SectorName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "SectorName",
+                                "parentFormContainer": "CustomerB2B.entities.Sector.forms.SectorForm.Sector",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Sector.steppers.AuthorSectors",
+                        "label": "Sectors",
+                        "rootCollectionStep": "CustomerB2B.entities.Sector.steppers.AuthorSectors.Sectors",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.steppers.AuthorSectors.Sectors",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerB2B.entities.Sector.collection_views.SectorCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": false,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Sectors"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Sector.steppers.AuthorSectors.Sectors.Sector",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerB2B.entities.Sector.forms.SectorForm.Sector",
+                                "label": "Sector",
+                                "parentCollectionStep": "CustomerB2B.entities.Sector.steppers.AuthorSectors.Sectors"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
+                "uniqueKeys": [],
+                "fuzzyLookupRules": []
+            },
+            {
+                "qualifiedName": "CustomerB2B.entities.Customer.Customer",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "FUZZY_MATCHED",
+                "iconUrl": "images://mdi/people.svg",
+                "label": "Customer",
+                "physicalTableName": "CUSTOMER",
+                "pluralLabel": "Customers",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.CustomerID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "CUSTOMER_ID",
+                        "valueSeparator": "",
+                        "description": "",
+                        "documentation": "",
+                        "fuzzyMatchedEntityGoldenIdGenerationType": "SEQUENCE",
+                        "fuzzyMatchedEntityGoldenIdSequenceStartsWith": 1,
+                        "idGenerationType": "MANUAL",
+                        "idSequenceStartsWith": 1,
+                        "label": "Customer ID",
+                        "length": 32,
+                        "precision": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.CustomerName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": true,
+                        "mandatoryValidationLabel": "Customer Name cannot be blank!",
+                        "mandatoryValidationScope": "PRE_CONSO",
+                        "multiValued": false,
+                        "physicalColName": "CUSTOMER_NAME",
+                        "valueSeparator": ",",
+                        "description": "",
+                        "documentation": "Customer or Company Name",
+                        "label": "Customer Name",
+                        "length": 128
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.NormalizedName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "NORMALIZED_NAME",
+                        "valueSeparator": "",
+                        "description": "",
+                        "documentation": "Customer Name enriched",
+                        "label": "Normalized Name",
+                        "length": 128
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.PhoneticName",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "PHONETIC_NAME",
+                        "valueSeparator": "",
+                        "description": "",
+                        "documentation": "name transformed using the phonetic metaphone algorithm",
+                        "label": "Phonetic Name",
+                        "length": 128
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.Website",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "WEBSITE",
+                        "valueSeparator": "",
+                        "description": "",
+                        "documentation": "",
+                        "label": "Website",
+                        "length": 128,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.TotalRevenue",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "Integer",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "TOTAL_REVENUE",
+                        "valueSeparator": "",
+                        "description": "",
+                        "documentation": "",
+                        "label": "Total Revenue",
+                        "length": 0,
+                        "precision": 10,
+                        "searchable": false
+                    }
+                ],
+                "complexAttributes": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.Customer.BillingAddress",
+                        "_type": "ComplexAttribute",
+                        "complexType": "CustomerB2B.complex_types.AddressType",
+                        "lovValidationScope": "PRE_CONSO",
+                        "mandatoryValidationScope": "NONE",
+                        "physicalPrefix": "BIL",
+                        "description": "",
+                        "documentation": "Billing Address of the customer",
+                        "label": "Billing Address"
+                    }
+                ],
+                "matcher": {
+                    "_type": "SemQLMatcher",
+                    "qualifiedName": "CustomerB2B.entities.Customer.Customer.CustomerSemQLMatcher",
+                    "autoConfirmGoldenThreshold": 99,
+                    "autoConfirmSingletons": true,
+                    "mergeThresholdMergingConfirmed": 0,
+                    "mergeThresholdMergingConfirmedWithNewMasters": 0,
+                    "mergeThresholdMergingConfirmedWithUnconfirmed": 0,
+                    "mergeThresholdMergingUnconfirmed": 0,
+                    "mergeThresholdMergingUnconfirmedWithNewMasters": 0,
+                    "mergeThresholdNewGroup": 89,
+                    "mergeThresholdRemergingPreviouslySplit": 100,
+                    "useMultiIterationGrouping": true,
+                    "useTransitiveMatchScore": true,
+                    "description": "CustomerSemQLMatcher",
+                    "matchRules": [
+                        {
+                            "qualifiedName": "CustomerB2B.entities.Customer.Customer.CustomerSemQLMatcher.ExactNameAndSameCity",
+                            "condition": "Record1.NormalizedName = Record2.NormalizedName AND Record1.BillingAddress.City = Record2.BillingAddress.City AND Record1.BillingAddress.Country = Record2.BillingAddress.Country",
+                            "matchScore": 100,
+                            "description": "Match customers with the same name and city",
+                            "documentation": "Match customers with the same name and city",
+                            "label": "Exact Name And Same City",
+                            "usingMatchOn": false
+                        },
+                        {
+                            "qualifiedName": "CustomerB2B.entities.Customer.Customer.CustomerSemQLMatcher.PhoneticNameAndSameCity",
+                            "condition": "Record1.PhoneticName = Record2.PhoneticName AND Record1.BillingAddress.City = Record2.BillingAddress.City AND Record1.BillingAddress.Country = Record2.BillingAddress.Country",
+                            "matchScore": 90,
+                            "description": "Match customers with the same phonetic name and city",
+                            "documentation": "Match customers with the same phonetic name and city",
+                            "label": "Phonetic Name And Same City",
+                            "usingMatchOn": false
+                        }
+                    ]
+                },
+                "abstractRowCheckConstraints": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.validations.CheckCustomerNameLength",
+                        "_type": "CheckConstraint",
+                        "condition": "Length(CustomerName) > 1",
+                        "validationLabel": "Length of Customer Name must be longer than 1 character!",
+                        "validationScope": "PRE_CONSO",
+                        "description": "Length of Customer Name must be longer than 1 character!",
+                        "label": "Customer Name Length"
+                    }
+                ],
+                "actionSets": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Customer Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.CreateAuthorCustomers",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "CustomerB2B.entities.Customer.steppers.AuthorCustomers"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.EditAuthorCustomers",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "CustomerB2B.entities.Customer.steppers.AuthorCustomers"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.MassUpdateAuthorCustomers",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "CustomerB2B.entities.Customer.steppers.AuthorCustomers",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.ImportAuthorCustomers",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "MASTER",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "CustomerB2B.entities.Customer.steppers.AuthorCustomers"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.DirectConfirmDuplicates",
+                                "_type": "DirectConfirmDupsAction",
+                                "description": "",
+                                "label": "Direct Confirm Duplicates",
+                                "useCustomLabel": false,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.ReviewAndConfirmDuplicatesManageDuplicatesOnCustomer",
+                                "_type": "ReviewAndConfirm",
+                                "description": "",
+                                "label": "Review and Confirm Duplicates",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "dupsManager": "CustomerB2B.entities.Customer.dups_managers.ManageDuplicatesOnCustomer",
+                                "enableEdit": true,
+                                "mandateConfirmAll": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.MergeOrSplitDuplicatesManageDuplicatesOnCustomer",
+                                "_type": "MergeOrSplit",
+                                "description": "",
+                                "label": "Merge Or Split Duplicates",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "dupsManager": "CustomerB2B.entities.Customer.dups_managers.ManageDuplicatesOnCustomer",
+                                "enableEdit": true
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.ReviewSuggestionsDuplicatesManageDuplicatesOnCustomer",
+                                "_type": "ReviewSuggestions",
+                                "description": "",
+                                "label": "Review Duplicates Suggestions",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "dupsManager": "CustomerB2B.entities.Customer.dups_managers.ManageDuplicatesOnCustomer",
+                                "enableEdit": true,
+                                "mandateResolveAllSuggestions": false,
+                                "onAcceptPromptGoldenId": false
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet.ExplainRecord",
+                                "_type": "ExplainRecordAction",
+                                "description": "",
+                                "label": "Explain Record",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "displayCard": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard",
+                                "formTab": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer"
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "ConfirmationStatus != 'CONFIRMED'",
+                        "rootBoViewEntity": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView.Customer",
+                        "rootDescription": "",
+                        "rootLabel": "Confirm Goldens",
+                        "rootPluralLabel": "Confirm Goldens",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "label": "ConfirmGoldens",
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView.Customer",
+                                "collection": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerB2B.entities.Customer.Customer",
+                                "form": "CustomerB2B.entities.Customer.forms.CustomerForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView.Customer.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView.Customer.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView.Customer.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView.Customer.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ],
+                                "displayCard": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer",
+                        "rootDescription": "",
+                        "rootLabel": "Customers",
+                        "rootPluralLabel": "Customers",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "label": "Customer Business View",
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer",
+                                "collection": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerB2B.entities.Customer.Customer",
+                                "form": "CustomerB2B.entities.Customer.forms.CustomerForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "CustomerB2B.entities.Customer.action_sets.CustomerActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.CustomConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "CUSTOM_FORM",
+                                            "customForm": "CustomerB2B.entities.Customer.search_forms.CustomerSearchForm"
+                                        }
+                                    }
+                                ],
+                                "displayCard": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard",
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.MasterRecords",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1=1",
+                                        "targetBoViewEntity": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.MasterRecords.MasterRecords",
+                                        "transitionPath": "MasterRecords",
+                                        "useCustomLabel": false,
+                                        "iconUrl": "images://mdi/puzzle.svg",
+                                        "label": "Master Records",
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.business_views.CustomerBusinessView.Customer.MasterRecords.MasterRecords",
+                                "collection": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "CustomerB2B.entities.Customer.Customer",
+                                "form": "CustomerB2B.entities.Customer.forms.CustomerForm",
+                                "gridAllowed": false,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "CustomerID DESC",
+                                "tableAllowed": true,
+                                "displayCard": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard"
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 2,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Customer",
+                        "tableRowLines": 2,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.CustomerID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CustomerID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.CustomerName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "CustomerName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.NormalizedName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "NormalizedName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.PhoneticName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "PhoneticName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.Website",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Website",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.TotalRevenue",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "TotalRevenue",
+                                "visibleByDefault": true,
+                                "valueDataType": "INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.StreetName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.StreetName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.City",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.City",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.PostalCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.PostalCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.Country",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.Country",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.FDN_Sector",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "FDN_Sector",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.MastersCount",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "MastersCount",
+                                "visibleByDefault": true,
+                                "valueDataType": "INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.ConfidenceScore",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 12,
+                                "useCustomLabel": false,
+                                "value": "ConfidenceScore",
+                                "visibleByDefault": true,
+                                "valueDataType": "INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.ConfirmationStatus",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 13,
+                                "useCustomLabel": false,
+                                "value": "ConfirmationStatus",
+                                "visibleByDefault": true,
+                                "valueDataType": "INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView.GoldenType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 14,
+                                "useCustomLabel": false,
+                                "value": "GoldenType",
+                                "visibleByDefault": true,
+                                "referencedEntity": "CustomerB2B.entities.Sector.Sector",
+                                "valueDataType": "INTEGER",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "CustomerName || ' , ' ||  BillingAddress.Country",
+                        "secondaryTextExpression": "CustomerID"
+                    }
+                ],
+                "dupsManagers": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.dups_managers.ManageDuplicatesOnCustomer",
+                        "checkoutCustomSortEnabled": false,
+                        "checkoutDefaultDisplayType": "TABLE",
+                        "checkoutDisplayGridAllowed": false,
+                        "checkoutDisplayListAllowed": true,
+                        "checkoutDisplayTableAllowed": true,
+                        "checkoutUserDefinedSortEnabled": true,
+                        "collectionView": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView",
+                        "displayCard": "CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard",
+                        "enableMasterValuePicking": true,
+                        "formTab": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                        "label": "Manage Duplicates On Customer"
+                    }
+                ],
+                "enrichers": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.enrichers.NormalizeName",
+                        "_type": "SemQLEnricher",
+                        "condition": "",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "description": "Upper case the Customer Name and remove punctuation",
+                        "label": "Normalize Name",
+                        "semQlEnricherExpressions": [
+                            {
+                                "attributeName": "NormalizedName",
+                                "expression": "UPPER( REGEXP_REPLACE( CustomerName, '[[:punct:]]','','g' ))"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.enrichers.RemovePunctuation",
+                        "_type": "SemQLEnricher",
+                        "condition": "",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "label": "Standardize Customer Name",
+                        "semQlEnricherExpressions": [
+                            {
+                                "attributeName": "NormalizedName",
+                                "expression": "UPPER( REGEXP_REPLACE( CustomerName, '[[:punct:]]', ' ', 'g' ) )"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.enrichers.PhoneticizeName",
+                        "_type": "PluginEnricher",
+                        "condition": "1=1",
+                        "enricherExecutionScope": "PRE_CONSO",
+                        "numberOfRetry": 0,
+                        "onErrorBehavior": "FAIL_JOB",
+                        "pluginId": "Pcom.semarchy.engine.plugins.convergence.text",
+                        "processingBatchSize": 1,
+                        "threadPoolSize": 1,
+                        "description": "Phoneticizes the name of the customer using the Double Metaphone algorithm",
+                        "label": "Phoneticize Customer Name",
+                        "pluginInputs": [
+                            {
+                                "_type": "PluginEnricherInput",
+                                "expression": "NormalizedName",
+                                "inputName": "IN_TEXT"
+                            }
+                        ],
+                        "pluginOutputs": [
+                            {
+                                "attributeName": "PhoneticName",
+                                "outputName": "OUT_TRANSFORMED_TEXT"
+                            }
+                        ],
+                        "pluginParams": [
+                            {
+                                "_type": "PluginEnricherParam",
+                                "paramName": "PARAM_TRANSFO_TYPE",
+                                "value": "PHONETIC DOUBLEMETAPHONE"
+                            }
+                        ]
+                    }
+                ],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm",
+                        "description": "Different form for editing",
+                        "documentation": "Customer Edit Form",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "ICON_LABEL",
+                                "iconUrl": "images://mdi/account-outline.svg",
+                                "label": "Customer",
+                                "visibleValue": "1"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container",
+                                "_type": "FormContainer",
+                                "layoutDirection": "ROW",
+                                "posInParent": 0,
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection",
+                                "_type": "FormSection2",
+                                "documentationInterpreter": "LITERAL",
+                                "layoutDirection": "COLUMN",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "label": "Customer Section",
+                                "labelWidth": "120px",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container",
+                                "visibleValue": "1"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection",
+                                "_type": "FormSection2",
+                                "documentationInterpreter": "LITERAL",
+                                "layoutDirection": "COLUMN",
+                                "posInParent": 1,
+                                "visibleValueInterpreter": "LITERAL",
+                                "label": "Address",
+                                "labelWidth": "100px",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CustomerID",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerID.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "CustomerName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.CustomerName.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "PhoneticName",
+                                "label": "Phonetic Name",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.PhoneticName.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "Website",
+                                "label": "Website",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.Website.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "TotalRevenue",
+                                "label": "TotalRevenue",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.CustomerSection.TotalRevenue.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": true,
+                                "value": "BillingAddress.StreetName",
+                                "label": "Street Name",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.StreetName.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": true,
+                                "value": "BillingAddress.City",
+                                "label": "City",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.City.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country",
+                                "_type": "FormField",
+                                "componentName": "semMenuField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": true,
+                                "value": "BillingAddress.Country",
+                                "label": "Country",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.listSort",
+                                        "dataType": "STRING",
+                                        "value": "none",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.Country.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": true,
+                                "value": "BillingAddress.PostalCode",
+                                "label": "Postal Code",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.textAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.multilineMaxLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "3",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.multilineMinLines",
+                                        "dataType": "DECIMAL",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "right",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer.Container.AddressSection.PostalCode.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "1",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Customer",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.CustomerID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CustomerID",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.CustomerName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "CustomerName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.NormalizedName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "NormalizedName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.PhoneticName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "PhoneticName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.Website",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Website",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.TotalRevenue",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "TotalRevenue",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.BillingAddress",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.StreetName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.StreetName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.PostalCode",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.PostalCode",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.City",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.City",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.Country",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress.Country",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer.FDN_Sector",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "FDN_Sector",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerEditForm_Roan.Customer",
+                                "referencedEntity": "CustomerB2B.entities.Sector.Sector",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    },
+                    {
+                        "default": true,
+                        "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Customer",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.CustomerID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "CustomerID",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.CustomerName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "CustomerName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.NormalizedName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "NormalizedName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.PhoneticName",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "PhoneticName",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.Website",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "Website",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.TotalRevenue",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "TotalRevenue",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.BillingAddress",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "BillingAddress",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer.FDN_Sector",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "FDN_Sector",
+                                "parentFormContainer": "CustomerB2B.entities.Customer.forms.CustomerForm.Customer",
+                                "referencedEntity": "CustomerB2B.entities.Sector.Sector",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.search_forms.CustomerSearchForm",
+                        "semQlCondition": "lower(CustomerName) LIKE '%' || lower(:SEARCH_PARAM_CUSTOMER_NAME) || '%'",
+                        "label": "Customer Search Form",
+                        "searchParameters": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.search_forms.CustomerSearchForm.CustomerName",
+                                "abstractAtomicType": "String",
+                                "bindVariableName": "SEARCH_PARAM_CUSTOMER_NAME",
+                                "displayCount": true,
+                                "displayType": "TEXT_FIELD",
+                                "primaryTextExpression": "",
+                                "useDistinct": true,
+                                "label": "Customer Name",
+                                "length": 128,
+                                "lookupEntity": "CustomerB2B.entities.Customer.Customer"
+                            }
+                        ]
+                    }
+                ],
+                "steppers": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.steppers.AuthorCustomers",
+                        "label": "Customers",
+                        "rootCollectionStep": "CustomerB2B.entities.Customer.steppers.AuthorCustomers.Customers",
+                        "steps": [
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.steppers.AuthorCustomers.Customers",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "CustomerB2B.entities.Customer.collection_views.CustomerCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": false,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Customers"
+                            },
+                            {
+                                "qualifiedName": "CustomerB2B.entities.Customer.steppers.AuthorCustomers.Customers.Customer",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": true,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "CustomerB2B.entities.Customer.forms.CustomerEditForm.Customer",
+                                "label": "Customer",
+                                "parentCollectionStep": "CustomerB2B.entities.Customer.steppers.AuthorCustomers.Customers"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.survivorship_rules.CustomerNameRule",
+                        "_type": "StandardSurvivorshipRule",
+                        "consolidationSkipNulls": false,
+                        "label": "Customer Name Rule",
+                        "consolidationOrderByExpression": "UpdateDate  DESC",
+                        "consolidationStrategy": "MOST_FREQUENT_VALUE",
+                        "description": "",
+                        "documentation": "",
+                        "defaultRule": false,
+                        "attributes": [
+                            {
+                                "attributeName": "CustomerName"
+                            }
+                        ],
+                        "overrideStrategy": "UNTIL_NEXT_USER_CHANGE"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.survivorship_rules.DefaultRule",
+                        "_type": "StandardSurvivorshipRule",
+                        "consolidationSkipNulls": false,
+                        "label": "Default Rule",
+                        "consolidationOrderByExpression": "UpdateDate DESC",
+                        "consolidationStrategy": "PREFERRED_PUBLISHER",
+                        "description": "",
+                        "documentation": "",
+                        "publisherRankings": [
+                            {
+                                "_type": "ConsoPublisherRanking",
+                                "publisher": "CustomerB2B.publishers.CRM",
+                                "rank": 0
+                            },
+                            {
+                                "_type": "ConsoPublisherRanking",
+                                "publisher": "CustomerB2B.publishers.MKT",
+                                "rank": 1
+                            },
+                            {
+                                "_type": "ConsoPublisherRanking",
+                                "publisher": "CustomerB2B.publishers.ERP",
+                                "rank": 2
+                            }
+                        ],
+                        "defaultRule": true,
+                        "overrideStrategy": "UNTIL_CONSOLIDATED_VAL_CHANGE"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.survivorship_rules.TotalRevenueRule",
+                        "_type": "StandardSurvivorshipRule",
+                        "consolidationSkipNulls": false,
+                        "label": "Total Revenue Rule",
+                        "consolidationStrategy": "LARGEST_VALUE",
+                        "description": "",
+                        "documentation": "",
+                        "defaultRule": false,
+                        "attributes": [
+                            {
+                                "attributeName": "TotalRevenue"
+                            }
+                        ],
+                        "overrideStrategy": "NO_OVERRIDE"
+                    },
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.survivorship_rules.IdSurvivorshipRule",
+                        "_type": "IdSurvivorshipRule",
+                        "consolidationSkipNulls": false,
+                        "label": "Id Survivorship Rule",
+                        "consolidationOrderByExpression": "UpdateDate DESC",
+                        "consolidationStrategy": "CUSTOM_RANKING",
+                        "description": "",
+                        "documentation": ""
+                    }
+                ],
+                "uniqueKeys": [
+                    {
+                        "qualifiedName": "CustomerB2B.entities.Customer.unique_keys.WebsiteUniqueKey",
+                        "validationLabel": "This website is already in use!",
+                        "validationScope": "POST_CONSO",
+                        "description": "Validation to check website uniqueness",
+                        "keyAttributes": [
+                            {
+                                "abstractAttribute": "CustomerB2B.entities.Customer.Customer.Website"
+                            }
+                        ],
+                        "label": "Unique Key for Customer Website"
+                    }
+                ],
+                "fuzzyLookupRules": []
+            }
+        ]
+    }
+}

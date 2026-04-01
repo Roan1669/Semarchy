@@ -1,0 +1,17 @@
+_package: CustomerB2B.list_of_values
+_name: CountryCodeType
+_type: LOVType
+label: Country Code
+length: 2
+lovValues:
+  - code: GB
+    label: United Kingdom
+  - code: FR
+    label: France
+  - code: US
+    label: United States
+  - code: IT
+    label: Italy
+  - code: ZA
+    label: South Africa
+

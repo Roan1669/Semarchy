@@ -1,0 +1,71 @@
+_package: CustomerB2B.entities.Customer.business_views
+label: Customer Business View
+_type: BusinessView
+_name: CustomerBusinessView
+entity: CustomerB2B.entities.Customer.Customer
+rootLabel: Customers
+rootPluralLabel: Customers
+displayRootNodeAs: ICON_LABEL
+
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Customer
+  displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+  entity: CustomerB2B.entities.Customer.Customer
+  actionSet: CustomerB2B.entities.Customer.action_sets.CustomerActionSet
+  collection: CustomerB2B.entities.Customer.collection_views.CustomerCollectionView
+  form: CustomerB2B.entities.Customer.forms.CustomerForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+    # Below we use the custom search form in the business view
+    - _name: CustomConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: CUSTOM_FORM
+      customForm: CustomerB2B.entities.Customer.search_forms.CustomerSearchForm
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+  transitions: 
+    - _name: MasterRecords
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      label: Master Records
+      iconUrl: images://mdi/puzzle.svg
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: 1=1
+      transitionPath: MasterRecords
+      useCustomLabel: false 
+      businessViewEntity:
+        _name: MasterRecords
+        _type: BusinessViewEntity
+        displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+        entity: CustomerB2B.entities.Customer.Customer
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: false
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        sortExpression: 'CustomerID DESC'
+        tableAllowed: true
+        collection: CustomerB2B.entities.Customer.collection_views.CustomerCollectionView      
+        form: CustomerB2B.entities.Customer.forms.CustomerForm
+enableHierarchyView: false
+useHierarchyOnOpen: false
+

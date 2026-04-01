@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"semarchy.dm.instanceUrl": "https://semarchy-training-session.eu.semarchy.net/dm",
+		"semarchy.dm.datasource": "datasource12",
+		"semarchy.dm.dataLocation": "RHEE_CustomerB2B",
+		"semarchy.seml.customTags": [
+
+		],
+		"git.ignoreLimitWarning": true
+	}
+}

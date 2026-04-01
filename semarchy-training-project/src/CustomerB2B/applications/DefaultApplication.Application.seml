@@ -1,0 +1,117 @@
+_package: CustomerB2B.applications
+_type: Application
+_name: DefaultApplication
+label: Default Application
+visibility: VISIBLE
+applicationTitle: Default Application
+avatarImageUrl: images://default/default-data-app-icon.svg
+logoUrl: images://default/semarchy-logo-navy.svg
+coverImageUrl: images://default/cover.png
+favIcon: images://default/dm-favicon.svg
+sortStrategy: POSITION
+historyBrowsingEnabled: false
+historyBrowsingRequiredRole: ""
+defaultAction: CustomerB2B.applications.DefaultApplication.Root
+documentationConfig:
+  documentation: ""
+globalSearchConfig:
+  displaySearchForDropdown: true
+  sortBusinessViewsAlphabetically: true
+
+navDrawer:
+  - _type: FolderNavGroup
+    _name: Customer
+    dividerVisible: true
+    labelVisible: true
+    linkedFolder: CustomerB2B.applications.DefaultApplication.Root.CustomersFolder
+
+rootFolder:
+  _type: FolderAction
+  _name: Root
+  label: Root Folder
+  image: images://mdi/folder.svg
+  imageAlign: MIDDLE_CENTER
+  imageMode: FIT
+  appActions:
+    - _type: GlobalSearchAction
+      _name: GlobalSearch
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+    - _type: MyTasksAction
+      _name: MyTasks
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      badgeVisible: false
+    - _type: BrowseEntitiesFolderAction
+      _name: Entities
+      lineageEnabled: true
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+    - _name: CustomersFolder
+      _type: FolderAction
+      label: Customers
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _name: BrowseCustomer
+          _type:  BrowseBusinessViewAction
+          label:   Customers (Golden)
+          labelColor:   md:amber
+          icon:   images://mdi/account-multiple.svg
+          iconColor:   md:amber
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          businessView: CustomerB2B.entities.Customer.business_views.CustomerBusinessView
+          viewType: GD
+          nbRecordsBadgeBackgroundColor: md:amber
+          nbRecordsBadgeVisible: true
+
+        - _name: ImportCustomer
+          _type: ImportDataAppAction
+          label: Import Customer
+          importAction: CustomerB2B.entities.Customer.action_sets.CustomerActionSet.ImportAuthorCustomers
+
+        - _name: InvalidCustomers
+          _type: BrowseBusinessViewAction
+          label: Invalid Customers
+          labelColor: md:red
+          icon: images://mdi/account-alert.svg
+          iconColor: md:red
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          businessView: CustomerB2B.entities.Customer.business_views.CustomerBusinessView
+          viewType: SDWE    
+          nbRecordsBadgeBackgroundColor: md:red    
+          nbRecordsBadgeVisible: false
+        
+        - _name: ConfirmGoldens
+          _type: BrowseBusinessViewAction
+          label: Confirm Goldens
+          labelColor:   md:amber
+          icon: images://mdi/account-alert.svg
+          iconColor: md:amber
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          businessView: CustomerB2B.entities.Customer.business_views.ConfirmGoldensBusinessView
+          viewType: GD
+          nbRecordsBadgeBackgroundColor: md:amber
+          nbRecordsBadgeVisible: true
+
+    - _name: SectorFolder
+      _type: FolderAction
+      label: Sector
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _name: BrowseSectors
+          _type:  BrowseBusinessViewAction
+          label:   Sector (Golden)
+          labelColor:   md:amber
+          icon:   images://mdi/account-multiple.svg
+          iconColor:   md:amber
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          businessView: CustomerB2B.entities.Sector.business_views.SectorBusinessView
+          viewType: GD
+          nbRecordsBadgeBackgroundColor: md:green
+          nbRecordsBadgeVisible: true   

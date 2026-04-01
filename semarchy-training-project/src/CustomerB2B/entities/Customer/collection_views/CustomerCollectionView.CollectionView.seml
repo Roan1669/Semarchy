@@ -1,0 +1,142 @@
+_package: CustomerB2B.entities.Customer.collection_views
+_type: CollectionView
+_name: CustomerCollectionView
+entity: CustomerB2B.entities.Customer.Customer
+default: true
+displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Customer
+tableRowLines: 2
+tableShowDisplayCard: true
+tableColumns:
+  - _name: CustomerID
+    _type: IdColumn
+    value: CustomerID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: CustomerName
+    _type: TextColumn
+    value: CustomerName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: NormalizedName
+    _type: TextColumn
+    value: NormalizedName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: PhoneticName
+    _type: TextColumn
+    value: PhoneticName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: Website
+    _type: TextColumn
+    value: Website
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: TotalRevenue
+    _type: TextColumn
+    value: TotalRevenue
+    useCustomLabel: false
+    dataType: INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: StreetName
+    _type: TextColumn
+    value: BillingAddress.StreetName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: City
+    _type: TextColumn
+    value: BillingAddress.City
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: PostalCode
+    _type: TextColumn
+    value: BillingAddress.PostalCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: Country
+    _type: TextColumn
+    value: BillingAddress.Country
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: FDN_Sector
+    _type: TextColumn
+    value: FDN_Sector
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true  
+
+  - _name: MastersCount
+    _type: TextColumn
+    value: MastersCount
+    useCustomLabel:  false
+    dataType:  INTEGER
+    columnAlign:  LEFT
+    visibleByDefault: true
+
+  - _name: ConfidenceScore
+    _type: TextColumn
+    value: ConfidenceScore
+    useCustomLabel: false
+    dataType: INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: ConfirmationStatus
+    _type: TextColumn
+    value: ConfirmationStatus
+    useCustomLabel: false
+    dataType: INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: GoldenType
+    _type: TextColumn
+    value: GoldenType
+    useCustomLabel: false
+    dataType: INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+
+    referencedEntity: CustomerB2B.entities.Sector.Sector
+
