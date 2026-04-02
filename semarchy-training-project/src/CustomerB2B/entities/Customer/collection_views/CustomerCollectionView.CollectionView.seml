@@ -99,8 +99,9 @@ tableColumns:
     visibleByDefault: true
 
   - _name: FDN_Sector
-    _type: TextColumn
+    _type: ReferenceColumn
     value: FDN_Sector
+    referencedEntity: CustomerB2B.entities.Sector.Sector
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
