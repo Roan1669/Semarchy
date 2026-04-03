@@ -9,6 +9,7 @@ rootFilter: ConfirmationStatus != 'CONFIRMED'
 displayRootNodeAs: ICON_LABEL
 enableHierarchyView: false
 useHierarchyOnOpen: false
+
 rootBusinessViewEntity:
   _type: BusinessViewEntity
   _name: Customer
