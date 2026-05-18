@@ -1,0 +1,68 @@
+_package: CustomerB2C.entities.Product.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.Product.Product
+_name: ProductActionSet
+label: Product Action Set
+description: ''
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorProducts
+    useCustomLabel: true
+    label: Create
+    description: ''
+    createdRecordType: GOLDEN
+    allowOtherPublishers: true
+    waitDialogEnabled: false
+    createMultiple: false
+    stepper: CustomerB2C.entities.Product.steppers.AuthorProducts
+  - _type: EditAction
+    _name: EditAuthorProducts
+    useCustomLabel: true
+    label: Edit
+    description: ''
+    multipleSelectionAllowed: true
+    itemsLimit: 1000
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.Product.steppers.AuthorProducts
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorProducts
+    useCustomLabel: true
+    label: Mass Update
+    description: ''
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.Product.steppers.AuthorProducts
+  - _type: DeleteAction
+    _name: Delete
+    useCustomLabel: true
+    label: Delete
+    description: ''
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    availableForGoldenData: true
+    waitDialogEnabled: false
+  - _type: ExportAction
+    _name: Export
+    useCustomLabel: true
+    label: Export
+    description: ''
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorProducts
+    useCustomLabel: true
+    label: Import
+    description: ''
+    importMode: CREATE_AND_UPDATE
+    importedRecordType: GOLDEN
+    allowOtherPublishers: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.Product.steppers.AuthorProducts
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    useCustomLabel: true
+    label: Browse Graph
+    description: ''
+    waitDialogEnabled: false
+

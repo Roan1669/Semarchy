@@ -1,0 +1,73 @@
+_package: ProductRetail.entities.Item
+_type: Entity
+_name: Item
+label: Item
+physicalTableName: ITEM
+pluralLabel: Items
+description: ''
+documentation: ''
+enableDelete: true
+entityType: BASIC
+historizeGolden: true
+historizeMaster: false
+iconUrl: images://mdi/basket-fill.svg
+dataEntryAllowed: true
+
+attributes:
+  - _type: EntityAttribute
+    _name: UPC
+    label: UPC
+    physicalName: UPC
+    description: Universal Product Code (UPC) is a 12-digit bar code used extensively
+      for retail packaging in United States.
+    documentation: Universal Product Code (UPC) is a 12-digit bar code used extensively
+      for retail packaging in United States.
+    dataType: String
+    length: 12
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    searchable: false
+  - _type: EntityAttribute
+    _name: Color
+    label: Color
+    physicalName: COLOR
+    lovValidationScope: PRE_CONSO
+    description: ''
+    documentation: ''
+    length: 20
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    searchable: true
+    valueSeparator: ','
+    dataType: ProductRetail.list_of_values.StandardColors
+    mandatoryValidationLabel: ''
+  - _type: EntityAttribute
+    _name: MainImageURL
+    description: ''
+    documentation: ''
+    label: Main Image
+    length: 2000
+    mandatory: false
+    mandatoryValidationLabel: ''
+    physicalName: MAIN_IMAGE_URL
+    searchable: true
+    valueSeparator: ','
+    dataType: ProductRetail.user_defined_types.URLString
+  - _type: EntityAttribute
+    _name: ColorDescription
+    label: Color Description
+    physicalName: COLOR_DESCRIPTION
+    description: ''
+    documentation: ''
+    length: 128
+    mandatory: false
+    mandatoryValidationLabel: ''
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+
+primaryKey: ProductRetail.entities.Item.Item.UPC
+
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1

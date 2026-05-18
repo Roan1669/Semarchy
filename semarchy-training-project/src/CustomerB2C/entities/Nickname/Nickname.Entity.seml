@@ -1,0 +1,56 @@
+_package: CustomerB2C.entities.Nickname
+_type: Entity
+_name: Nickname
+entityType: BASIC
+physicalTableName: NICKNAME
+iconUrl: images://mdi/tag-faces.svg
+label: Nickname
+pluralLabel: Nicknames
+description: ''
+documentation: ''
+enableDelete: true
+dataEntryAllowed: true
+historizeGolden: false
+historizeMaster: false
+
+attributes:
+  - _name: GivenName
+    _type: EntityAttribute
+    label: Given Name
+    description: ''
+    documentation: ''
+    physicalName: GIVEN_NAME
+    dataType: String
+    mandatory: true
+    valueSeparator: ','
+    searchable: true
+    length: 128
+  - _name: TopNickname
+    label: Top Nickname
+    _type: EntityAttribute
+    description: ''
+    documentation: ''
+    physicalName: TOP_NICKNAME
+    dataType: String
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+    length: 128
+  - _name: AllNicknames
+    label: All Nicknames
+    _type: EntityAttribute
+    description: ''
+    documentation: ''
+    physicalName: ALL_NICKNAMES
+    dataType: String
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+    length: 128
+
+primaryKey: CustomerB2C.entities.Nickname.Nickname.GivenName
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1

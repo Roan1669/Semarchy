@@ -1,0 +1,17 @@
+_package: CustomerB2C.entities.PersonProduct.display_cards
+_type: DisplayCard
+_name: PersonProductDisplayCard
+entity: CustomerB2C.entities.PersonProduct.PersonProduct
+default: true
+primaryTextExpression: FDN_Product
+secondaryTextExpression: FDN_Person
+primaryImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+primaryImageFallbackValueInterpreter: LITERAL
+avatarImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
+avatarImageValueInterpreter: LITERAL

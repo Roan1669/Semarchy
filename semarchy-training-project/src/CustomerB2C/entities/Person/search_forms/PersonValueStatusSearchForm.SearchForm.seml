@@ -1,0 +1,19 @@
+_package: CustomerB2C.entities.Person.search_forms
+_type: SearchForm
+_name: PersonValueStatusSearchForm
+label: Customer Value Status
+entity: CustomerB2C.entities.Person.Person
+semQlCondition: ValueStatus = :SEARCH_PARAM_VALUE_STATUS
+searchParameters:
+  - _name: ValueStatus
+    _type: SearchParameter
+    bindVariableName: SEARCH_PARAM_VALUE_STATUS
+    label: Value Status
+    dataType: String
+    length: 128
+    displayType: VALUE_PICKER
+    boundSelectExpression: ValueStatus
+    primaryTextExpression: ValueStatus
+    useDistinct: true
+    displayCount: false
+    lookupEntity: CustomerB2C.entities.Person.Person

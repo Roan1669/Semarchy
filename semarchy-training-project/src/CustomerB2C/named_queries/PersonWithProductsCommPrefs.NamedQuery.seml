@@ -1,0 +1,98 @@
+_package: CustomerB2C.named_queries
+_type: NamedQuery
+_name: PersonWithProductsCommPrefs
+active: true
+defaultLimit: 100
+filter: ID = :QUERY_PARAM_ID
+queryParameters:
+  - _name: ID
+    _type: QueryParameter
+    bindingName: QUERY_PARAM_ID
+    mandatory: true
+    dataType: NUMBER
+rootQueryObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.Person
+queryObjects:
+  - _name: Person
+    _type: QueryObject
+    entity: CustomerB2C.entities.Person.Person
+    objectProperties:
+      - _name: ID
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: ID
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.Person
+      - _name: FirstName
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: NormalizedFirstName
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.Person
+      - _name: LastName
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: NormalizedLastName
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.Person
+      - _name: Nickname
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: Nickname
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.Person
+      - _name: PersonType
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: PersonType
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.Person
+      - _name: Products
+        _type: ObjectProperty
+        type: MULTI_RECORDS
+        semQlExpression: PersonProducts
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.PersonProduct
+      - _name: CommunicationChannelPreferences
+        type: MULTI_RECORDS
+        _type: ObjectProperty
+        semQlExpression: CommunicationChannelPreferences
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.CommChanPref
+  - _name: PersonProduct
+    _type: QueryObject
+    entity: CustomerB2C.entities.PersonProduct.PersonProduct
+    objectProperties:
+      - _name: Product
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: Product.ProductName
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.PersonProduct
+      - _name: RegistrationDate
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: RegistrationDate
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.PersonProduct
+      - _name: PurchaseDate
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: PurchaseDate
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.PersonProduct
+  - _name: CommChanPref
+    _type: QueryObject
+    entity: CustomerB2C.entities.CommChanPref.CommChanPref
+    objectProperties:
+      - _name: ContactInformation
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: CASE   WHEN CommunicationType = 'EMAIL' THEN Person.CleansedEmail   WHEN
+          CommunicationType = 'PHONE' THEN Person.StandardizedPhone   ELSE Person.Address
+          END
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.CommChanPref
+      - _name: Preference
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: Preference
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.CommChanPref
+      - _name: CommunicationType
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: CommunicationType
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.CommChanPref
+      - _name: ChannelFrequency
+        _type: ObjectProperty
+        type: VALUE
+        semQlExpression: ChannelFrequency
+        targetObject: CustomerB2C.named_queries.PersonWithProductsCommPrefs.CommChanPref

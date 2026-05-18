@@ -1,0 +1,17 @@
+_package: CustomerB2C.entities.Person.display_cards
+_type: DisplayCard
+_name: PersonDisplayCard
+entity: CustomerB2C.entities.Person.Person
+default: true
+primaryTextExpression: FirstName || ' ' || LastName
+secondaryTextExpression: COALESCE( CleansedEmail, StandardizedPhone, Address )
+primaryImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+primaryImageFallbackValueInterpreter: LITERAL
+avatarImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
+avatarImageValueInterpreter: LITERAL

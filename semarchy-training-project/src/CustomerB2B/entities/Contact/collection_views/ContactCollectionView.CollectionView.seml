@@ -1,0 +1,76 @@
+_package: CustomerB2B.entities.Contact.collection_views
+_type: CollectionView
+_name: ContactCollectionView
+entity: CustomerB2B.entities.Contact.Contact
+default: true
+displayCard: CustomerB2B.entities.Contact.display_cards.ContactDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Contact
+tableRowLines: 2
+tableShowDisplayCard: true
+tableColumns:
+  - _name: ContactID
+    _type: IdColumn
+    value: ContactID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: FirstName
+    _type: TextColumn
+    value: FirstName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: LastName
+    _type: TextColumn
+    value: LastName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: Email
+    _type: TextColumn
+    value: Email
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: Phone
+    _type: TextColumn
+    value: Phone
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: JobTitle
+    _type: TextColumn
+    value: JobTitle
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: FDN_Customer
+    _type: ReferenceColumn
+    value: Contact.FDN_Customer
+    referencedEntity: CustomerB2B.entities.Customer.Customer
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

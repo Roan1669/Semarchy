@@ -1,0 +1,72 @@
+_package: CustomerB2C.entities.Nickname.forms
+_type: Form
+_name: NicknameForm
+default: true
+entity: CustomerB2C.entities.Nickname.Nickname
+
+formTabs:
+  - _type: FormTab
+    _name: Nickname
+    label: Nickname
+    iconUrl: images://mdi/tag-faces.svg
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: ICON_LABEL
+
+    content:
+      - _type: IdField
+        _name: GivenName
+        dataType: STRING
+        useCustomLabel: false
+        value: GivenName
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: TextField
+        _name: TopNickname
+        dataType: STRING
+        useCustomLabel: false
+        value: TopNickname
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+          
+      - _type: TextField
+        _name: AllNicknames
+        dataType: STRING
+        documentationInterpreter: LITERAL
+        useCustomLabel: false
+        value: AllNicknames
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+

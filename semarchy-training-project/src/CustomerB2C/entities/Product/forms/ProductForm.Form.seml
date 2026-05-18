@@ -1,0 +1,128 @@
+_package: CustomerB2C.entities.Product.forms
+_type: Form
+_name: ProductForm
+default: true
+entity: CustomerB2C.entities.Product.Product
+
+formTabs:
+  - _type: FormTab
+    _name: Product
+    label: Product
+    iconUrl: images://mdi/package-variant.svg
+    displayFormTabAs: ICON_LABEL
+    visibleValue: '1'
+    documentationInterpreter: LITERAL
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: IdField
+        _name: ID
+        dataType: LONG_INTEGER
+        useCustomLabel: false
+        value: ID
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: TextField
+        _name: ProductName
+        dataType: STRING
+        useCustomLabel: false
+        value: ProductName
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: TextField
+        _name: Description
+        dataType: STRING
+        useCustomLabel: false
+        value: Description
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: TextField
+        _name: Origin
+        dataType: STRING
+        useCustomLabel: false
+        value: Origin
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: TextField
+        _name: SalesUnit
+        dataType: STRING
+        useCustomLabel: false
+        value: SalesUnit
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+          
+      - _type: TextField
+        _name: Price
+        dataType: DECIMAL
+        useCustomLabel: false
+        value: Price
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption

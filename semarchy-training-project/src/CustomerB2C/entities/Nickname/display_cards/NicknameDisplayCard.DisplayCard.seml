@@ -1,0 +1,17 @@
+_package: CustomerB2C.entities.Nickname.display_cards
+_type: DisplayCard
+_name: NicknameDisplayCard
+entity: CustomerB2C.entities.Nickname.Nickname
+default: true
+primaryTextExpression: TopNickname
+secondaryTextExpression: GivenName
+primaryImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+primaryImageFallbackValueInterpreter: LITERAL
+avatarImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
+avatarImageValueInterpreter: LITERAL

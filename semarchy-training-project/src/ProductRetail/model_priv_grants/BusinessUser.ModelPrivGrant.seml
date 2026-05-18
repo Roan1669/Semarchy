@@ -1,0 +1,157 @@
+_package: ProductRetail.model_priv_grants
+_type: ModelPrivGrant
+_name: BusinessUser
+allowApiPublishingAsUser: false
+allowDataQualityDocumentation: false
+allowEnrichmentDocumentation: false
+
+dataAdminRole: false
+integrationWsRole: false
+label: Business User
+roleName: BusinessUser
+
+entityPrivGrants:
+  - entity: ProductRetail.entities.Item.Item
+    _name: Item
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.Item.Item.UPC
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.ItemHasProduct.Product ## Foreign
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Item.Item.Color
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.ItemHasSize.Size ## Foreign
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Item.Item.ColorDescription
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Item.Item.MainImageURL
+        accessType: READ_WRITE
+  - entity: ProductRetail.entities.Size.Size
+    _name: Size
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.Size.Size.ID
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Size.Size.SizeUS
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Size.Size.SizeEU
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.SizeHasFamily.Family ## Foreign
+        accessType: READ_WRITE
+  - entity: ProductRetail.entities.Brand.Brand
+    _name: Brand
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.Brand.Brand.ID
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Brand.Brand.Name
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Brand.Brand.LogoURL
+        accessType: READ_WRITE
+  - entity: ProductRetail.entities.Family.Family
+    _name: Family
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.Family.Family.ID
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Family.Family.Name
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Family.Family.AvatarURL
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Family.Family.ImageURL
+        accessType: READ_WRITE
+  - entity: ProductRetail.entities.Product.Product
+    _name: Product
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.Product.Product.ID
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.Name
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.Description
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.CareInstructions
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.ImageURL
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.SalesUnit
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.Origin
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.Material
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.ProductHasBrand.Brand ## Foreign
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.ProductHasFamily.Family ## Foreign
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.ProductHasSubFamily.SubFamily ## Foreign
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.HeelHeight
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.Product.Product.ClosureType
+        accessType: READ_WRITE
+  - entity: ProductRetail.entities.ItemImage.ItemImage
+    _name: ItemImage
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.ItemImage.ItemImage.ID
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.ItemImage.ItemImage.ImageURL
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.ItemImage.ItemImage.Label
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.ItemImageHasItem.Item ## Foreign
+        accessType: READ_WRITE
+  - entity: ProductRetail.entities.SubFamily.SubFamily
+    _name: SubFamily
+    _type: EntityPrivGrant
+    checkoutAllowed: true
+    createAllowed: true
+    defaultAccessType: READ_WRITE
+    deleteAllowed: false
+    exportAllowed: true
+    removeAllowed: false
+    attributePrivGrants:
+      - attribute: ProductRetail.entities.SubFamily.SubFamily.ID
+        accessType: READ_WRITE
+      - attribute: ProductRetail.entities.SubFamily.SubFamily.Name
+        accessType: READ_WRITE
+      - attribute: ProductRetail.references.SubFamilyHasFamily.Family ## Foreign
+        accessType: READ_WRITE

@@ -1,0 +1,140 @@
+_package: CustomerB2C.entities.Person.business_views
+_type: BusinessView
+_name: Person
+label: Customer
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: true
+entity: CustomerB2C.entities.Person.Person
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/people.svg
+rootDescription: ''
+rootLabel: Customer
+rootPluralLabel: Customers
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _name: PersonEO
+  _type: BusinessViewEntity
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  actionSet: CustomerB2C.entities.Person.action_sets.PersonGoldenActionSet
+  collection: CustomerB2C.entities.Person.collection_views.PersonBrowseGoldenCollection
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: true
+  entity: CustomerB2C.entities.Person.Person
+  form: CustomerB2C.entities.Person.forms.PersonForm
+  displayCard: CustomerB2C.entities.Person.display_cards.PersonDisplayCard
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: false
+  tableAllowed: true
+  transitions:
+    - _name: CommunicationChannel
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      displayFormTabAs: ICON_LABEL
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: 1 = 1
+      iconUrl: images://mdi/cellphone-basic.svg
+      label: Communications
+      pluralLabel: Communications
+      transitionPath: CommunicationChannelPreferences
+      useCustomLabel: false
+      businessViewEntity:
+        _name: CommunicationChannelsPreferences
+        _type: BusinessViewEntity
+        collection: CustomerB2C.entities.CommChanPref.collection_views.CommChanPrefCollection
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        entity: CustomerB2C.entities.CommChanPref.CommChanPref
+        form: CustomerB2C.entities.CommChanPref.forms.CommChanPrefForm
+        displayCard: CustomerB2C.entities.CommChanPref.display_cards.CommChanPrefDisplayCard
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        referenceAttributeNavigationConfigs:
+          - formField: CustomerB2C.entities.CommChanPref.forms.CommChanPrefForm.CommChanPref.FDN_Person
+            navigationMode: MODAL_FORM
+        tableAllowed: true
+    - _name: PersonProducts
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      displayFormTabAs: ICON_LABEL
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: 1 = 1
+      iconUrl: images://mdi/package-variant.svg
+      label: Product
+      pluralLabel: Products
+      transitionPath: PersonProducts
+      useCustomLabel: false
+      businessViewEntity:
+        _name: PersonProduct
+        _type: BusinessViewEntity
+        collection: CustomerB2C.entities.PersonProduct.collection_views.PersonProductBrowseCollection
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        entity: CustomerB2C.entities.PersonProduct.PersonProduct
+        form: CustomerB2C.entities.PersonProduct.forms.PersonProductForm
+        displayCard: CustomerB2C.entities.PersonProduct.display_cards.PersonProductDisplayCard
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        referenceAttributeNavigationConfigs:
+          - formField: CustomerB2C.entities.PersonProduct.forms.PersonProductForm.PersonProduct.FDN_Product
+            navigationMode: MODAL_FORM
+          - formField: CustomerB2C.entities.PersonProduct.forms.PersonProductForm.PersonProduct.FDN_Person
+            navigationMode: MODAL_FORM
+        tableAllowed: true
+    - _name: MasterRecords
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      displayFormTabAs: ICON_LABEL
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: 1 = 1
+      iconUrl: images://mdi/puzzle.svg
+      transitionPath: MasterRecords
+      useCustomLabel: false
+      businessViewEntity:
+        _name: Person
+        _type: BusinessViewEntity
+        businessEntitySearchConfigs:
+          - _name: TextConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: TEXT
+          - _name: FormConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: BY_FORM
+          - _name: AdvancedConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: ADVANCED
+          - _name: SemqlConfig
+            _type: BusinessEntitySearchTypeConfig
+            searchType: SEMQL
+        collection: CustomerB2C.entities.Person.collection_views.PersonBrowseMasterCollection
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        entity: CustomerB2C.entities.Person.Person
+        form: CustomerB2C.entities.Person.forms.PersonForm
+        displayCard: CustomerB2C.entities.Person.display_cards.PersonDisplayCard
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true

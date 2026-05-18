@@ -1,0 +1,83 @@
+_package: CustomerB2B.workflows
+_type: Workflow
+_name: CustomerApprovalWorkflow
+label: Customer Approval Workflow
+workflowAdminOnDueDate: false
+generalProperties:
+  attachmentMaxFileCount: 0
+  attachmentMaxFileSize: 0
+dataScope: []
+notifications: []
+retentionPolicy:
+  duration: 0
+  unit: FOREVER
+steps:
+  - _name: Start
+    _type: StartFromSelectionEvent
+    label: Start Approval Workflow
+    position:
+      x: 0
+      y: 0
+    authoredEntity: CustomerB2B.entities.Customer.Customer
+    defaultPriority: NORMAL
+    selectionSourceType: BUSINESS_VIEW
+    startupParameters: []
+    transition: PendingApproval
+
+  - _name: PendingApproval
+    _type: UserTask
+    label: Pending Approval
+    position:
+      x: 200
+      y: 0
+    entity: CustomerB2B.entities.Customer.Customer
+    application: CustomerB2B.applications.DefaultApplication
+    stepper: CustomerB2B.entities.Customer.steppers.AuthorCustomers
+    taskType: REVIEW
+    assigneeCanRelease: false
+    myTasksConfiguration: {}
+    notificationsOnTaskAssignment: {}
+    notificationsOnTaskExpiration: {}
+    notificationsOnWorkflowDueDate: {}
+    transitions:
+      - _name: Approve
+        _type: UserTaskTransition
+        label: Approve
+        toStep: Approved
+        userTaskCompletionRequired: true
+        showWaitDialog: false
+        behaviorOnTransition: COMPLETE
+        transitionParameters: []
+      - _name: Reject
+        _type: UserTaskTransition
+        label: Reject
+        toStep: Rejected
+        userTaskCompletionRequired: true
+        showWaitDialog: false
+        behaviorOnTransition: COMPLETE
+        transitionParameters: []
+
+  - _name: Rejected
+    _type: UserTask
+    label: Revise and Resubmit
+    position:
+      x: 200
+      y: 200
+    entity: CustomerB2B.entities.Customer.Customer
+    application: CustomerB2B.applications.DefaultApplication
+    stepper: CustomerB2B.entities.Customer.steppers.AuthorCustomers
+    taskType: REVIEW
+    assigneeCanRelease: false
+    myTasksConfiguration: {}
+    notificationsOnTaskAssignment: {}
+    notificationsOnTaskExpiration: {}
+    notificationsOnWorkflowDueDate: {}
+    transitions:
+      - _name: Resubmit
+        _type: UserTaskTransition
+        label: Revise and Resubmit
+        toStep: PendingApproval
+        userTaskCompletionRequired: true
+        showWaitDialog: false
+        behaviorOnTransition: COMPLETE
+        transitionParameters: []

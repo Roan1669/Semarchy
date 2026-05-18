@@ -1,0 +1,105 @@
+_package: ProductRetail.model_diagrams
+_type: ModelDiagram
+_name: ProductRetailDiagram
+attributeNameFormat: NAME
+description: The main diagram shows all entities and relationships of the
+  Product Retail demo
+entityNameFormat: LABEL
+label: Main Diagram
+referenceRoleNameFormat: LABEL
+referenceNameFormat: LABEL
+showAttributeDataType: false
+showForeignAttribute: true
+showInheritLinkName: false
+showInheritedAttributes: true
+showReferenceCardinality: true
+showReferenceName: false
+showReferenceRoles: true
+entityShapes:
+  - _type: EntityShape
+    entity: ProductRetail.entities.SubFamily.SubFamily
+    _name: SubFamily
+    borderColor: "#9dbb61"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 463.4437188052613
+      y: 287.2219796450883
+    width: -1
+  - _type: EntityShape
+    entity: ProductRetail.entities.Size.Size
+    _name: Size
+    borderColor: "#9dbb61"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 785.9692305053895
+      y: 104.64593890372149
+    width: -1
+  - _type: EntityShape
+    entity: ProductRetail.entities.Brand.Brand
+    _name: Brand
+    borderColor: "#9dbb61"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: -204.21622576867537
+      y: -2.672814608561353
+    width: -1
+  - _type: EntityShape
+    entity: ProductRetail.entities.Item.Item
+    _name: Item
+    borderColor: ""
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 159.30314812513046
+      y: 685.2995444299394
+    width: -1
+  - _type: EntityShape
+    entity: ProductRetail.entities.Product.Product
+    _name: Product
+    borderColor: ""
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: -239.36564734031484
+      y: 391.6797229716733
+    width: -1
+  - _type: EntityShape
+    entity: ProductRetail.entities.ItemImage.ItemImage
+    _name: ItemImage
+    borderColor: ""
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 810.882104199166
+      y: 479.6998324821003
+    width: -1
+  - _type: EntityShape
+    entity: ProductRetail.entities.Family.Family
+    borderColor: "#9dbb61"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 57.33595028974324
+      y: -19.824207645459126
+    width: -1
+    _name: Family
+referenceLinks:
+  - bendPoints: []
+    reference: ProductRetail.references.ItemImageHasItem
+  - bendPoints: []
+    reference: ProductRetail.references.ProductHasBrand
+  - bendPoints: []
+    reference: ProductRetail.references.ItemHasProduct
+  - bendPoints: []
+    reference: ProductRetail.references.SubFamilyHasFamily
+  - bendPoints: []
+    reference: ProductRetail.references.ProductHasFamily
+  - bendPoints: []
+    reference: ProductRetail.references.SizeHasFamily
+  - bendPoints: []
+    reference: ProductRetail.references.ProductHasSubFamily
+  - bendPoints: []
+    reference: ProductRetail.references.ItemHasSize

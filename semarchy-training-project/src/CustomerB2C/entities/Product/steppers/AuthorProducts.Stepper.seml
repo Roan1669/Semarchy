@@ -1,0 +1,35 @@
+_package: CustomerB2C.entities.Product.steppers
+_type: Stepper
+_name: AuthorProducts
+label: Author Products
+iconUrl: images://mdi/package-variant.svg
+entity: CustomerB2C.entities.Product.Product
+rootStep:
+  _type: CollectionStep
+  _name: Products
+  label: Products
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerB2C.entities.Product.collection_views.ProductCollection
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayTableAllowed: true
+  displayListAllowed: true
+  displayGridAllowed: false
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: Product
+      label: Product
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerB2C.entities.Product.forms.ProductForm.Product
+

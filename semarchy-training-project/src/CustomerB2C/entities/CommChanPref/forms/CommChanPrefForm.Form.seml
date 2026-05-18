@@ -1,0 +1,119 @@
+_package: CustomerB2C.entities.CommChanPref.forms
+_type: Form
+_name: CommChanPrefForm
+default: true
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+
+formTabs:
+  - _type: FormTab
+    _name: CommChanPref
+    label: Communications
+    iconUrl: images://mdi/cellphone-basic.svg
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: ICON_LABEL
+    labelWidth: 200px
+
+    content:
+      - _type: IdField
+        _name: ID
+        dataType: LONG_INTEGER
+        value: ID
+        useCustomLabel: false
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: ReferenceField
+        _name: FDN_Person
+        referencedEntity: CustomerB2C.entities.Person.Person
+        dataType: STRING
+        useCustomLabel: false
+        value: FDN_Person
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          displayType: hyperlink
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: MenuField
+        _name: CommunicationType
+        dataType: STRING
+        useCustomLabel: false
+        label: Type
+        value: CommunicationType
+        visibleValue: '1'
+        authoringMode: auto
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          listSort: none
+
+      - _type: MenuField
+        _name: ChannelFrequency
+        dataType: STRING
+        useCustomLabel: false
+        value: ChannelFrequency
+        visibleValue: '1'
+        authoringMode: auto
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          listSort: none
+
+      - _type: MenuField
+        _name: Preference
+        dataType: STRING
+        useCustomLabel: false
+        value: Preference
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: TextField
+        _name: FirstName
+        dataType: STRING
+        useCustomLabel: false
+        value: FirstName
+        visibleValue: '1'
+        authoringMode: auto
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+        componentProperties:
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+          textAlign: left
+          textTypography: body-1

@@ -1,0 +1,107 @@
+_package: CustomerB2C.entities.PersonProduct.forms
+_type: Form
+_name: PersonProductForm
+default: true
+entity: CustomerB2C.entities.PersonProduct.PersonProduct
+
+formTabs:
+  - _type: FormTab
+    _name: PersonProduct
+    label: Person Product
+    iconUrl: images://mdi/ticket-account.svg
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: ICON_LABEL
+
+    content:
+      - _type: IdField
+        _name: ID
+        dataType: STRING
+        useCustomLabel: false
+        value: ID
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: ReferenceField
+        _name: FDN_Person
+        dataType: STRING
+        useCustomLabel: false
+        value: FDN_Person
+        referencedEntity: CustomerB2C.entities.Person.Person
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          displayType: hyperlink
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: ReferenceField
+        _name: FDN_Product
+        dataType: STRING
+        useCustomLabel: false
+        value: FDN_Product
+        referencedEntity: CustomerB2C.entities.Product.Product
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          displayType: hyperlink
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: DateField
+        _name: PurchaseDate
+        dataType: DATE
+        documentationInterpreter: LITERAL
+        useCustomLabel: false
+        value: PurchaseDate
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          useTimePicker: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption
+          
+      - _type: DateField
+        _name: RegistrationDate
+        dataType: DATE
+        useCustomLabel: false
+        value: RegistrationDate
+        visibleValueInterpreter: LITERAL
+        visibleValue: '1'
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          useTimePicker: '1'
+        labelProperties:
+          isVisible: '1'
+          alignment: right
+          position: left
+          typography: caption

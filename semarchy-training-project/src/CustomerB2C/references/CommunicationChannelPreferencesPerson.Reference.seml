@@ -1,0 +1,30 @@
+_package: CustomerB2C.references
+_type: Reference
+_name: CommunicationChannelPreferencesPerson
+label: Communication Channel Preferences Person
+physicalName: COMM_CHAN_PRE
+oneToMany: false
+validationScope: PRE_CONSO
+deletePropagation: CASCADE
+splitDuplicatePropagation: RESET_MATCHING
+fromEntity: CustomerB2C.entities.CommChanPref.CommChanPref
+fromRoleName: CommunicationChannelPreferences
+fromRoleLabel: Communication
+fromRolePluralLabel: Communications
+toEntity: CustomerB2C.entities.Person.Person
+toRoleName: Person
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: Person
+  label: Person
+  physicalName: PERSON
+  entity: CustomerB2C.entities.CommChanPref.CommChanPref
+toRoleLabel: Person
+toRolePhysicalName: PERSON
+brokenValidationLabel: ''
+mandatoryValidationLabel: ''
+
+
+
+
+

@@ -1,0 +1,58 @@
+_package: ProductRetail.entities.ItemImage
+_type: Entity
+_name: ItemImage
+entityType: BASIC
+dataEntryAllowed: true
+description: ''
+documentation: ''
+enableDelete: true
+historizeGolden: false
+historizeMaster: false
+iconUrl: images://mdi/folder-multiple-image.svg
+label: Item Image
+physicalTableName: ITEM_IMAGE
+pluralLabel: Item Images
+
+attributes:
+  - _type: EntityAttribute
+    _name: ID
+    label: ID
+    physicalName: ID
+    description: ''
+    documentation: ''
+    dataType: LongInteger
+    length: 0
+    precision: 38
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    searchable: false    
+  - _type: EntityAttribute
+    _name: ImageURL
+    description: ''
+    documentation: ''
+    label: Image URL
+    length: 128
+    mandatory: false
+    physicalName: IMAGE_URL
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+    mandatoryValidationLabel: ''
+  - _type: EntityAttribute
+    _name: Label
+    description: ''
+    documentation: ''
+    label: Label
+    length: 128
+    mandatory: false
+    mandatoryValidationLabel: ''
+    physicalName: LABEL
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+
+primaryKey: ProductRetail.entities.ItemImage.ItemImage.ID
+
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 10001

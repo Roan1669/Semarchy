@@ -1,0 +1,69 @@
+_package: ProductRetail.entities.ItemImage.steppers
+_type: Stepper
+_name: EditItemImage
+label: Edit Item Image
+entity: ProductRetail.entities.ItemImage.ItemImage
+rootStep:
+  _type: CollectionStep
+  _name: ItemImages
+  canFinishSubLevel: true
+  childDeleteType: HARD_DELETE
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  displayGridAllowed: true
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  label: Item Images
+  linear: false
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  collectionView: ProductRetail.entities.ItemImage.collection_views.ItemImageCollection
+  stepTransitionValidations:
+    - onStepExit: SKIP
+      validationType: MANDATORY
+      attribute: ProductRetail.references.ItemImageHasItem.Item
+    - onStepExit: SKIP
+      validationType: FOREIGN
+      attribute: ProductRetail.references.ItemImageHasItem.Item
+  childSteps:
+    - _type: FormStep
+      _name: ItemImage
+      canFinishSubLevel: true
+      enableMasterValuePicking: false
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      label: Item Image
+      formTab: ProductRetail.entities.ItemImage.forms.ItemImageEditingForm.ItemImage
+      formStepValidations:
+        - validationType: MANDATORY
+          executedOnDataChange: false
+          executedOnFormOpen: false
+          attribute: ProductRetail.references.ItemImageHasItem.Item
+        - validationType: FOREIGN
+          executedOnDataChange: false
+          executedOnFormOpen: false
+          attribute: ProductRetail.references.ItemImageHasItem.Item
+      referenceFormFieldConfigs:
+        - enableUserSort: true
+          fdnFormField: ProductRetail.entities.ItemImage.forms.ItemImageEditingForm.ItemImage.FDN_Item
+          referencePickerType: AUTO_COMPLETE
+          referencePickerCollectionView: ProductRetail.entities.Item.collection_views.ItemCollection
+      stepTransitionValidations:
+        - onStepExit: SKIP
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemImageHasItem.Item
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemImageHasItem.Item
+stepperFinishValidations:
+  - onStepperFinish: SKIP
+    validationType: MANDATORY
+    attribute: ProductRetail.references.ItemImageHasItem.Item
+  - onStepperFinish: SKIP
+    validationType: FOREIGN
+    attribute: ProductRetail.references.ItemImageHasItem.Item
+

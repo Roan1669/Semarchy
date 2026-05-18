@@ -1,0 +1,32 @@
+_package: ProductRetail.entities.Brand.forms
+_type: Form
+_name: BrandBrowsingFormProductsInBrand
+default: false
+entity: ProductRetail.entities.Brand.Brand
+
+formTabs:
+  - _type: FormTab
+    _name: Products
+    label: Products
+    iconUrl: images://mdi/package-variant.svg
+    displayFormTabAs: ICON_LABEL
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+    
+    content:
+      - _name: ProductsCollection
+        _type: FormCollection
+        label: Products in Brand
+        pluralLabel: Products in Brand
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: true
+        listAllowed: true
+        sortExpression: Name
+        tableAllowed: true
+        transitionPath: Products
+        useCustomLabel: true
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        collection: ProductRetail.entities.Product.collection_views.ProductCollection
+        targetEntity: ProductRetail.entities.Product.Product

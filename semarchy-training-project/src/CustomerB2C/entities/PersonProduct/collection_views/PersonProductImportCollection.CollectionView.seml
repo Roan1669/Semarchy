@@ -1,0 +1,75 @@
+_package: CustomerB2C.entities.PersonProduct.collection_views
+_type: CollectionView
+_name: PersonProductImportCollection
+
+default: false
+entity: CustomerB2C.entities.PersonProduct.PersonProduct
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: false
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: false
+tableAllowed: true
+tableDisplayCardColumnLabel: ''
+tableRowLines: 1
+tableShowDisplayCard: false
+displayCard: CustomerB2C.entities.PersonProduct.display_cards.PersonProductDisplayCard
+
+tableColumns:
+  - _type: IdColumn
+    _name: ID
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ID
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: PublisherID_Person
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: PublisherID_Person
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: SourceID_Person
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: SourceID_Person
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: FID_Product
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: FID_Product
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: PurchaseDate
+    columnAlign: LEFT
+    dataType: DATE
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: PurchaseDate
+    visibleByDefault: true
+    
+  - _type: TextColumn
+    _name: RegistrationDate
+    columnAlign: LEFT
+    dataType: DATE
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: RegistrationDate
+    visibleByDefault: true

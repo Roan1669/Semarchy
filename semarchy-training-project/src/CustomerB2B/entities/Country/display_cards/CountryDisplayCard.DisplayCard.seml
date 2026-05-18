@@ -1,0 +1,17 @@
+_package: CustomerB2B.entities.Country.display_cards
+_type: DisplayCard
+_name: CountryDisplayCard
+entity: CustomerB2B.entities.Country.Country
+default: true
+primaryTextExpression: CountryName
+secondaryTextExpression: CountryCode || ' — ' || Region
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

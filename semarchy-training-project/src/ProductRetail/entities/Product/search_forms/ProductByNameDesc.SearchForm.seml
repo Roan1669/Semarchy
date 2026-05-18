@@ -1,0 +1,20 @@
+_package: ProductRetail.entities.Product.search_forms
+_type: SearchForm
+_name: ProductByNameDesc
+entity: ProductRetail.entities.Product.Product
+label: Name & Desc
+semQlCondition: lower(Name) LIKE '%' || lower(:SEARCH_PARAM_NAME_DESC) || '%' or lower(Description)
+  LIKE '%' || lower(:SEARCH_PARAM_NAME_DESC) || '%'
+searchParameters:
+  - _name: NameDesc
+    _type: SearchParameter
+    bindVariableName: SEARCH_PARAM_NAME_DESC
+    displayCount: false
+    displayType: TEXT_FIELD
+    label: Search
+    length: 128
+    useDistinct: false
+    dataType: String
+    primaryTextExpression: ''
+    lookupEntity: ProductRetail.entities.Product.Product
+

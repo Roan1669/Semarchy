@@ -1,0 +1,7 @@
+_package: CustomerB2C.publishers
+_type: Publisher
+_name: CRM
+label: Customer Relationship Management
+active: true
+code: CRM
+color: md:red

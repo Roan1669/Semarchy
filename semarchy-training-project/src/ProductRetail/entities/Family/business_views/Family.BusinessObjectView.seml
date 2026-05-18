@@ -1,0 +1,116 @@
+_package: ProductRetail.entities.Family.business_views
+_type: BusinessView
+_name: Family
+label: Family
+description: ''
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/people.svg
+rootLabel: Family
+rootPluralLabel: Families
+useHierarchyOnOpen: false
+rootBusinessViewEntity:
+  _name: Family
+  _type: BusinessViewEntity
+  collection: ProductRetail.entities.Family.collection_views.FamilyCollection
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: true
+  entity: ProductRetail.entities.Family.Family
+  form: ProductRetail.entities.Family.forms.FamilyBrowsingForm
+  actionSet: ProductRetail.entities.Family.action_sets.FamilyActions
+  displayCard: ProductRetail.entities.Family.display_cards.FamilyDisplayCard
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: false
+  tableAllowed: true
+  businessEntitySearchConfigs:
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+      enabled: true
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+      enabled: true
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+      enabled: true
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+      enabled: true
+  transitions:
+    - _name: SubFamily
+      _type: BusinessViewTransition
+      enableHierarchyInterpreter: LITERAL
+      description: ''
+      displayFormTabAs: ICON_LABEL
+      displayTransitionNodeAs: ICON_LABEL
+      enableHierarchy: '0'
+      expandHierarchyByDefault: false
+      filter: 1 = 1
+      iconUrl: images://gs-retail/file-tree-subfamily.svg
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: SubFamily
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true
+        actionSet: ProductRetail.entities.SubFamily.action_sets.SubFamilyActions
+        collection: ProductRetail.entities.SubFamily.collection_views.SubFamilyCollection
+        entity: ProductRetail.entities.SubFamily.SubFamily
+        form: ProductRetail.entities.SubFamily.forms.SubFamilyEditAndBrowsing
+        displayCard: ProductRetail.entities.SubFamily.display_cards.SubFamilyDisplayCard
+        referenceAttributeNavigationConfigs:
+          - formField: ProductRetail.entities.SubFamily.forms.SubFamilyEditAndBrowsing.Subfamily.FDN_Family
+            form: ProductRetail.entities.Family.forms.FamilyBrowsingForm
+            navigationMode: MODAL_FORM
+      transitionPath: SubFamily
+      transitionType: FULLY_QUALIFIED
+      transitionVisible: '1'
+      transitionVisibleInterpreter: LITERAL
+      useCustomLabel: false
+    - _name: Sizes
+      _type: BusinessViewTransition
+      description: ''
+      displayFormTabAs: ICON_LABEL
+      displayTransitionNodeAs: ICON_LABEL
+      enableHierarchy: '0'
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: 1 = 1
+      iconUrl: images://mdi/format-size.svg
+      transitionPath: Sizes
+      transitionType: FULLY_QUALIFIED
+      transitionVisible: '1'
+      transitionVisibleInterpreter: LITERAL
+      useCustomLabel: false
+      businessViewEntity:
+        _type: BusinessViewEntity
+        _name: Size
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: true
+        sortExpression: lpad(SizeUS , 2, '0')
+        tableAllowed: true
+        actionSet: ProductRetail.entities.Size.action_sets.SizeActions
+        collection: ProductRetail.entities.Size.collection_views.SizeCollection
+        entity: ProductRetail.entities.Size.Size
+        form: ProductRetail.entities.Size.forms.SizeForm
+        displayCard: ProductRetail.entities.Size.display_cards.SizeDisplayCardVerbose
+        referenceAttributeNavigationConfigs:
+          - formField: ProductRetail.entities.Size.forms.SizeForm.Size.FDN_Family
+            form: ProductRetail.entities.Family.forms.FamilyBrowsingForm
+            navigationMode: MODAL_FORM
+entity: ProductRetail.entities.Family.Family
+rootDescription: ''

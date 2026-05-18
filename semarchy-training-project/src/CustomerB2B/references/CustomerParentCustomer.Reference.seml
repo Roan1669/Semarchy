@@ -1,0 +1,24 @@
+_package: CustomerB2B.references
+_name: CustomerParentCustomer
+_type: Reference
+label: Customer Parent Customer
+description: "Self-reference to model parent/subsidiary company relationships. A Customer may optionally belong to a parent Customer (e.g. a subsidiary linked to a holding company)."
+physicalName: CUSTOMER_PARENT
+oneToMany: false
+validationScope: PRE_CONSO
+deletePropagation: RESTRICT
+fromEntity: CustomerB2B.entities.Customer.Customer
+fromRoleName: Subsidiaries
+fromRoleLabel: Subsidiary
+fromRolePluralLabel: Subsidiaries
+toEntity: CustomerB2B.entities.Customer.Customer
+toRoleName: ParentCustomer
+toRoleLabel: Parent Customer
+toRolePhysicalName: PARENT_CUSTOMER
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: ParentCustomer
+  label: Parent Customer
+  physicalName: PARENT_CUSTOMER
+brokenValidationLabel: ""
+mandatoryValidationLabel: ""

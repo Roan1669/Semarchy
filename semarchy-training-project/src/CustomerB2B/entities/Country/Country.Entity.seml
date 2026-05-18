@@ -1,0 +1,58 @@
+_package: CustomerB2B.entities.Country
+_type: Entity
+_name: Country
+label: Country
+pluralLabel: Countries
+entityType: BASIC
+physicalTableName: COUNTRY
+iconUrl: images://mdi/flag.svg
+description: "Reference entity for countries"
+documentation: "Stores the list of countries used across the model. Replaces the CountryCodeType LOV as the authoritative source for country data, enabling richer lookup and label display."
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+
+attributes:
+  - _name: CountryCode
+    _type: EntityAttribute
+    label: Country Code
+    physicalName: COUNTRY_CODE
+    dataType: String
+    length: 2
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+
+  - _name: CountryName
+    _type: EntityAttribute
+    label: Country Name
+    physicalName: COUNTRY_NAME
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: PRE_CONSO
+
+  - _name: Region
+    _type: EntityAttribute
+    label: Region
+    physicalName: REGION
+    dataType: String
+    length: 64
+    mandatory: false
+    searchable: true
+
+  - _name: ISONumericCode
+    _type: EntityAttribute
+    label: ISO Numeric Code
+    physicalName: ISO_NUMERIC_CODE
+    dataType: String
+    length: 3
+    mandatory: false
+    searchable: false
+
+primaryKey: CustomerB2B.entities.Country.Country.CountryCode
+
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1

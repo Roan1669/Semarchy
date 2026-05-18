@@ -1,0 +1,75 @@
+_package: CustomerB2C.entities.Product.collection_views
+_type: CollectionView
+_name: ProductCollection
+
+default: true
+entity: CustomerB2C.entities.Product.Product
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Product
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: CustomerB2C.entities.Product.display_cards.ProductDisplayCard
+
+tableColumns:
+  - _type: IdColumn
+    _name: ID
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ID
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: ProductName
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ProductName
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Description
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Description
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Origin
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Origin
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: SalesUnit
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: SalesUnit
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Price
+    columnAlign: LEFT
+    dataType: DECIMAL
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Price
+    visibleByDefault: true

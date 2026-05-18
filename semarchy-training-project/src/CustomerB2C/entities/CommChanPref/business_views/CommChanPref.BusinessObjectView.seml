@@ -1,0 +1,45 @@
+_package: CustomerB2C.entities.CommChanPref.business_views
+_type: BusinessView
+_name: CommChanPref
+label: Communication Channel Preferences
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/cellphone-basic.svg
+rootDescription: ''
+rootLabel: Communication Channel Preference
+rootPluralLabel: Communication Channel Preferences
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: CommChanPrefEO
+  entity: CustomerB2C.entities.CommChanPref.CommChanPref
+  collection: CustomerB2C.entities.CommChanPref.collection_views.CommChanPrefCollection
+  actionSet: CustomerB2C.entities.CommChanPref.action_sets.CommChanPrefActionSet
+  form: CustomerB2C.entities.CommChanPref.forms.CommChanPrefForm
+  displayCard: CustomerB2C.entities.CommChanPref.display_cards.CommChanPrefDisplayCard
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: false
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: false
+  tableAllowed: true
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  referenceAttributeNavigationConfigs:
+    - formField: CustomerB2C.entities.CommChanPref.forms.CommChanPrefForm.CommChanPref.FDN_Person
+      navigationMode: MODAL_FORM

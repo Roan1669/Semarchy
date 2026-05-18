@@ -1,0 +1,124 @@
+_package: ProductRetail.entities.ItemImage.collection_views
+_type: CollectionView
+_name: ItemImageCollection
+
+entity: ProductRetail.entities.ItemImage.ItemImage
+default: true
+description: ''
+gridAllowed: true
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 2
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: true
+listShowDivider: false
+tableAllowed: true
+tableDisplayCardColumnLabel: Image
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: ProductRetail.entities.ItemImage.display_cards.ItemImageDisplayCard
+
+tableColumns:
+  - _type: IdColumn
+    _name: ID
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ID
+    dataType: LONG_INTEGER
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Label
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Label
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: ImageURL
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ImageURL
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: ReferenceColumn
+    _name: FDN_Item
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Item
+    useCustomLabel: true
+    value: FDN_Item
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Item.Item
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: ReferenceColumn
+    _name: Item_FDN_Product
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Product
+    useCustomLabel: true
+    value: Item.FDN_Product
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Product.Product
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: ReferenceColumn
+    _name: Item_FDN_Size
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Size
+    useCustomLabel: true
+    value: Item.FDN_Size
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Size.Size
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: MenuColumn
+    _name: Item_Color
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Color
+    useCustomLabel: true
+    value: Item.Color
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Item_ColorDescription
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Color description
+    useCustomLabel: true
+    value: Item.ColorDescription
+    dataType: STRING
+    visibleByDefault: true

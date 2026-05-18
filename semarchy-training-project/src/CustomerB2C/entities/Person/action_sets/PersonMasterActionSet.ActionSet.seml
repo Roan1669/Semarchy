@@ -1,0 +1,106 @@
+_package: CustomerB2C.entities.Person.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.Person.Person
+_name: PersonMasterActionSet
+label: Person Master Action Set
+description: ''
+defaultActionSet: false
+actions:
+  - _type: EditAction
+    _name: EditAuthorPersons
+    useCustomLabel: true
+    label: Edit
+    description: ''
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false
+    itemsLimit: 1000
+    availableForGoldenData: true
+    availableForMasterData: true
+    availableForErrorData: true
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+  - _type: CreateAction
+    _name: CreateAuthorPersons
+    useCustomLabel: true
+    label: Create
+    description: ''
+    waitDialogEnabled: false
+    createMultiple: false
+    createdRecordType: GOLDEN
+    allowOtherPublishers: false
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorPersons
+    useCustomLabel: true
+    label: Mass Update
+    description: ''
+    availableForGoldenData: true
+    availableForMasterData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+  - _type: ExportAction
+    _name: Export
+    useCustomLabel: true
+    label: Export
+    description: ''
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorPersons
+    useCustomLabel: true
+    label: Import
+    description: ''
+    waitDialogEnabled: false
+    importMode: CREATE_AND_UPDATE
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+    importedRecordType: MASTER
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    useCustomLabel: true
+    label: Browse Graph
+    description: ''
+    waitDialogEnabled: false
+  - _type: ExplainRecordAction
+    _name: ExplainRecord
+    useCustomLabel: true
+    label: Explain Record
+    description: ''
+    waitDialogEnabled: false
+    displayCard: CustomerB2C.entities.Person.display_cards.PersonDisplayCard
+    formTab: CustomerB2C.entities.Person.forms.PersonConfirmMatchesForm.Person
+  - _type: DirectConfirmDupsAction
+    _name: DirectConfirmDuplicates
+    useCustomLabel: true
+    label: Direct Confirm Duplicates
+    description: ''
+    waitDialogEnabled: false
+    itemsLimit: 1000
+  - _type: MergeOrSplit
+    _name: MergeOrSplitDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Merge Or Split Duplicates
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    waitDialogEnabled: false
+  - _type: ReviewSuggestions
+    _name: ReviewSuggestionsDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Review Duplicates Suggestions
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    waitDialogEnabled: false
+    onAcceptPromptGoldenId: false
+    mandateResolveAllSuggestions: false
+    itemsLimit: 1000
+  - _type: ReviewAndConfirm
+    _name: ReviewAndConfirmDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Review And Confirm Duplicates
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    mandateConfirmAll: false
+    waitDialogEnabled: false
+
+

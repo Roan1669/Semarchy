@@ -1,0 +1,641 @@
+_package: CustomerB2C.entities.Person.forms
+_type: Form
+_name: PersonForm
+default: true
+entity: CustomerB2C.entities.Person.Person
+
+formTabs:
+  - _type: FormTab
+    _name: Person
+    label: Person
+    iconUrl: images://mdi/account-outline.svg
+    visibleValue: '1'
+    displayFormTabAs: ICON_LABEL
+    documentationInterpreter: LITERAL
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: FormContainer
+        _name: Container17
+        layoutDirection: ROW
+
+        content:
+          - _type: FormSection
+            _name: BasicInfo
+            label: Basic Information
+            layoutDirection: COLUMN
+            visibleValue: '1'
+            labelWidth: 120px
+            visibleValueInterpreter: LITERAL
+
+            content:
+              - _type: IdField
+                _name: ID
+                dataType: LONG_INTEGER
+                useCustomLabel: false
+                value: ID
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: FirstName
+                dataType: STRING
+                useCustomLabel: false
+                value: FirstName
+                authoringMode: auto
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: LastName
+                dataType: STRING
+                useCustomLabel: false
+                value: LastName
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                visibleValue: '1'
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: DateOfBirth
+                dataType: DATE
+                useCustomLabel: false
+                value: DateOfBirth
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                visibleValue: '1'
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: MemberID
+                dataType: STRING
+                useCustomLabel: false
+                value: MemberID
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                visibleValue: '1'
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: MenuField
+                _name: PersonType
+                dataType: STRING
+                useCustomLabel: false
+                value: PersonType
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  listSort: none
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: MenuField
+                _name: ValueStatus
+                dataType: STRING
+                useCustomLabel: false
+                value: ValueStatus
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                visibleValue: '1'
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  listSort: none
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: ProductsPurchased
+                dataType: STRING
+                useCustomLabel: true
+                label: Products Purchased
+                value: |
+                  LOOKUP
+                    string_agg FDN_Product
+                    separated by ', '
+                    from PersonProducts
+                    order by FDN_Product
+                  END
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                  isMultiline: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+          - _type: FormSection
+            _name: NameInfo
+            label: Name Enrichment
+            documentationInterpreter: LITERAL
+            layoutDirection: COLUMN
+            visibleValue: '1'
+            labelWidth: 200px
+            visibleValueInterpreter: LITERAL
+
+            content:
+              - _type: TextField
+                _name: EnrichedName
+                dataType: STRING
+                useCustomLabel: true
+                label: Enriched Names
+                value: "'These values are used for helping match customers.'"
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textColor: md:grey
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: PhoneticFirstName
+                dataType: STRING
+                useCustomLabel: false
+                value: PhoneticFirstName
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: PhoneticLastName
+                dataType: STRING
+                useCustomLabel: false
+                value: PhoneticLastName
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: NormalizedFirstName
+                dataType: STRING
+                useCustomLabel: false
+                value: NormalizedFirstName
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: NormalizedLastName
+                dataType: STRING
+                useCustomLabel: false
+                value: NormalizedLastName
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: Nickname
+                dataType: STRING
+                useCustomLabel: false
+                value: Nickname
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption                
+
+  - _type: FormTab
+    _name: ContactInfo
+    label: Contact Info
+    iconUrl: images://mdi/contact-mail.svg
+    visibleValue: '1'
+    displayFormTabAs: ICON_LABEL
+    visibleValueInterpreter: LITERAL
+    content:
+
+      - _type: FormContainer
+        _name: Container14
+        layoutDirection: ROW
+
+        content:
+          - _type: FormContainer
+            _name: Container5
+            layoutDirection: COLUMN
+
+            content:
+              - _type: FormSection
+                _name: Address
+                label: Address
+                layoutDirection: COLUMN
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+
+                content:
+                  - _type: TextField
+                    _name: Address_Street
+                    dataType: STRING
+                    label: Street
+                    useCustomLabel: true
+                    value: Address.Street
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+
+                  - _type: TextField
+                    _name: NormalizedStreet
+                    dataType: STRING
+                    useCustomLabel: false
+                    value: NormalizedStreet
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+
+                  - _type: TextField
+                    _name: Address_City
+                    dataType: STRING
+                    label: City
+                    useCustomLabel: true
+                    value: Address.City
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+
+                  - _type: TextField
+                    _name: NormalizedCity
+                    dataType: STRING
+                    useCustomLabel: false
+                    value: NormalizedCity
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+
+                  - _type: TextField
+                    _name: Address_State
+                    dataType: STRING
+                    label: State
+                    useCustomLabel: true
+                    value: Address.State
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+
+                  - _type: TextField
+                    _name: NormalizedState
+                    dataType: STRING
+                    useCustomLabel: false
+                    value: NormalizedState
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+                        
+                  - _type: TextField
+                    _name: Address_PostalCode
+                    dataType: STRING
+                    useCustomLabel: true
+                    label: Postal Code
+                    value: Address.PostalCode
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+                        
+                  - _type: TextField
+                    _name: Address_Country
+                    dataType: STRING
+                    useCustomLabel: true
+                    label: Country
+                    value: Address.Country
+                    visibleValueInterpreter: LITERAL
+                    visibleValue: '1'
+                    authoringMode: auto
+                    componentProperties:
+                      textAlign: left
+                      textTypography: body-1
+                      multilineMaxLines: '3'
+                      multilineMinLines: '1'
+                    labelProperties:
+                      isVisible: '1'
+                      alignment: right
+                      position: left
+                      typography: caption
+
+          - _type: FormContainer
+            _name: Container7
+            layoutDirection: COLUMN
+
+            content:
+              - _type: FormSection
+                _name: EmailPhone
+                label: Email & Phone
+                layoutDirection: COLUMN
+                visibleValueInterpreter: LITERAL
+                visibleValue: '1'
+
+                content:
+                  - _type: FormContainer
+                    _name: Container6
+                    layoutDirection: COLUMN
+
+                    content:
+                      - _type: FormContainer
+                        _name: Container16
+                        layoutDirection: COLUMN
+                      
+                        content:
+                          - _type: TextField
+                            _name: SourceEmail
+                            dataType: STRING
+                            useCustomLabel: false
+                            value: SourceEmail
+                            visibleValueInterpreter: LITERAL
+                            visibleValue: '1'
+                            authoringMode: auto
+                            componentProperties:
+                              textAlign: left
+                              textTypography: body-1
+                              multilineMaxLines: '3'
+                              multilineMinLines: '1'
+                            labelProperties:
+                              isVisible: '1'
+                              alignment: right
+                              position: left
+                              typography: caption
+
+                          - _type: TextField
+                            _name: CleansedEmail
+                            dataType: STRING
+                            useCustomLabel: false
+                            value: CleansedEmail
+                            visibleValueInterpreter: LITERAL
+                            visibleValue: '1'
+                            authoringMode: auto
+                            componentProperties:
+                              textAlign: left
+                              textTypography: body-1
+                              multilineMaxLines: '3'
+                              multilineMinLines: '1'
+                            labelProperties:
+                              isVisible: '1'
+                              alignment: right
+                              position: left
+                              typography: caption
+
+                          - _type: TextField
+                            _name: ValidEmailDomain
+                            label: Valid Email Domain
+                            dataType: STRING
+                            useCustomLabel: true
+                            value: >
+                              CASE   
+                              WHEN ValidEmailDomain = '1' THEN 'YES'
+                              ELSE 'NO'
+                              END
+                            visibleValueInterpreter: LITERAL
+                            visibleValue: '1'
+                            authoringMode: auto
+                            componentProperties:
+                              textAlign: left
+                              textTypography: body-1
+                              multilineMaxLines: '3'
+                              multilineMinLines: '1'
+                            labelProperties:
+                              isVisible: '1'
+                              alignment: right
+                              position: left
+                              typography: caption
+
+                      - _type: FormContainer
+                        _name: Container15
+                        layoutDirection: COLUMN
+
+                        content:
+                          - _type: TextField
+                            _name: SourcePhone
+                            dataType: STRING
+                            useCustomLabel: false
+                            value: SourcePhone
+                            visibleValueInterpreter: LITERAL
+                            visibleValue: '1'
+                            authoringMode: auto
+                            componentProperties:
+                              textAlign: left
+                              textTypography: body-1
+                              multilineMaxLines: '3'
+                              multilineMinLines: '1'
+                            labelProperties:
+                              isVisible: '1'
+                              alignment: right
+                              position: left
+                              typography: caption
+
+                          - _type: TextField
+                            _name: StandardizedPhone
+                            dataType: STRING
+                            useCustomLabel: false
+                            value: StandardizedPhone
+                            visibleValueInterpreter: LITERAL
+                            visibleValue: '1'
+                            authoringMode: auto
+                            componentProperties:
+                              textAlign: left
+                              textTypography: body-1
+                              multilineMaxLines: '3'
+                              multilineMinLines: '1'
+                            labelProperties:
+                              isVisible: '1'
+                              alignment: right
+                              position: left
+                              typography: caption
+
+                          - _type: TextField
+                            _name: PhoneGeocodingData
+                            dataType: STRING
+                            useCustomLabel: false
+                            value: PhoneGeocodingData
+                            visibleValueInterpreter: LITERAL
+                            visibleValue: '1'
+                            authoringMode: auto
+                            componentProperties:
+                              textAlign: left
+                              textTypography: body-1
+                              multilineMaxLines: '3'
+                              multilineMinLines: '1'
+                            labelProperties:
+                              isVisible: '1'
+                              alignment: right
+                              position: left
+                              typography: caption

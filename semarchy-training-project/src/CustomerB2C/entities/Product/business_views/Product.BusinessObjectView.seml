@@ -1,0 +1,42 @@
+_package: CustomerB2C.entities.Product.business_views
+_type: BusinessView
+_name: Product
+label: Products
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+entity: CustomerB2C.entities.Product.Product
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/package-variant.svg
+rootDescription: ''
+rootLabel: Product
+rootPluralLabel: Products
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: ProductEO
+  entity: CustomerB2C.entities.Product.Product
+  collection: CustomerB2C.entities.Product.collection_views.ProductCollection
+  actionSet: CustomerB2C.entities.Product.action_sets.ProductActionSet
+  form: CustomerB2C.entities.Product.forms.ProductForm
+  displayCard: CustomerB2C.entities.Product.display_cards.ProductDisplayCard
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: false
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: false
+  tableAllowed: true
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL

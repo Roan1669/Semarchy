@@ -1,0 +1,44 @@
+_package: ProductRetail.entities.SubFamily
+_type: Entity
+_name: SubFamily
+label: Subfamily
+dataEntryAllowed: true
+enableDelete: false
+entityType: BASIC
+historizeGolden: false
+historizeMaster: false
+iconUrl: images://gs-retail/hierarchy-subfamily.svg
+physicalTableName: SUB_FAMILY
+pluralLabel: Subfamilies
+
+attributes:
+  - _type: EntityAttribute
+    _name: ID
+    label: ID
+    physicalName: ID
+    dataType: String
+    length: 128
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    searchable: false
+  - _type: EntityAttribute
+    _name: Name
+    label: Name
+    length: 128
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: PRE_CONSO
+    physicalName: NAME
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+
+primaryKey: ProductRetail.entities.SubFamily.SubFamily.ID
+
+sourceIdGeneration:
+  mode: SEMQL
+  idExpression: SUBSTR(FID_Family || '.' || UPPER( SEM_NORMALIZE( Name ) ) , 1 ,
+      128)
+  startWith: 1
+
+

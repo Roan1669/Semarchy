@@ -1,0 +1,24 @@
+_package: CustomerB2B.references
+_name: ContactBelongsToCustomer
+_type: Reference
+label: Contact Belongs To Customer
+description: "Links a Contact to the parent Customer organisation"
+physicalName: CONTACT_CUSTOMER
+oneToMany: true
+validationScope: PRE_CONSO
+deletePropagation: CASCADE
+fromEntity: CustomerB2B.entities.Customer.Customer
+fromRoleName: Contacts
+fromRoleLabel: Contact
+fromRolePluralLabel: Contacts
+toEntity: CustomerB2B.entities.Contact.Contact
+toRoleName: Customer
+toRoleLabel: Customer
+toRolePhysicalName: CUSTOMER
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: Customer
+  label: Customer
+  physicalName: CUSTOMER
+brokenValidationLabel: ""
+mandatoryValidationLabel: "A Contact must be linked to a Customer!"

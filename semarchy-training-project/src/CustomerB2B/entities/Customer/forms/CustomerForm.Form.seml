@@ -37,6 +37,12 @@ formTabs:
         value: Website
         useCustomLabel: false
         dataType: STRING
+
+      - _type: TextField
+        _name: Email
+        value: Email
+        useCustomLabel: false
+        dataType: STRING
       - _type: TextField
         _name: TotalRevenue
         value: TotalRevenue

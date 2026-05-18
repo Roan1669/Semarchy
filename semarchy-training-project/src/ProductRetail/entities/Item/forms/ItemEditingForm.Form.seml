@@ -1,0 +1,181 @@
+_package: ProductRetail.entities.Item.forms
+_type: Form
+_name: ItemEditingForm
+default: false
+description: ''
+documentation: ''
+entity: ProductRetail.entities.Item.Item
+
+formTabs:
+  - _type: FormTab
+    _name: Item
+    description: ''
+    displayFormTabAs: ICON_LABEL
+    documentation: ''
+    documentationInterpreter: LITERAL
+    iconUrl: images://mdi/basket-fill.svg
+    label: Item
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: FormContainer
+        _name: Container39
+        layoutDirection: ROW
+
+        content:
+          - _type: FormContainer
+            layoutDirection: COLUMN
+            _name: Container28
+
+            content:
+              - _type: IdField
+                _name: UPC
+                description: ''
+                documentation: Universal Product Code (UPC) or barcode ID for this item. Please sync-up with the Supply Chain team.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: UPC
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                helperText: Barcode ID. See with Supply Chain team...
+                componentProperties:
+                  textTypography: body-1
+                  textAlign: left
+                labelProperties:
+                  position: left
+                  typography: caption
+                  isVisible: '1'
+                  alignment: right
+                  isFloating: '1'
+
+
+              - _type: ReferenceField
+                _name: FDN_Product
+                label: Product
+                useCustomLabel: true
+                value: FDN_Product
+                dataType: STRING
+                visibleValue: '0'
+                visibleValueInterpreter: LITERAL
+                referencedEntity: ProductRetail.entities.Product.Product
+                authoringMode: auto
+                helperText: Parent product
+                componentProperties:
+                  displayType: chip
+                  useAvatarInChip: '1'
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  position: left
+                  alignment: right
+                  isVisible: '1'
+                  typography: caption
+
+              - _type: ReferenceField
+                _name: FDN_Size
+                description: ''
+                documentation: Standard sizes are provided in the grid sizes for the corresponding family for the product.
+                documentationInterpreter: LITERAL
+                label: Size
+                useCustomLabel: true
+                value: FDN_Size
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                displayCard: ProductRetail.entities.Size.display_cards.SizeDisplayCardMinimal
+                referencedEntity: ProductRetail.entities.Size.Size
+                authoringMode: auto
+                helperText: Sizes are the ones available for the product family.
+                componentProperties:
+                  useAvatarInChip: '1'
+                  textTypography: body-1
+                  displayType: chip
+                  useSecondaryTextInChip: '1'
+                  textAlign: left
+                labelProperties:
+                  typography: caption
+                  position: left
+                  isVisible: '1'
+                  alignment: right
+
+              - _type: MenuField
+                _name: Color
+                description: ''
+                documentation: Standardized colors are important for SEO. Choose the closest useful match from the standpoint of a prospective customer.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: Color
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                helperText: Choose the closest useful match from the standpoint of a prospective customer.
+                componentProperties:
+                  listSort: code
+                  textTypography: body-1
+                  textColor: case when lower(Color) = 'white' then 'grey' else 'css:' || Color end
+                  textColorValueInterpreter: SEMQL
+                  textAlign: left
+                labelProperties:
+                  position: left
+                  typography: caption
+                  alignment: right
+                  isVisible: '1'
+
+              - _type: TextField
+                _name: ColorDescription
+                description: ''
+                documentation: Our detailed color and style descriptions are a competitive advantage. Make them clever and thought-provoking.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: ColorDescription
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                helperText: Make color description clever and thought-provoking.
+                componentProperties:
+                  multilineMaxLines: '3'
+                  textTypography: body-1
+                  textAlign: left
+                  multilineMinLines: '1'
+                  isCharCounterVisible: '0'
+                  isMultiline: '0'
+                labelProperties:
+                  position: left
+                  isVisible: '1'
+                  alignment: right
+                  typography: caption
+
+          - _type: FormContainer
+            layoutDirection: ROW
+            _name: Container29
+            
+            content:
+              - _type: ImageField
+                _name: MainImageURL
+                label: Primary Image
+                useCustomLabel: true
+                value: MainImageURL
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                helperText: If left empty, will use the parent image.
+                componentProperties:
+                  imageAlign: middle-center
+                  showFullSizeOnClick: '1'
+                  imageHeight: '300'
+                  fallbackImageType: url
+                  imageSourceType: url
+                  imageMode: fit
+                  textTypography: body-1
+                labelProperties:
+                  alignment: right
+                  position: left
+                  isVisible: '0'
+                  typography: caption
+                  isFloating: '1'

@@ -1,0 +1,17 @@
+_package: CustomerB2C.entities.Person.validations
+_type: PluginValidation
+_name: InvalidEmail
+label: Invalid Email
+entity: CustomerB2C.entities.Person.Person
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+pluginId: com.semarchy.engine.plugins.convergence.email
+threadPoolSize: 1
+validationLabel: This email from the source system is invalid. Check it for errors.
+validationScope: NONE
+pluginParams:
+  - paramName: VALIDATOR_ACCEPTED_DOMAINS
+    value: VALID_DOMAINS
+pluginInputs:
+  - expression: SourceEmail
+    inputName: EMAIL_ADDRESS

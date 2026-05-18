@@ -1,0 +1,17 @@
+_package: CustomerB2C.list_of_values
+_type: LOVType
+_name: FrequencyType
+label: Frequency Type
+description: ''
+length: 128
+validationLabel: ''
+lovValues:
+  - code: MONTH
+    label: Monthly
+    description: ''
+  - code: QUARTER
+    label: Quarterly
+    description: ''
+  - code: WEEK
+    label: Weekly
+    description: ''

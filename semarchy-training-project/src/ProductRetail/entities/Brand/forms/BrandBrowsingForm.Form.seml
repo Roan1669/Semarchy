@@ -1,0 +1,139 @@
+_package: ProductRetail.entities.Brand.forms
+_type: Form
+_name: BrandBrowsingForm
+default: true
+entity: ProductRetail.entities.Brand.Brand
+
+formTabs:
+  - _type: FormTab
+    _name: Brand
+    label: Brand
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+
+    content:
+      - _type: FormContainer
+        _name: Container30
+        layoutDirection: ROW
+
+        content:
+          - _type: FormContainer
+            _name: Container40
+            layoutDirection: COLUMN
+
+            content:
+              - _type: IdField
+                _name: ID
+                useCustomLabel: false
+                value: ID
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: Name
+                value: Name
+                useCustomLabel: false
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                dataType: STRING
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+                  
+              - _type: TextField
+                _name: LogoURL
+                value: LogoURL
+                useCustomLabel: false
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                dataType: STRING
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  isMultiline: '1'
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: CreationDate
+                value: CreationDate
+                useCustomLabel: false
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                dataType: TIMESTAMP
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: Creator
+                value: Creator
+                useCustomLabel: false
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                dataType: STRING
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+                  
+          - _type: ImageField
+            _name: Logo
+            value: LogoURL
+            useCustomLabel: false
+            visibleValue: '1'
+            visibleValueInterpreter: LITERAL
+            dataType: STRING
+            authoringMode: auto
+            componentProperties:
+              textTypography: body-1
+              imageSourceType: url
+              fallbackImageType: url
+              showFullSizeOnClick: '1'
+              imageAlign: top-left
+              imageMode: fit
+            labelProperties:
+              isVisible: '0'
+              alignment: right
+              position: left
+              typography: caption

@@ -1,0 +1,30 @@
+_package: CustomerB2C.references
+_type: Reference
+_name: PersonProductsPerson
+label: Person Products Person
+physicalName: PERSON_PRODUCTS_PERSON
+oneToMany: false
+validationScope: PRE_CONSO
+deletePropagation: CASCADE
+splitDuplicatePropagation: NONE
+fromEntity: CustomerB2C.entities.PersonProduct.PersonProduct
+fromRoleName: PersonProducts
+fromRoleLabel: Product
+fromRolePluralLabel: Products
+toEntity: CustomerB2C.entities.Person.Person
+toRoleName: Person
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: Person
+  label: Person
+  physicalName: PERSON
+  entity: CustomerB2C.entities.Product.Product
+toRoleLabel: Person
+toRolePhysicalName: PERSON
+brokenValidationLabel: ''
+mandatoryValidationLabel: ''
+
+
+
+
+

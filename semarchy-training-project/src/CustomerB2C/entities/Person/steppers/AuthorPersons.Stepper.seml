@@ -1,0 +1,164 @@
+_package: CustomerB2C.entities.Person.steppers
+_type: Stepper
+_name: AuthorPersons
+label: Author Persons
+iconUrl: images://mdi/package-variant.svg
+entity: CustomerB2C.entities.Person.Person
+
+stepperFinishValidations:
+  - onStepperFinish: SKIP
+    validationType: DETECT_DUPS
+  - onStepperFinish: SKIP
+    validationType: PLUGIN
+    validator: CustomerB2C.entities.Person.validations.InvalidEmail
+  - onStepperFinish: SKIP
+    validationType: MANDATORY
+    attribute: CustomerB2C.entities.Person.Person.LastName
+  - onStepperFinish: SKIP
+    validationType: LOV
+    attribute: CustomerB2C.entities.Person.Person.PersonType
+  - validationType: MANDATORY
+    attribute: CustomerB2C.entities.Person.Person.SourceEmail
+    onStepperFinish: WARN
+  - validationType: LOV
+    attribute: CustomerB2C.entities.Person.Person.ValueStatus
+    onStepperFinish: WARN
+
+rootStep:
+  _type: CollectionStep
+  _name: Customers
+  label: Customers
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  stepTransitionValidations:
+    - onStepExit: SKIP
+      validationType: DETECT_DUPS
+      matcher: CustomerB2C.entities.Person.Person.Person
+    - onStepExit: SKIP
+      validationType: PLUGIN
+      validator: CustomerB2C.entities.Person.validations.InvalidEmail
+    - onStepExit: SKIP
+      validationType: MANDATORY
+      attribute: CustomerB2C.entities.Person.Person.LastName
+    - onStepExit: SKIP
+      validationType: LOV
+      attribute: CustomerB2C.entities.Person.Person.PersonType
+    - validationType: MANDATORY
+      attribute: CustomerB2C.entities.Person.Person.SourceEmail
+      onStepExit: SKIP
+    - validationType: LOV
+      attribute: CustomerB2C.entities.Person.Person.ValueStatus
+      onStepExit: SKIP
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerB2C.entities.Person.collection_views.PersonImportMastersCollection
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayTableAllowed: true
+  displayListAllowed: true
+  displayGridAllowed: false
+  useCustomCollectionLabel: false
+
+  childSteps:
+    - _type: FormStep
+      _name: Customer
+      label: Customer
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerB2C.entities.Person.forms.PersonForm.Person
+      stepTransitionValidations:
+        - onStepExit: SKIP
+          validationType: DETECT_DUPS
+          matcher: CustomerB2C.entities.Person.Person.Person
+        - onStepExit: SKIP
+          validationType: PLUGIN
+          validator: CustomerB2C.entities.Person.validations.InvalidEmail
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.LastName
+        - onStepExit: SKIP
+          validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.PersonType
+        - validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.SourceEmail
+          onStepExit: SKIP
+        - validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.ValueStatus
+          onStepExit: SKIP
+      formStepValidations:
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: PLUGIN
+          validator: CustomerB2C.entities.Person.validations.InvalidEmail
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.LastName
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.PersonType
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.SourceEmail
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.ValueStatus
+
+    - _type: FormStep
+      _name: ContactInfo
+      label: Contact Info
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerB2C.entities.Person.forms.PersonForm.ContactInfo
+      stepTransitionValidations:
+        - onStepExit: SKIP
+          validationType: DETECT_DUPS
+          matcher: CustomerB2C.entities.Person.Person.Person
+        - onStepExit: SKIP
+          validationType: PLUGIN
+          validator: CustomerB2C.entities.Person.validations.InvalidEmail
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.LastName
+        - onStepExit: SKIP
+          validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.PersonType
+        - validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.SourceEmail
+          onStepExit: SKIP
+        - validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.ValueStatus
+          onStepExit: SKIP
+      formStepValidations:
+        - executedOnDataChange: true
+          executedOnFormOpen: true
+          validationType: PLUGIN
+          validator: CustomerB2C.entities.Person.validations.InvalidEmail
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.LastName
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.PersonType
+        - executedOnDataChange: true
+          executedOnFormOpen: true
+          validationType: MANDATORY
+          attribute: CustomerB2C.entities.Person.Person.SourceEmail
+        - executedOnDataChange: false
+          executedOnFormOpen: false
+          validationType: LOV
+          attribute: CustomerB2C.entities.Person.Person.ValueStatus

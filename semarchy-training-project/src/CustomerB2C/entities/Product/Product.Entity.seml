@@ -1,0 +1,94 @@
+_package: CustomerB2C.entities.Product
+_type: Entity
+_name: Product
+entityType: BASIC
+physicalTableName: PRODUCT
+iconUrl: images://mdi/package-variant.svg
+label: Product
+pluralLabel: Products
+description: ''
+documentation: ''
+enableDelete: true
+dataEntryAllowed: true
+historizeGolden: false
+historizeMaster: false
+
+attributes:
+  - _name: ID
+    _type: EntityAttribute
+    label: ID
+    description: ''
+    documentation: ''
+    physicalName: ID
+    dataType: String
+    mandatory: true
+    valueSeparator: ''
+    searchable: true
+    length: 128
+  - _name: ProductName
+    _type: EntityAttribute
+    label: Product Name
+    description: ''
+    documentation: ''
+    dataType: String
+    physicalName: PRODUCT_NAME
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+    length: 128
+  - _name: Description
+    _type: EntityAttribute
+    label: Description
+    description: ''
+    documentation: ''
+    dataType: String
+    physicalName: DESCRIPTION
+    length: 4000
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+  - _name: Origin
+    _type: EntityAttribute
+    label: Origin
+    description: ''
+    documentation: ''
+    dataType: String
+    physicalName: ORIGIN
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+    length: 128
+  - _name: SalesUnit
+    _type: EntityAttribute
+    label: Sales Unit
+    description: ''
+    documentation: ''
+    dataType: String
+    physicalName: SALES_UNIT
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+    length: 128
+  - _name: Price
+    _type: EntityAttribute
+    label: Price
+    description: ''
+    documentation: ''
+    dataType: Decimal
+    physicalName: PRICE
+    scale: 2
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    searchable: true
+    precision: 20
+
+primaryKey: CustomerB2C.entities.Product.Product.ID
+
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1

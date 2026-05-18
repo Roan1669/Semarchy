@@ -1,0 +1,48 @@
+_package: CustomerB2C.entities.Nickname.collection_views
+_type: CollectionView
+_name: NicknameCollection
+
+default: true
+entity: CustomerB2C.entities.Nickname.Nickname
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Nickname
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: CustomerB2C.entities.Nickname.display_cards.NicknameDisplayCard
+
+tableColumns:
+  - _type: IdColumn
+    _name: GivenName
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: GivenName
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: TopNickname
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: TopNickname
+    visibleByDefault: true
+    
+  - _type: TextColumn
+    _name: AllNicknames
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: AllNicknames
+    visibleByDefault: true

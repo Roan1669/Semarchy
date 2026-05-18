@@ -1,0 +1,120 @@
+_package: CustomerB2B.entities.Customer.business_views
+_type: BusinessView
+_name: DataQualityBusinessView
+entity: CustomerB2B.entities.Customer.Customer
+label: Data Quality
+rootLabel: Data Quality Issues
+rootPluralLabel: Data Quality Issues
+# Surface golden records that are missing key attributes — no email, no website, no sector, or very short names
+rootFilter: >
+  Email IS NULL
+  OR Website IS NULL
+  OR FDN_Sector IS NULL
+  OR Length(CustomerName) <= 2
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Customer
+  entity: CustomerB2B.entities.Customer.Customer
+  actionSet: CustomerB2B.entities.Customer.action_sets.CustomerActionSet
+  collection: CustomerB2B.entities.Customer.collection_views.CustomerCollectionView
+  form: CustomerB2B.entities.Customer.forms.CustomerForm
+  displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: false
+  transitions:
+    - _name: MissingEmail
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      label: Missing Email
+      iconUrl: images://mdi/email-off.svg
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: Email IS NULL
+      transitionPath: MissingEmail
+      useCustomLabel: false
+      businessViewEntity:
+        _name: MissingEmail
+        _type: BusinessViewEntity
+        displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+        entity: CustomerB2B.entities.Customer.Customer
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: false
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true
+        collection: CustomerB2B.entities.Customer.collection_views.CustomerCollectionView
+        form: CustomerB2B.entities.Customer.forms.CustomerForm
+
+    - _name: MissingWebsite
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      label: Missing Website
+      iconUrl: images://mdi/web-off.svg
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: Website IS NULL
+      transitionPath: MissingWebsite
+      useCustomLabel: false
+      businessViewEntity:
+        _name: MissingWebsite
+        _type: BusinessViewEntity
+        displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+        entity: CustomerB2B.entities.Customer.Customer
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: false
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true
+        collection: CustomerB2B.entities.Customer.collection_views.CustomerCollectionView
+        form: CustomerB2B.entities.Customer.forms.CustomerForm
+
+    - _name: MissingSector
+      _type: BusinessViewTransition
+      transitionType: FULLY_QUALIFIED
+      label: Missing Sector
+      iconUrl: images://mdi/tag-off.svg
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      filter: FDN_Sector IS NULL
+      transitionPath: MissingSector
+      useCustomLabel: false
+      businessViewEntity:
+        _name: MissingSector
+        _type: BusinessViewEntity
+        displayCard: CustomerB2B.entities.Customer.display_cards.CustomerDisplayCard
+        entity: CustomerB2B.entities.Customer.Customer
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: false
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true
+        collection: CustomerB2B.entities.Customer.collection_views.CustomerCollectionView
+        form: CustomerB2B.entities.Customer.forms.CustomerForm

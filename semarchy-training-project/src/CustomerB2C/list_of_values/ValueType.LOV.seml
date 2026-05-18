@@ -1,0 +1,14 @@
+_package: CustomerB2C.list_of_values
+_type: LOVType
+_name: ValueType
+label: Value Type
+description: For Value Status describing customer purchase history
+length: 128
+validationLabel: ''
+lovValues:
+  - code: HIGH
+    label: HIGH
+    description: ''
+  - code: NORMAL
+    label: NORMAL
+    description: ''

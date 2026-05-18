@@ -1,0 +1,75 @@
+_package: ProductRetail.entities.SubFamily.forms
+_type: Form
+_name: SubFamilyEditAndBrowsing
+entity: ProductRetail.entities.SubFamily.SubFamily
+default: true
+
+formTabs:
+  - _type: FormTab
+    _name: Subfamily
+    displayFormTabAs: ICON_LABEL
+    iconUrl: images://gs-retail/hierarchy-subfamily.svg
+    label: SubFamily
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: IdField
+        _name: ID
+        useCustomLabel: false
+        value: ID
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          textTypography: body-1
+          textAlign: left
+        labelProperties:
+          alignment: right
+          position: left
+          typography: caption
+          isVisible: '1'
+
+      - _type: TextField
+        _name: Name
+        useCustomLabel: false
+        value: Name
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          multilineMinLines: '1'
+          isCharCounterVisible: '0'
+          multilineMaxLines: '3'
+          isMultiline: '0'
+          textTypography: body-1
+        labelProperties:
+          alignment: right
+          typography: caption
+          isVisible: '1'
+          position: left
+          
+      - _type: ReferenceField
+        _name: FDN_Family
+        label: Family
+        useCustomLabel: true
+        value: FDN_Family
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        referencedEntity: ProductRetail.entities.Family.Family
+        authoringMode: auto
+        componentProperties:
+          displayType: chip
+          textAlign: left
+          useAvatarInChip: '1'
+          useSecondaryTextInChip: '1'
+          textTypography: body-1
+        labelProperties:
+          alignment: right
+          position: left
+          typography: caption
+          isVisible: '1'

@@ -1,0 +1,7 @@
+_package: CustomerB2C.publishers
+_type: Publisher
+_name: Marketing
+label: Marketing
+active: true
+code: MKT
+color: md:blue

@@ -1,0 +1,6 @@
+_package: ProductRetail.user_defined_types
+_type: UserDefinedType
+_name: URLString
+label: URL String
+length: 2000
+dataType: String

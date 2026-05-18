@@ -1,0 +1,52 @@
+_package: ProductRetail.entities.Family.steppers
+_type: Stepper
+_name: EditFamilies
+label: Edit Families
+entity: ProductRetail.entities.Family.Family
+rootStep:
+  _type: CollectionStep
+  _name: Families
+  label: Families
+  canFinishSubLevel: true
+  childDeleteType: HARD_DELETE
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  description: ''
+  displayGridAllowed: true
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: true
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  collectionView: ProductRetail.entities.Family.collection_views.FamilyCollection
+  stepTransitionValidations:
+    - onStepExit: SKIP
+      validationType: MANDATORY
+      attribute: ProductRetail.entities.Family.Family.Name
+  childSteps:
+    - _type: FormStep
+      _name: Family
+      label: Family
+      canFinishSubLevel: true
+      description: ''
+      enableMasterValuePicking: false
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      formTab: ProductRetail.entities.Family.forms.FamilyDataEntryForm.Family
+      formStepValidations:
+        - validationType: MANDATORY
+          executedOnDataChange: false
+          executedOnFormOpen: false
+          attribute: ProductRetail.entities.Family.Family.Name
+      stepTransitionValidations:
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: ProductRetail.entities.Family.Family.Name
+stepperFinishValidations:
+  - onStepperFinish: SKIP
+    validationType: MANDATORY
+    attribute: ProductRetail.entities.Family.Family.Name

@@ -1,0 +1,21 @@
+_package: CustomerB2C.entities.Person.enrichers
+_type: JavaPluginEnricher
+_name: GCleanseEmail
+label: Cleanse Email
+enricherExecutionScope: PRE_CONSO
+entity: CustomerB2C.entities.Person.Person
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+pluginId: com.semarchy.engine.plugins.convergence.email
+processingBatchSize: 1
+threadPoolSize: 1
+afterEnrichers: 
+  CustomerB2C.entities.Person.enrichers.FNormalizeAddress
+pluginInputs:
+  - expression: SourceEmail
+    inputName: IN_EMAIL_ADDRESS
+pluginOutputs:
+  - attributeName: CleansedEmail
+    outputName: OUT_CLEANSED_EMAIL
+  - attributeName: ValidEmailDomain
+    outputName: OUT_CLEANSED_HOST_VALID

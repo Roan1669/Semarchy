@@ -1,0 +1,161 @@
+_package: CustomerB2C.entities.Person.collection_views
+_type: CollectionView
+_name: PersonImportMastersCollection
+
+default: false
+entity: CustomerB2C.entities.Person.Person
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Customer
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: CustomerB2C.entities.Person.display_cards.PersonDisplayCard
+
+tableColumns:
+  - _type: TextColumn
+    _name: PublisherID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: PublisherID
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: SourceID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: SourceID
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: FirstName
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: FirstName
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: LastName
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: LastName
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: DateOfBirth
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: DATE
+    value: DateOfBirth
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Address_Street
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: true
+    label: Street
+    dataType: STRING
+    value: Address.Street
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Address_City
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    label: City
+    useCustomLabel: true
+    dataType: STRING
+    value: Address.City
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Address_State
+    columnAlign: LEFT
+    label: State
+    documentationInterpreter: LITERAL
+    useCustomLabel: true
+    dataType: STRING
+    value: Address.State
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Address_PostalCode
+    columnAlign: LEFT
+    label: PostalCode
+    documentationInterpreter: LITERAL
+    useCustomLabel: true
+    dataType: STRING
+    value: Address.PostalCode
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Address_Country
+    columnAlign: LEFT
+    dataType: STRING
+    label: Country
+    documentationInterpreter: LITERAL
+    useCustomLabel: true
+    value: Address.Country
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: SourceEmail
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: SourceEmail
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: SourcePhone
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: SourcePhone
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: MemberID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: MemberID
+    visibleByDefault: true
+
+  - _type: MenuColumn
+    _name: PersonType
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: PersonType
+    visibleByDefault: true
+    
+  - _type: MenuColumn
+    _name: ValueStatus
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: ValueStatus
+    visibleByDefault: true

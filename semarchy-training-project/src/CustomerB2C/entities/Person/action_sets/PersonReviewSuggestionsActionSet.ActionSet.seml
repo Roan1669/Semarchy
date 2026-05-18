@@ -1,0 +1,29 @@
+_package: CustomerB2C.entities.Person.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.Person.Person
+_name: PersonReviewSuggestionsActionSet
+label: Person Review Suggestions Action Set
+description: ''
+defaultActionSet: false
+actions:
+  - _type: ReviewSuggestions
+    _name: ReviewSuggestionsDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Review Suggestions
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    itemsLimit: 1000
+    mandateResolveAllSuggestions: false
+    waitDialogEnabled: false
+    onAcceptPromptGoldenId: false
+  - _type: MergeOrSplit
+    _name: MergeOrSplitDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Merge Or Split Duplicates
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    itemsLimit: 1000
+    waitDialogEnabled: false
+

@@ -1,0 +1,137 @@
+_package: ProductRetail.entities.Product
+_type: Entity
+_name: Product
+dataEntryAllowed: true
+enableDelete: true
+entityType: BASIC
+historizeGolden: true
+historizeMaster: false
+iconUrl: images://mdi/package-variant.svg
+label: Product
+physicalTableName: PRODUCT
+pluralLabel: Products
+
+attributes:
+  - _type: EntityAttribute
+    _name: ID
+    label: ID
+    physicalName: ID
+    dataType: LongInteger
+    length: 0
+    precision: 38
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    searchable: false    
+  - _type: EntityAttribute
+    _name: HeelHeight
+    label: Heel Height (in)
+    length: 128
+    mandatory: false
+    mandatoryValidationLabel: ''
+    physicalName: HEEL_HEIGHT
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+  - _type: EntityAttribute
+    _name: Material
+    label: Material
+    length: 128
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: NONE
+    physicalName: MATERIAL
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+  - _type: EntityAttribute
+    _name: Origin
+    lovValidationScope: PRE_CONSO
+    label: Made in
+    length: 128
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: NONE
+    physicalName: ORIGIN
+    searchable: true
+    valueSeparator: ','
+    dataType: ProductRetail.list_of_values.Countries
+  - _type: EntityAttribute
+    _name: SalesUnit
+    lovValidationScope: NONE
+    label: Sales Unit
+    length: 5
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: NONE
+    physicalName: SALES_UNIT
+    searchable: true
+    valueSeparator: ','
+    dataType: ProductRetail.list_of_values.SalesUnits
+  - _type: EntityAttribute
+    _name: ImageURL
+    label: Image
+    length: 2000
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: NONE
+    physicalName: IMAGE_URL
+    searchable: true
+    valueSeparator: ','
+    dataType: ProductRetail.user_defined_types.URLString
+  - _type: EntityAttribute
+    _name: Description
+    label: Description
+    length: 4000
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: NONE
+    multiValued: false
+    physicalName: DESCRIPTION
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+  - _type: EntityAttribute
+    _name: CareInstructions
+    goldenAttribute: true
+    i18ned: false
+    label: Care Instructions
+    length: 500
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: NONE
+    physicalName: CARE_INSTRUCTIONS
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+  - _type: EntityAttribute
+    _name: Name
+    description: Friendly name of a product. Use meaningful descriptions to aid SEO.
+      This is the first impression our customers have of our products.
+    documentation: Friendly name of a product. Use meaningful descriptions to aid
+      SEO. This is the first impression our customers have of our products.
+    label: Name
+    length: 128
+    mandatory: true
+    mandatoryValidationLabel: ''
+    mandatoryValidationScope: PRE_CONSO
+    physicalName: NAME
+    searchable: true
+    valueSeparator: ','
+    dataType: String 
+  - _type: EntityAttribute
+    _name: ClosureType
+    lovValidationScope: PRE_CONSO
+    label: Closure Type
+    length: 50
+    mandatory: false
+    mandatoryValidationLabel: ''
+    physicalName: CLOSURE_TYPE
+    valueSeparator: ','
+    searchable: true
+    dataType: ProductRetail.list_of_values.ClosureTypes
+
+primaryKey: ProductRetail.entities.Product.Product.ID
+
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1

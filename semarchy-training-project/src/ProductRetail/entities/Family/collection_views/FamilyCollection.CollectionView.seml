@@ -1,0 +1,56 @@
+_package: ProductRetail.entities.Family.collection_views
+_type: CollectionView
+_name: FamilyCollection
+
+default: true
+entity: ProductRetail.entities.Family.Family
+gridAllowed: true
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: true
+listShowDivider: false
+tableAllowed: true
+tableDisplayCardColumnLabel: Family
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: ProductRetail.entities.Family.display_cards.FamilyDisplayCard
+
+tableColumns:
+  - _type: ImageColumn
+    _name: ImageURL
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ImageURL
+    visibleByDefault: true
+    dataType: STRING
+    componentProperties:
+      showFullSizeOnClick: '1'
+      imageAlign: middle-center
+      imageMode: fit
+      fallbackImageType: url
+      imageSourceType: url
+
+  - _type: TextColumn
+    _name: Name
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    documentation: ''
+    useCustomLabel: false
+    value: Name
+    dataType: STRING
+    visibleByDefault: true
+    
+  - _type: IdColumn
+    _name: ID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    documentation: ''
+    useCustomLabel: false
+    value: ID
+    dataType: STRING
+    visibleByDefault: true

@@ -1,0 +1,51 @@
+_package: CustomerB2B.entities.Country.collection_views
+_type: CollectionView
+_name: CountryCollectionView
+entity: CustomerB2B.entities.Country.Country
+default: true
+displayCard: CustomerB2B.entities.Country.display_cards.CountryDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Country
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _name: CountryCode
+    _type: IdColumn
+    value: CountryCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: CountryName
+    _type: TextColumn
+    value: CountryName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: Region
+    _type: TextColumn
+    value: Region
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
+  - _name: ISONumericCode
+    _type: TextColumn
+    value: ISONumericCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: false

@@ -1,0 +1,15 @@
+_package: CustomerB2C.entities.CommChanPref.dups_managers
+_type: DupsManager
+_name: ManageDuplicatesOnCommChanPref
+label: Manage Duplicates on Communication Channel Preferences
+enableMasterValuePicking: true
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+displayCard: CustomerB2C.entities.CommChanPref.display_cards.CommChanPrefDisplayCard
+formTab: CustomerB2C.entities.CommChanPref.forms.CommChanPrefForm.CommChanPref
+collectionView: CustomerB2C.entities.CommChanPref.collection_views.CommChanPrefCollection
+checkoutUserDefinedSortEnabled: true
+checkoutDefaultDisplayType: TABLE
+checkoutDisplayTableAllowed: true
+checkoutDisplayListAllowed: true
+checkoutDisplayGridAllowed: false
+checkoutCustomSortEnabled: false

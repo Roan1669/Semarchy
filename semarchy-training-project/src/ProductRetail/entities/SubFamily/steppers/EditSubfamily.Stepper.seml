@@ -1,0 +1,77 @@
+_package: ProductRetail.entities.SubFamily.steppers
+_type: Stepper
+_name: EditSubfamily
+entity: ProductRetail.entities.SubFamily.SubFamily
+label: Edit Subfamily
+rootStep:
+  _type: CollectionStep
+  _name: Subfamilies
+  canFinishSubLevel: true
+  childDeleteType: HARD_DELETE
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  label: Subfamilies
+  linear: false
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  collectionView: ProductRetail.entities.SubFamily.collection_views.SubFamilyCollection
+  stepTransitionValidations:
+    - onStepExit: SKIP
+      validationType: MANDATORY
+      attribute: ProductRetail.references.SubFamilyHasFamily.Family
+    - onStepExit: SKIP
+      validationType: FOREIGN
+      attribute: ProductRetail.references.SubFamilyHasFamily.Family
+    - onStepExit: SKIP
+      validationType: MANDATORY
+      attribute: ProductRetail.entities.SubFamily.SubFamily.Name
+  childSteps:
+    - _type: FormStep
+      _name: SubFamily
+      canFinishSubLevel: true
+      enableMasterValuePicking: false
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      label: SubFamily
+      formTab: ProductRetail.entities.SubFamily.forms.SubFamilyEditAndBrowsing.Subfamily
+      formStepValidations:
+        - validationType: FOREIGN
+          executedOnFormOpen: false
+          executedOnDataChange: true
+          attribute: ProductRetail.references.SubFamilyHasFamily.Family
+        - validationType: MANDATORY
+          executedOnDataChange: true
+          executedOnFormOpen: false
+          attribute: ProductRetail.references.SubFamilyHasFamily.Family
+        - validationType: MANDATORY
+          executedOnDataChange: true
+          executedOnFormOpen: true
+          attribute: ProductRetail.entities.SubFamily.SubFamily.Name
+      stepTransitionValidations:
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.references.SubFamilyHasFamily.Family
+        - onStepExit: BLOCK
+          validationType: FOREIGN
+          attribute: ProductRetail.references.SubFamilyHasFamily.Family
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.entities.SubFamily.SubFamily.Name
+stepperFinishValidations:
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.references.SubFamilyHasFamily.Family
+  - onStepperFinish: BLOCK
+    validationType: FOREIGN
+    attribute: ProductRetail.references.SubFamilyHasFamily.Family
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.entities.SubFamily.SubFamily.Name
+

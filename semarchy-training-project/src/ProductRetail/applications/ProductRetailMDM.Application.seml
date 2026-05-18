@@ -1,0 +1,374 @@
+_package: ProductRetail.applications
+_type: Application
+_name: ProductRetailMDM
+label: Product Retail MDM
+applicationTitle: Product Retail MDM
+
+avatarImageUrl: images://gs-retail/cart-outline-blue.svg
+coverImageUrl: images://gs-retail/CamelClothingCover.jpg
+description: ''
+favIcon: images://gs-retail/cart-outline.png
+historyBrowsingEnabled: false
+historyBrowsingRequiredRole: ''
+logoUrl: images://gs-retail/CamelClothing.png
+sortStrategy: POSITION
+visibility: VISIBLE
+
+defaultAction: ProductRetail.applications.ProductRetailMDM.Root.TopActions.GlobalSearchConfig
+
+rootFolder:
+  _type: FolderAction
+  _name: Root
+  label: Top
+  description: Top level of application hierarchy
+  icon: images://mdi/folder.svg
+  imageAlign: MIDDLE_CENTER
+  imageMode: FIT
+  appActions:
+    - _type: FolderAction
+      _name: TopActions
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: GlobalSearchAction
+        _name: GlobalSearchConfig
+        icon: images://mdi/magnify.svg
+        iconColor: md:blue
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Search
+      - _type: MyTasksAction
+        _name: Inbox
+        badgeVisible: true
+        iconColor: md:blue
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+      - _type: FolderAction
+        _name: StartHere
+        icon: images://mdi/arrow-right.svg
+        iconColor: md:green
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Start Here
+        requiredRole: DataSteward
+        appActions:
+          - _type: ImportDataAppAction
+            _name: ImportBrands
+            image: images://gs-retail/ImportBrands.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Brands
+            importAction: ProductRetail.entities.Brand.action_sets.BrandActionSet.Import
+          - _type: ImportDataAppAction
+            _name: ImportFamilies
+            image: images://gs-retail/ImportFamilies.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Families
+            importAction: ProductRetail.entities.Family.action_sets.FamilyActions.ImportFamily
+          - _type: ImportDataAppAction
+            _name: ImportSubfamilies
+            image: images://gs-retail/ImportSubfamilies.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Subfamilies
+            importAction: ProductRetail.entities.SubFamily.action_sets.SubFamilyActions.ImportSubFamily
+          - _type: ImportDataAppAction
+            _name: ImportSizes
+            image: images://gs-retail/ImportSizes.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Sizes
+            importAction: ProductRetail.entities.Size.action_sets.SizeActions.ImportSize
+          - _type: ImportDataAppAction
+            _name: ImportProducts
+            image: images://gs-retail/ImportProducts.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Products
+            importAction: ProductRetail.entities.Product.action_sets.ProductActionSet.Import
+          - _type: ImportDataAppAction
+            _name: ImportItems
+            image: images://gs-retail/ImportItems.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Items
+            importAction: ProductRetail.entities.Item.action_sets.ItemActions.Import
+          - _type: ImportDataAppAction
+            _name: ImportImages
+            image: images://gs-retail/ImportItemImages.jpg
+            imageAlign: MIDDLE_CENTER
+            imageMode: FIT
+            label: Import Images
+            importAction: ProductRetail.entities.ItemImage.action_sets.ItemImageActionSet.Import
+    
+    - _type: FolderAction
+      _name: MoreActions
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      label: More
+      appActions:
+        - _type: FolderAction
+          _name: ReferenceData
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          label: Reference Data
+          appActions:
+            - _type: BrowseBusinessViewAction
+              _name: FamilyHierarchy
+              description: Hierarchy of families, subfamilies and sizes
+              icon: images://mdi/people.svg
+              image: images://gs-retail/BrowseFamily.jpg
+              imageAlign: TOP_LEFT
+              imageMode: FILL
+              label: Family hierarchy
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Family.business_views.Family
+            - _type: BrowseBusinessViewAction
+              _name: BrandDetails
+              description: Brand names, IDs and other dteails
+              image: images://gs-retail/BrowseBrand.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: Brand details
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Brand.business_views.Brands
+            - _type: BrowseBusinessViewAction
+              _name: Sizes
+              description: US and corresponding European sizes
+              image: images://gs-retail/BrowseSize.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: Sizes
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Size.business_views.Sizes
+
+        - _type: FolderAction
+          _name: ProductCatalog
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          label: Product Catalog
+          appActions:
+            - _type: BrowseBusinessViewAction
+              _name: AllProducts
+              description: Filterable list of all products
+              icon: images://mdi/package-variant.svg
+              iconColor: md:orange
+              image: images://gs-retail/BrowseProduct.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: All Products
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Product.business_views.Products
+            - _type: BrowseBusinessViewAction
+              _name: ByFamily
+              description: All products within their product Family hierarchy
+              icon: images://mdi/people.svg
+              image: images://gs-retail/BrowseFamily.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: STRETCH
+              label: By Family
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Family.business_views.ProductsByFamily
+            - _type: BrowseBusinessViewAction
+              _name: ByBrand
+              description: All products within their Brand hierarchy
+              icon: images://mdi/label-outline.svg
+              image: images://gs-retail/BrowseBrand.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: By Brand
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Brand.business_views.ProductsByBrand
+            - _type: BrowseBusinessViewAction
+              _name: AllItems
+              description: Filterable list of all items for all products
+              icon: images://mdi/basket-fill.svg
+              image: images://gs-retail/BrowseItems.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: All Items
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.Item.business_views.Items
+            - _type: BrowseBusinessViewAction
+              _name: ItemImageAction
+              description: Browsable list of all images attached to items
+              image: images://gs-retail/BrowseItemImages.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: All Item Images
+              nbRecordsBadgeVisible: false
+              useSearchOnOpen: false
+              viewType: GD
+              businessView: ProductRetail.entities.ItemImage.business_views.ItemImages
+            - _type: StartWorkflowAction
+              _name: CreateProduct
+              description: Create a new product with items and item images
+              icon: images://mdi/plus-circle-outline.svg
+              iconColor: md:green
+              image: images://default/folder-item-create.png
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              label: Add Product
+              startEvent: ProductRetail.workflows.AddProduct.Start
+
+        - _type: FolderAction
+          _name: Errors
+          icon: images://mdi/alert-octagon.svg
+          iconColor: md:red
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          label: Browse Errors
+          appActions:
+            - _type: BrowseBusinessViewAction
+              _name: BrandErrors
+              icon: images://mdi/alert-outline.svg
+              iconColor: md:red
+              image: images://gs-retail/BrowseBrandErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Brand Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.Brand.business_views.Brands
+            - _type: BrowseBusinessViewAction
+              _name: FamilyErrors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-retail/BrowseFamilyErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Family Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.Family.business_views.Family
+            - _type: BrowseBusinessViewAction
+              _name: SubFamilyErrors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-retail/BrowseSubfamilyErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Subfamily Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.SubFamily.business_views.SubFamily
+            - _type: BrowseBusinessViewAction
+              _name: SizeErrors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-retail/BrowseSizeErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Size Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.Size.business_views.Sizes
+            - _type: BrowseBusinessViewAction
+              _name: ProductErrors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-retail/BrowseProductErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Product Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.Product.business_views.Products
+            - _type: BrowseBusinessViewAction
+              _name: ItemErrors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-retail/BrowseItemsErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Item Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.Item.business_views.Items
+            - _type: BrowseBusinessViewAction
+              _name: ItemImageErrors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-retail/BrowseItemImagesErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FILL
+              label: Browse Item Image Errors
+              nbRecordsBadgeVisible: true
+              useSearchOnOpen: false
+              viewType: SAWE
+              businessView: ProductRetail.entities.ItemImage.business_views.ItemImages
+
+    - _type: FolderAction
+      _name: Dashboards
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      label: Dashboards
+      appActions:
+        - _type: OpenDashboardAction
+          _name: ProductMetrics
+          dashboard: ProductMetrics
+          dashboardApplication: ProductRetailDashboard
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          label: Product Metrics
+
+documentationConfig:
+  documentation: ''
+
+globalSearchConfig:
+  displaySearchForDropdown: true
+  sortBusinessViewsAlphabetically: false
+  globalSearchBusinessViews:
+    - _name: Products
+      _type: GlobalSearchBoView
+      viewType: GD
+      businessView: ProductRetail.entities.Product.business_views.Products
+      searchTypeConfig: ProductRetail.entities.Product.business_views.Products.Product.CustomFormConfig1
+      searchParameter: ProductRetail.entities.Product.search_forms.ProductByNameDesc.NameDesc
+
+navDrawer:
+
+  - _type: FolderNavGroup
+    _name: TopActionsGroup
+    dividerVisible: false
+    labelVisible: false
+    linkedFolder: ProductRetail.applications.ProductRetailMDM.Root.TopActions
+
+  - _type: NavigationGroup
+    _name: ProductCatalogShortcuts
+    dividerVisible: true
+    label: Quick Access
+    labelVisible: true
+    actions:
+      - appAction: ProductRetail.applications.ProductRetailMDM.Root.MoreActions.ProductCatalog.AllProducts
+      - appAction: ProductRetail.applications.ProductRetailMDM.Root.MoreActions.ProductCatalog.ByFamily
+      - appAction: ProductRetail.applications.ProductRetailMDM.Root.MoreActions.ProductCatalog.ByBrand
+      - appAction: ProductRetail.applications.ProductRetailMDM.Root.MoreActions.ProductCatalog.AllItems
+      - appAction: ProductRetail.applications.ProductRetailMDM.Root.MoreActions.ProductCatalog.CreateProduct
+
+  - _type: FolderNavGroup
+    _name: MoreActionsGroup
+    dividerVisible: true
+    labelVisible: true
+    linkedFolder: ProductRetail.applications.ProductRetailMDM.Root.MoreActions
+
+  - _type: FolderNavGroup
+    _name: DashboardsGroup
+    dividerVisible: true
+    labelVisible: true
+    linkedFolder: ProductRetail.applications.ProductRetailMDM.Root.Dashboards

@@ -1,0 +1,14 @@
+_package: CustomerB2B.entities.Customer.survivorship_rules
+_type: StandardSurvivorshipRule
+_name: EmailRule
+entity: CustomerB2B.entities.Customer.Customer
+label: Email Rule
+description: "Prefer the most recently updated non-null email address across source records."
+documentation: ""
+defaultRule: false
+consolidationStrategy: CUSTOM_RANKING
+consolidationSkipNulls: true
+overrideStrategy: UNTIL_NEXT_USER_CHANGE
+consolidationOrderByExpression: UpdateDate DESC
+attributes:
+  - attributeName: Email

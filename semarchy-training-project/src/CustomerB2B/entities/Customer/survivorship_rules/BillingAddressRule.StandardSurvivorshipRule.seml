@@ -1,0 +1,14 @@
+_package: CustomerB2B.entities.Customer.survivorship_rules
+_type: StandardSurvivorshipRule
+_name: BillingAddressRule
+entity: CustomerB2B.entities.Customer.Customer
+label: Billing Address Rule
+description: "The most recently updated source record wins for the BillingAddress complex type. This ensures the golden address reflects the latest known billing location."
+documentation: ""
+defaultRule: false
+consolidationStrategy: CUSTOM_RANKING
+consolidationSkipNulls: false
+overrideStrategy: UNTIL_NEXT_USER_CHANGE
+consolidationOrderByExpression: UpdateDate DESC
+attributes:
+  - attributeName: BillingAddress

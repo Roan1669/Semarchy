@@ -1,0 +1,10 @@
+_package: ProductRetail.model_priv_grants
+_type: ModelPrivGrant
+_name: DataSteward
+label: Data Steward
+roleName: DataSteward
+allowApiPublishingAsUser: true
+allowDataQualityDocumentation: false
+allowEnrichmentDocumentation: false
+dataAdminRole: true
+integrationWsRole: true

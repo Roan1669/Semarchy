@@ -1,0 +1,163 @@
+_package: ProductRetail.entities.Product.business_views
+_type: BusinessView
+_name: Products
+entity: ProductRetail.entities.Product.Product
+description: ''
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/package-variant.svg
+label: Products
+rootDescription: ''
+rootLabel: Product
+rootPluralLabel: Products
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _name: Product
+  _type: BusinessViewEntity
+  entity: ProductRetail.entities.Product.Product
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: true
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: true
+  sortExpression: Name
+  tableAllowed: true
+  actionSet: ProductRetail.entities.Product.action_sets.ProductActionSet
+  collection: ProductRetail.entities.Product.collection_views.ProductCollection
+  form: ProductRetail.entities.Product.forms.ProductBrowsingForm
+  displayCard: ProductRetail.entities.Product.display_cards.ProductDisplayCard
+  businessEntitySearchConfigs:
+    - _name: CustomFormConfig1
+      _type: BusinessEntitySearchTypeConfig
+      searchType: CUSTOM_FORM
+      enabled: true
+      customForm: ProductRetail.entities.Product.search_forms.ProductByNameDesc
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+      enabled: true
+    - _name: CustomFormConfig2
+      _type: BusinessEntitySearchTypeConfig
+      searchType: CUSTOM_FORM
+      enabled: true
+      customForm: ProductRetail.entities.Product.search_forms.ProductBySize
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+      enabled: true
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+      enabled: true
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+      enabled: true
+  referenceAttributeNavigationConfigs:
+    - formField: ProductRetail.entities.Product.forms.ProductBrowsingForm.Product.Container41.Container31.FDN_Family
+      navigationMode: BUSINESS_OBJECT_VIEW
+      businessView: ProductRetail.entities.Family.business_views.Family
+    - formField: ProductRetail.entities.Product.forms.ProductBrowsingForm.Product.Container41.Container31.FDN_Brand
+      navigationMode: BUSINESS_OBJECT_VIEW
+      businessView: ProductRetail.entities.Brand.business_views.Brands
+    - formField: ProductRetail.entities.Product.forms.ProductBrowsingForm.Product.Container41.Container31.FDN_SubFamily
+      navigationMode: BUSINESS_OBJECT_VIEW
+      businessView: ProductRetail.entities.SubFamily.business_views.SubFamily
+  transitions:
+    - _name: Item
+      _type: BusinessViewTransition
+      displayFormTabAs: ICON_LABEL
+      displayTransitionNodeAs: ICON_LABEL
+      enableHierarchy: '0'
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      iconUrl: images://mdi/basket-fill.svg
+      transitionPath: Items
+      filter: 1 = 1
+      transitionType: FULLY_QUALIFIED
+      transitionVisible: '1'
+      transitionVisibleInterpreter: LITERAL
+      useCustomLabel: false
+      visibleInFormTabCondition: ANY Items HAVE ( UPC IS NOT NULL )
+      businessViewEntity: 
+        _name: Item
+        _type: BusinessViewEntity
+        displayRecordCount: ALWAYS
+        enableUserDefinedSort: true
+        gridAllowed: true
+        listAllowed: true
+        outlineVisible: false
+        overrideDefaultSort: false
+        tableAllowed: true
+        collection: ProductRetail.entities.Item.collection_views.ItemCollection
+        entity: ProductRetail.entities.Item.Item
+        form: ProductRetail.entities.Item.forms.ItemBrowsingForm
+        displayCard: ProductRetail.entities.Item.display_cards.ItemDisplayCard
+        referenceAttributeNavigationConfigs:
+          - formField: ProductRetail.entities.Item.forms.ItemBrowsingForm.Item.Container27.Container37.FDN_Product
+            navigationMode: NOT_NAVIGABLE
+          - formField: ProductRetail.entities.Item.forms.ItemBrowsingForm.Item.Container27.Container37.FDN_Size
+            navigationMode: NOT_NAVIGABLE
+        transitions:
+          - _name: Images
+            _type: BusinessViewTransition
+            description: ''
+            displayFormTabAs: ICON_LABEL
+            displayTransitionNodeAs: ICON_LABEL
+            enableHierarchy: '0'
+            enableHierarchyInterpreter: LITERAL
+            expandHierarchyByDefault: false
+            filter: 1 = 1
+            iconUrl: images://mdi/folder-multiple-image.svg
+            transitionPath: Images
+            transitionType: FULLY_QUALIFIED
+            transitionVisible: '1'
+            transitionVisibleInterpreter: LITERAL
+            useCustomLabel: false
+            businessViewEntity: 
+              _name: ItemImage
+              _type: BusinessViewEntity
+              displayRecordCount: ALWAYS
+              enableUserDefinedSort: true
+              gridAllowed: true
+              listAllowed: true
+              outlineVisible: false
+              overrideDefaultSort: false
+              tableAllowed: true
+              collection: ProductRetail.entities.ItemImage.collection_views.ItemImageCollection
+              entity: ProductRetail.entities.ItemImage.ItemImage
+              form: ProductRetail.entities.ItemImage.forms.ItemImageBrowsingForm
+              displayCard: ProductRetail.entities.ItemImage.display_cards.ItemImageDisplayCard
+              referenceAttributeNavigationConfigs:
+                - formField: ProductRetail.entities.ItemImage.forms.ItemImageBrowsingForm.ItemImage.Container24.Container26.FDN_Item
+                  navigationMode: MODAL_FORM
+    - _name: GoldenHistoryRecords
+      _type: BusinessViewTransition
+      displayFormTabAs: ICON_LABEL
+      displayTransitionNodeAs: ICON_LABEL
+      enableHierarchy: '0'
+      enableHierarchyInterpreter: LITERAL
+      expandHierarchyByDefault: false
+      iconUrl: images://mdi/history.svg
+      label: History
+      pluralLabel: History
+      transitionPath: GoldenHistoryRecords
+      transitionType: FULLY_QUALIFIED
+      transitionVisible: '1'
+      transitionVisibleInterpreter: LITERAL
+      useCustomLabel: true
+      businessViewEntity: 
+        _type: BusinessViewEntityReference
+        ref: ProductRetail.entities.Product.business_views.Products.Product
+      filter: 1 = 1
+
+
+
+
+
+
+
+

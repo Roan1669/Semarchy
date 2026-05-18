@@ -1,0 +1,15 @@
+_package: ProductRetail.model_jobs
+_type: ModelJob
+_name: BRAND
+jobType: INTEGRATION
+queueName: Default
+modelTasks:
+  - entity: ProductRetail.entities.Brand.Brand
+    _type: ModelJobTask
+    _name: Brand
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true

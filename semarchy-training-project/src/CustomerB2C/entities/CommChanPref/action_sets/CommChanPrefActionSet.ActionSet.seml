@@ -1,0 +1,53 @@
+_package: CustomerB2C.entities.CommChanPref.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+_name: CommChanPrefActionSet
+label: Comm Chan Pref Action Set
+description: ''
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorCommChanPrefs
+    useCustomLabel: true
+    label: Create
+    description: ''
+    createdRecordType: MASTER
+    allowOtherPublishers: true
+    defaultPublisher: CustomerB2C.publishers.CRM
+    waitDialogEnabled: false
+    createMultiple: true
+    stepper: CustomerB2C.entities.CommChanPref.steppers.AuthorCommChanPref
+  - _type: EditAction
+    _name: EditAuthorCommChanPrefs
+    useCustomLabel: true
+    label: Edit
+    description: ''
+    multipleSelectionAllowed: true
+    itemsLimit: 1000
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.CommChanPref.steppers.AuthorCommChanPref
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorCommChanPrefs
+    useCustomLabel: true
+    label: Mass Update
+    description: ''
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.CommChanPref.steppers.AuthorCommChanPref
+  - _type: ExportAction
+    _name: Export
+    useCustomLabel: true
+    label: Export
+    description: ''
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorCommChanPrefs
+    useCustomLabel: true
+    label: Import
+    description: ''
+    importMode: CREATE_AND_UPDATE
+    importedRecordType: MASTER
+    allowOtherPublishers: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.CommChanPref.steppers.AuthorCommChanPref

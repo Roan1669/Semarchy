@@ -35,12 +35,24 @@ matcher:
       label: Phonetic Name And Same City
       description: Match customers with the same phonetic name and city
       documentation: Match customers with the same phonetic name and city
-      condition: Record1.PhoneticName = Record2.PhoneticName 
-                 AND 
+      condition: Record1.PhoneticName = Record2.PhoneticName
+                 AND
                  Record1.BillingAddress.City = Record2.BillingAddress.City
-                 AND 
+                 AND
                  Record1.BillingAddress.Country = Record2.BillingAddress.Country
       matchScore: 90
+      usingMatchOn: false
+
+    - _name: SameWebsiteDomain
+      _type: SemQLMatchRule
+      label: Same Website Domain
+      description: Match customers sharing the same website domain. Complements the WebsiteUniqueKey by catching duplicates that arrive from different publishers before consolidation.
+      documentation: Strips protocol prefixes and paths before comparing — matches 'http://acme.com/en' with 'https://acme.com' for example.
+      condition: Record1.Website IS NOT NULL
+                 AND Record2.Website IS NOT NULL
+                 AND LOWER( REGEXP_REPLACE( Record1.Website, '^https?://(www\.)?|/.*$', '' ) )
+                   = LOWER( REGEXP_REPLACE( Record2.Website, '^https?://(www\.)?|/.*$', '' ) )
+      matchScore: 85
       usingMatchOn: false
 
   useTransitiveMatchScore: true
@@ -131,6 +143,18 @@ attributes:
     mandatory: false
     searchable: false     
      
+  - _name: Email
+    _type: EntityAttribute
+    label: Email
+    description: ""
+    documentation: 'Primary contact email address for the customer'
+    dataType: String
+    physicalName: EMAIL
+    i18ned: false
+    length: 128
+    mandatory: false
+    searchable: true
+
   - _name: BillingAddress
     _type: EntityAttribute
     description: ''

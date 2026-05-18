@@ -1,0 +1,75 @@
+_package: CustomerB2C.model_diagrams
+_type: ModelDiagram
+_name: CustomerB2CDiagram
+label: Customer B2C Diagram
+showForeignAttribute: true
+entityNameFormat: NAME
+attributeNameFormat: NAME
+showAttributeDataType: true
+showInheritLinkName: false
+showInheritedAttributes: false
+showReferenceCardinality: false
+showReferenceRoles: false
+showReferenceName: false
+entityShapes:
+  - _type: EntityShape
+    entity: CustomerB2C.entities.Product.Product
+    _name: Product
+    borderColor: "#095fe8"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 1041.134535280387
+      y: -108.55924144430544
+    width: -1
+  - _type: EntityShape
+    entity: CustomerB2C.entities.Nickname.Nickname
+    _name: Nickname
+    borderColor: "#e87909"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 152.39728940563992
+      y: 182.08409850632717
+    width: -1
+  - _type: EntityShape
+    entity: CustomerB2C.entities.CommChanPref.CommChanPref
+    _name: CommChanPref
+    borderColor: "#e809e8"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 31.858014657531385
+      y: 518.8063464588291
+    width: -1
+  - _type: EntityShape
+    entity: CustomerB2C.entities.Person.Person
+    _name: Person
+    borderColor: "#e80914"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 557.3723982565042
+      y: -181.2725921352382
+    width: -1
+  - _type: EntityShape
+    entity: CustomerB2C.entities.PersonProduct.PersonProduct
+    _name: PersonProduct
+    borderColor: "#32e809"
+    fontTitleColor: ""
+    height: -1
+    position:
+      x: 957.3855447578057
+      y: 630.6174571372095
+    width: -1
+referenceLinks:
+  - bendPoints:
+      - x: 435
+        y: 435
+    reference: CustomerB2C.references.CommunicationChannelPreferencesPerson
+  - bendPoints: []
+    reference: CustomerB2C.references.PersonProductsPerson
+  - bendPoints:
+      - x: 1110
+        y: 330
+    reference: CustomerB2C.references.PersonProductsProduct

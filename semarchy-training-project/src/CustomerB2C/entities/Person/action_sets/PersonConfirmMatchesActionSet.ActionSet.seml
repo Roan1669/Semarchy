@@ -1,0 +1,35 @@
+_package: CustomerB2C.entities.Person.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.Person.Person
+_name: PersonConfirmMatchesActionSet
+label: Person Confirm Matches Action Set
+description: ''
+defaultActionSet: false
+actions:
+  - _type: ReviewAndConfirm
+    _name: ReviewAndConfirmDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Review And Confirm Matches
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ConfirmMatchesOnPerson
+    enableEdit: true
+    itemsLimit: 1000
+    mandateConfirmAll: false
+    waitDialogEnabled: false
+  - _type: DirectConfirmDupsAction
+    _name: DirectConfirmDuplicates
+    useCustomLabel: true
+    label: Single-Click Confirm
+    description: ''
+    waitDialogEnabled: false
+    itemsLimit: 1000
+  - _type: MergeOrSplit
+    _name: MergeOrSplitDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Merge Or Split Duplicates
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    itemsLimit: 1000
+    waitDialogEnabled: false
+

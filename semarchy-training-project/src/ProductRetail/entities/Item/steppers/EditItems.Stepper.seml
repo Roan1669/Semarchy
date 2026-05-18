@@ -1,0 +1,240 @@
+_package: ProductRetail.entities.Item.steppers
+_type: Stepper
+_name: EditItems
+label: Edit Items
+entity: ProductRetail.entities.Item.Item
+rootStep:
+  _type: CollectionStep
+  _name: Items
+  label: Items
+  canFinishSubLevel: true
+  childDeleteType: HARD_DELETE
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  description: ''
+  displayGridAllowed: true
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  collectionView: ProductRetail.entities.Item.collection_views.ItemCollection
+  stepTransitionValidations:
+    - onStepExit: BLOCK
+      validationType: LOV
+      attribute: ProductRetail.entities.Item.Item.Color
+    - onStepExit: BLOCK
+      validationType: FOREIGN
+      attribute: ProductRetail.references.ItemHasSize.Size
+    - onStepExit: BLOCK
+      validationType: FOREIGN
+      attribute: ProductRetail.references.ItemHasProduct.Product
+    - onStepExit: BLOCK
+      validationType: MANDATORY
+      attribute: ProductRetail.references.ItemHasProduct.Product
+    - onStepExit: BLOCK
+      validationType: MANDATORY
+      attribute: ProductRetail.entities.Item.Item.Color
+    - onStepExit: BLOCK
+      validationType: MANDATORY
+      attribute: ProductRetail.references.ItemHasSize.Size
+  childSteps:
+    - _type: FormStep
+      _name: Item
+      label: Item
+      canFinishSubLevel: true
+      description: ''
+      enableMasterValuePicking: false
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      formTab: ProductRetail.entities.Item.forms.ItemEditingForm.Item
+      formStepValidations:
+        - validationType: LOV
+          executedOnDataChange: true
+          executedOnFormOpen: false
+          attribute: ProductRetail.entities.Item.Item.Color
+        - executedOnDataChange: true
+          executedOnFormOpen: false
+          validationType: MANDATORY
+          attribute: ProductRetail.entities.Item.Item.Color
+        - executedOnDataChange: true
+          executedOnFormOpen: false
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemHasSize.Size
+        - executedOnDataChange: true
+          executedOnFormOpen: false
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemHasProduct.Product
+        - executedOnDataChange: true
+          executedOnFormOpen: false
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemHasSize.Size
+        - executedOnFormOpen: false
+          executedOnDataChange: true
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemHasProduct.Product
+      referenceFormFieldConfigs:
+        - enableUserSort: true
+          referenceFilter: Record.Product.FID_Family = Referenced.FID_Family
+          fdnFormField: ProductRetail.entities.Item.forms.ItemEditingForm.Item.Container39.Container28.FDN_Size
+          referencePickerType: AUTO_COMPLETE
+          referencePickerCollectionView: ProductRetail.entities.Size.collection_views.SizeCollection
+        - enableUserSort: true
+          referencePickerType: AUTO_COMPLETE
+          fdnFormField: ProductRetail.entities.Item.forms.ItemEditingForm.Item.Container39.Container28.FDN_Product
+          referencePickerCollectionView: ProductRetail.entities.Product.collection_views.ProductCollection
+      stepTransitionValidations:
+        - onStepExit: BLOCK
+          validationType: LOV
+          attribute: ProductRetail.entities.Item.Item.Color
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.entities.Item.Item.Color
+        - onStepExit: BLOCK
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemHasSize.Size
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemHasProduct.Product
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemHasSize.Size
+        - onStepExit: BLOCK
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemHasProduct.Product
+    - _type: CollectionStep
+      _name: Images
+      label: Images
+      canFinishSubLevel: true
+      childDeleteType: HARD_DELETE
+      childImportModeOnParentEdit: CREATE_AND_UPDATE
+      createChildUsingManyToManyPicker: false
+      customSortEnabled: false
+      defaultDisplayType: TABLE
+      description: ''
+      displayGridAllowed: true
+      displayListAllowed: true
+      displayTableAllowed: true
+      enableChildCopyOnParentCreate: true
+      enableChildCopyOnParentEdit: true
+      enableChildCreationOnParentCreate: true
+      enableChildCreationOnParentEdit: true
+      enableChildDeleteOnParentEdit: true
+      enableChildEditOnParentCreate: true
+      enableChildEditOnParentEdit: true
+      enableChildImportOnParentCreate: false
+      enableChildImportOnParentEdit: false
+      enableChildRemoveOnParentCreate: true
+      enableChildRemoveOnParentEdit: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: false
+      formFieldsMode: AUTO
+      linear: true
+      manyToManyCustomSortEnabled: false
+      manyToManyDefaultDisplayType: TABLE
+      manyToManyDisplayGridAllowed: false
+      manyToManyDisplayListAllowed: false
+      manyToManyDisplayTableAllowed: false
+      manyToManyUserDefinedSortEnabled: false
+      skipToChildCreationOnParentCreate: true
+      skipToChildEditingOnParentEdit: true
+      useCustomCollectionLabel: false
+      userDefinedSortEnabled: false
+      collectionView: ProductRetail.entities.ItemImage.collection_views.ItemImageCollection
+      oneToManyReference: ProductRetail.references.ItemImageHasItem
+      stepTransitionValidations:
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: ProductRetail.entities.Item.Item.Color
+        - onStepExit: SKIP
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemImageHasItem.Item
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemImageHasItem.Item
+        - onStepExit: SKIP
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemHasSize.Size
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemHasProduct.Product
+        - onStepExit: SKIP
+          validationType: LOV
+          attribute: ProductRetail.entities.Item.Item.Color
+        - onStepExit: SKIP
+          validationType: FOREIGN
+          attribute: ProductRetail.references.ItemHasProduct.Product
+        - onStepExit: SKIP
+          validationType: MANDATORY
+          attribute: ProductRetail.references.ItemHasSize.Size
+      childSteps:
+        - _type: FormStep
+          _name: ItemImage
+          label: Item Image
+          canFinishSubLevel: true
+          description: ''
+          enableMasterValuePicking: false
+          enabledOnParentCreate: true
+          enabledOnParentEdit: true
+          formFieldsMode: AUTO
+          formTab: ProductRetail.entities.ItemImage.forms.ItemImageEditingForm.ItemImage
+          formStepValidations:
+            - validationType: FOREIGN
+              executedOnDataChange: false
+              executedOnFormOpen: false
+              attribute: ProductRetail.references.ItemImageHasItem.Item
+            - validationType: MANDATORY
+              executedOnDataChange: false
+              executedOnFormOpen: false
+              attribute: ProductRetail.references.ItemImageHasItem.Item
+          referenceFormFieldConfigs:
+            - enableUserSort: true
+              fdnFormField: ProductRetail.entities.ItemImage.forms.ItemImageEditingForm.ItemImage.FDN_Item
+              referencePickerType: AUTO_COMPLETE
+              referencePickerCollectionView: ProductRetail.entities.Item.collection_views.ItemCollection
+          stepTransitionValidations:
+            - onStepExit: SKIP
+              validationType: MANDATORY
+              attribute: ProductRetail.references.ItemImageHasItem.Item
+            - onStepExit: SKIP
+              validationType: FOREIGN
+              attribute: ProductRetail.references.ItemImageHasItem.Item
+stepperFinishValidations:
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.references.ItemHasSize.Size
+  - onStepperFinish: BLOCK
+    validationType: LOV
+    attribute: ProductRetail.entities.Item.Item.Color
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.references.ItemImageHasItem.Item
+  - onStepperFinish: BLOCK
+    validationType: FOREIGN
+    attribute: ProductRetail.references.ItemHasProduct.Product
+  - onStepperFinish: BLOCK
+    validationType: FOREIGN
+    attribute: ProductRetail.references.ItemImageHasItem.Item
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.entities.Item.Item.Color
+  - onStepperFinish: BLOCK
+    validationType: FOREIGN
+    attribute: ProductRetail.references.ItemHasSize.Size
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.references.ItemHasProduct.Product
+
+
+
+
+
+
+
+
+
+

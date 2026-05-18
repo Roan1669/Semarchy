@@ -1,0 +1,15 @@
+_package: ProductRetail.model_jobs
+_type: ModelJob
+_name: ITEM
+jobType: INTEGRATION
+queueName: Default
+modelTasks:
+  - entity: ProductRetail.entities.Item.Item
+    _type: ModelJobTask
+    _name: Item
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true

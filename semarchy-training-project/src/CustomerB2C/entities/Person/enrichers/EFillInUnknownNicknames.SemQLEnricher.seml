@@ -1,0 +1,14 @@
+_package: CustomerB2C.entities.Person.enrichers
+_type: SemQLEnricher
+_name: EFillInUnknownNicknames
+label: Fill In unknown Nicknames
+description: In cases where a name doesn't have a nickname, take the original first
+  name, for matching reasons.
+condition: Nickname IS NULL
+enricherExecutionScope: PRE_CONSO
+entity: CustomerB2C.entities.Person.Person
+afterEnrichers: 
+  CustomerB2C.entities.Person.enrichers.DLookupNickname
+semQlEnricherExpressions:
+  - attributeName: Nickname
+    expression: LOWER ( FirstName )

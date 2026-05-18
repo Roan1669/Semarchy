@@ -1,0 +1,34 @@
+_package: CustomerB2C.entities.Nickname.steppers
+_type: Stepper
+_name: AuthorNicknames
+label: Author Nicknames
+iconUrl: images://mdi/package-variant.svg
+entity: CustomerB2C.entities.Nickname.Nickname
+rootStep:
+  _type: CollectionStep
+  _name: Nicknames
+  label: Nicknames
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerB2C.entities.Nickname.collection_views.NicknameCollection
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayTableAllowed: true
+  displayListAllowed: true
+  displayGridAllowed: false
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: Nickname
+      label: Nickname
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerB2C.entities.Nickname.forms.NicknameForm.Nickname

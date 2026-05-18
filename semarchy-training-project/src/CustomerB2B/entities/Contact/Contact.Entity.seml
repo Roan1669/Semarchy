@@ -1,0 +1,82 @@
+_package: CustomerB2B.entities.Contact
+_type: Entity
+_name: Contact
+entityType: BASIC
+physicalTableName: CONTACT
+iconUrl: 'images://mdi/person.svg'
+label: Contact
+pluralLabel: Contacts
+description: "A person who is a contact at a B2B Customer organisation"
+documentation: "Represents an individual contact (e.g. account manager, billing contact) associated with a B2B Customer."
+enableDelete: true
+historizeGolden: false
+historizeMaster: false
+
+attributes:
+  - _name: ContactID
+    _type: EntityAttribute
+    label: Contact ID
+    physicalName: CONTACT_ID
+    dataType: LongInteger
+    precision: 38
+    length: 32
+    goldenAttribute: true
+    i18ned: false
+    mandatory: true
+    searchable: true
+
+  - _name: FirstName
+    _type: EntityAttribute
+    label: First Name
+    physicalName: FIRST_NAME
+    dataType: String
+    length: 64
+    mandatory: true
+    mandatoryValidationLabel: "First Name cannot be blank!"
+    mandatoryValidationScope: PRE_CONSO
+    searchable: true
+
+  - _name: LastName
+    _type: EntityAttribute
+    label: Last Name
+    physicalName: LAST_NAME
+    dataType: String
+    length: 64
+    mandatory: true
+    mandatoryValidationLabel: "Last Name cannot be blank!"
+    mandatoryValidationScope: PRE_CONSO
+    searchable: true
+
+  - _name: Email
+    _type: EntityAttribute
+    label: Email
+    physicalName: EMAIL
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
+
+  - _name: Phone
+    _type: EntityAttribute
+    label: Phone
+    physicalName: PHONE
+    dataType: String
+    length: 32
+    mandatory: false
+    searchable: false
+
+  - _name: JobTitle
+    _type: EntityAttribute
+    label: Job Title
+    physicalName: JOB_TITLE
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: false
+
+primaryKey: CustomerB2B.entities.Contact.Contact.ContactID
+
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1
+

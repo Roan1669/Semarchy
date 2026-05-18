@@ -1,0 +1,315 @@
+_package: ProductRetail.entities.Product.forms
+_type: Form
+_name: ProductBrowsingForm
+entity: ProductRetail.entities.Product.Product
+default: true
+
+formTabs:
+  - _type: FormTab
+    _name: Product
+    documentationInterpreter: LITERAL
+    displayFormTabAs: ICON_LABEL
+    iconUrl: images://mdi/package-variant.svg
+    label: Product
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: TextField
+        _name: Name
+        documentation: Friendly name of a product. Consider using meaningful descriptions that would augment our SEO. This is the first information our customers see about our products.
+        documentationInterpreter: LITERAL
+        useCustomLabel: false
+        value: Name
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          isMultiline: '1'
+          textTypography: display-1
+          multilineMaxLines: '3'
+          isCharCounterVisible: '0'
+          multilineMinLines: '1'
+          textAlign: left
+        labelProperties:
+          alignment: caption
+          isVisible: '0'
+          position: left
+
+      - _type: FormContainer
+        _name: Container41
+        layoutDirection: ROW
+
+        content:
+          - _type: FormContainer
+            _name: Container31
+            layoutDirection: COLUMN
+            relativeWidth: 40
+
+            content:
+              - _type: IdField
+                _name: ID
+                documentation: Unique product ID. Please refer to our **internal guidelines** when launching a new product as to how you should use this field.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: ID
+                dataType: LONG_INTEGER
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  alignment: right
+                  isVisible: '1'
+                  typography: caption
+                  position: left
+
+              - _type: ReferenceField
+                _name: FDN_Brand
+                label: Brand
+                useCustomLabel: true
+                value: FDN_Brand
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                referencedEntity: ProductRetail.entities.Brand.Brand
+                authoringMode: auto
+                componentProperties:
+                  useAvatarInChip: '1'
+                  textAlign: left
+                  displayType: chip
+                  textTypography: body-1
+                labelProperties:
+                  typography: caption
+                  alignment: right
+                  position: left
+                  isVisible: '1'
+
+              - _type: ReferenceField
+                _name: FDN_Family
+                label: Family
+                useCustomLabel: true
+                value: FDN_Family
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                referencedEntity: ProductRetail.entities.Family.Family
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  useAvatarInChip: '1'
+                  displayType: chip
+                  textTypography: body-1
+                labelProperties:
+                  typography: caption
+                  position: left
+                  alignment: right
+                  isVisible: '1'
+
+              - _type: ReferenceField
+                _name: FDN_SubFamily
+                label: Sub Family
+                useCustomLabel: true
+                value: FDN_SubFamily
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                referencedEntity: ProductRetail.entities.SubFamily.SubFamily
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  displayType: chip
+                  useAvatarInChip: '1'
+                  textTypography: body-1
+                labelProperties:
+                  position: left
+                  alignment: right
+                  typography: caption
+                  isVisible: '1'
+
+              - _type: MenuField
+                _name: SalesUnit
+                documentation: "Sales unit is a goverened list of values that is dictated by our Supply Chain department. Valid values are: * Pair * Piece * Set"
+                documentationInterpreter: LITERAL
+                label: Sales Unit
+                useCustomLabel: true
+                value: SalesUnit
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                  listSort: code
+                  listSourceType: list-of-values
+                labelProperties:
+                  position: left
+                  typography: caption
+                  alignment: right
+                  isVisible: '1'
+
+              - _type: TextField
+                _name: Material
+                documentation: Decribes the main material used as it apears in the shipping box. Refer to our **internal guidelines** for details.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: Material
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  isMultiline: '1'
+                  multilineMinLines: '1'
+                  multilineMaxLines: '3'
+                  isCharCounterVisible: '0'
+                  textTypography: body-1
+                labelProperties:
+                  typography: caption
+                  alignment: right
+                  position: left
+                  isVisible: '1'
+
+              - _type: MenuField
+                _name: Origin
+                documentation: Country of origin for the product. Labelling our products with the country of origin gives a better user experience for our international customers browsing our online catalog.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: Origin
+                dataType: LONG_INTEGER
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textTypography: body-1
+                  listSort: none
+                  textAlign: left
+                labelProperties:
+                  typography: caption
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+
+              - _type: TextField
+                _name: HeelHeight
+                documentation: Property that applies only to womens and girls shoes. Important for SEO.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: HeelHeight
+                dataType: STRING
+                visibleValue: FID_Family in ('WOMENSSHOES', 'GIRLSSHOES')
+                visibleValueInterpreter: SEMQL
+                authoringMode: auto
+                componentProperties:
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                  isMultiline: '0'
+                  isCharCounterVisible: '0'
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  alignment: right
+                  position: left
+                  isVisible: '1'
+                  typography: caption
+
+              - _type: MenuField
+                _name: ClosureType
+                documentation: Important attribute for shoes. Consider providing this information to augment our search metrics.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: ClosureType
+                dataType: STRING
+                visibleValue: FID_Family in ('WOMENSSHOES', 'MENSSHOES', 'GIRLSSHOES', 'BOYSSHOES')
+                visibleValueInterpreter: SEMQL
+                authoringMode: auto
+                componentProperties:
+                  textTypography: body-1
+                  listSort: none
+                  textAlign: left
+                labelProperties:
+                  alignment: right
+                  isVisible: '1'
+                  typography: caption
+                  position: left
+
+              - _type: TextField
+                _name: CareInstructions
+                documentation: Descriptive information for apparel products only. Does not apply to shoes. Should match the care instructions indicated on the product label.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: CareInstructions
+                dataType: STRING
+                visibleValue: FID_Family in ('WOMENSCLOTHING', 'MENSCLOTHING', 'BOYSCLOTHING', 'GIRLSCLOTHING')
+                visibleValueInterpreter: SEMQL
+                authoringMode: auto
+                componentProperties:
+                  isCharCounterVisible: '0'
+                  textTypography: body-1
+                  multilineMinLines: '2'
+                  multilineMaxLines: '10'
+                  isMultiline: '1'
+                  textAlign: left
+                labelProperties:
+                  alignment: right
+                  isVisible: '1'
+                  typography: caption
+                  position: left
+
+          - _type: FormContainer
+            _name: Container32
+            layoutDirection: COLUMN
+            relativeWidth: 60
+
+            content:
+              - _type: ImageField
+                _name: ImageURL
+                documentation: Consider connecting with the *marketing* department to get the best image URL to use when creating a new product. The *marketing* department is in charge of the digital assets management system that keeps track of all product images designed by our artists.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: ImageURL
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  imageSourceType: url
+                  imageMode: fit
+                  fallbackImageType: url
+                  textTypography: body-1
+                  imageAlign: middle-center
+                  showFullSizeOnClick: '1'
+                  imageHeight: '300'
+                labelProperties:
+                  alignment: right
+                  typography: caption
+                  position: left
+                  isVisible: '0'
+                  
+              - _type: TextField
+                _name: Description
+                documentation: "Please consider the following when writing a descriptive text for the product: To get started, you need to know exactly who the buyer is: 1. Define the buyer persona 2. Consider describing the list of features and benefits 3. Use a friendly tone of voice 4. Optimize for search engines (SEO)"
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: Description
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  isCharCounterVisible: '0'
+                  multilineMinLines: '10'
+                  multilineMaxLines: '10'
+                  isMultiline: '1'
+                  textTypography: body-1
+                labelProperties:
+                  isVisible: '0'
+                  typography: caption
+                  position: top
+                  alignment: left

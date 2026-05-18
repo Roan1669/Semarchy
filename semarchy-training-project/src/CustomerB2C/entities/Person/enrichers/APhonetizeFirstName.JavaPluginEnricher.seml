@@ -1,0 +1,20 @@
+_package: CustomerB2C.entities.Person.enrichers
+_type: JavaPluginEnricher
+_name: APhonetizeFirstName
+label: Phonetize First Name
+enricherExecutionScope: PRE_CONSO
+entity: CustomerB2C.entities.Person.Person
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+pluginId: com.semarchy.engine.plugins.convergence.text
+processingBatchSize: 1
+threadPoolSize: 1
+pluginParams:
+  - paramName: PARAM_TRANSFO_TYPE
+    value: PHONETIC METAPHONE
+pluginInputs:
+  - inputName: IN_TEXT
+    expression: FirstName
+pluginOutputs:
+  - attributeName: PhoneticFirstName
+    outputName: OUT_TRANSFORMED_TEXT

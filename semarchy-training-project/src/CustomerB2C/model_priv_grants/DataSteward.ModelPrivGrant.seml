@@ -1,0 +1,8 @@
+_package: CustomerB2C.model_priv_grants
+_type: ModelPrivGrant
+_name: DataSteward
+roleName: DataSteward
+label: Data Steward
+dataAdminRole: true
+integrationWsRole: true
+allowApiPublishingAsUser: true

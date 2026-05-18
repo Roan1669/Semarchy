@@ -1,0 +1,141 @@
+_package: ProductRetail.entities.Item.collection_views
+_type: CollectionView
+_name: ItemCollectionErrors
+
+default: false
+entity: ProductRetail.entities.Item.Item
+tableDisplayCardColumnLabel: ''
+description: ''
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: false
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: false
+tableAllowed: true
+tableRowLines: 1
+tableShowDisplayCard: false
+displayCard: ProductRetail.entities.Item.display_cards.ItemDisplayCard
+
+tableColumns:
+  - _type: TextColumn
+    _name: ErrorStatus
+    value: ErrorStatus
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: LoadID
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: LoadID
+    dataType: LONG_INTEGER
+    visibleByDefault: true
+    
+  - _type: TextColumn
+    _name: OriginalBatchID
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: OriginalBatchID
+    dataType: LONG_INTEGER
+    visibleByDefault: true
+
+  - _type: DateColumn
+    _name: BatchDate
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: BatchDate
+    dataType: TIMESTAMP
+    visibleByDefault: true    
+
+  - _type: TextColumn
+    _name: ConstraintName
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ConstraintName
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: ConstraintType
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ConstraintType
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: IdColumn
+    _name: UPC
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: UPC
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: ReferenceColumn
+    _name: FDN_Product
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Product
+    useCustomLabel: true
+    value: FDN_Product
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Product.Product
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: ReferenceColumn
+    _name: FDN_Size
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Size
+    useCustomLabel: true
+    value: FDN_Size
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Size.Size
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: TextColumn
+    _name: ColorDescription
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Color
+    useCustomLabel: true
+    value: ColorDescription
+    dataType: STRING
+    visibleByDefault: true

@@ -1,0 +1,204 @@
+_package: ProductRetail.entities.Product.collection_views
+_type: CollectionView
+_name: ProductCollectionErrors
+entity: ProductRetail.entities.Product.Product
+
+default: false
+gridAllowed: true
+gridColumns: 6
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: false
+listItemLines: 2
+listShowDisplayCardAvatar: true
+listShowDivider: false
+tableAllowed: true
+tableDisplayCardColumnLabel: Product
+tableRowLines: 2
+tableShowDisplayCard: false
+displayCard: ProductRetail.entities.Product.display_cards.ProductDisplayCard
+
+tableColumns:
+  - _type: TextColumn
+    _name: ErrorStatus
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ErrorStatus
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: BatchID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: BatchID
+    dataType: LONG_INTEGER
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: OriginalBatchID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: OriginalBatchID
+    dataType: LONG_INTEGER
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: ConstraintName
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ConstraintName
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: ConstraintType
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ConstraintType
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: ImageColumn
+    _name: ImageURL
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ImageURL
+    dataType: STRING
+    visibleByDefault: true
+    componentProperties:
+      imageMode: fit
+      imageAlign: middle-center
+      imageSourceType: url
+      showFullSizeOnClick: '1'
+
+  - _type: TextColumn
+    _name: Name
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Name
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: IdColumn
+    _name: ID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ID
+    dataType: LONG_INTEGER
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Description
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Description
+    dataType: STRING
+    visibleByDefault: true
+    
+  - _type: ReferenceColumn
+    _name: FDN_Family
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    label: Family
+    useCustomLabel: true
+    value: FDN_Family
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Family.Family
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: ReferenceColumn
+    _name: FDN_SubFamily
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    label: Sub Family
+    useCustomLabel: true
+    value: FDN_SubFamily
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.SubFamily.SubFamily
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: ReferenceColumn
+    _name: FDN_Brand
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    label: Brand
+    useCustomLabel: true
+    value: FDN_Brand
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Brand.Brand
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: MenuColumn
+    _name: SalesUnit
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: SalesUnit
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: Material
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Material
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: MenuColumn
+    _name: Origin
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Origin
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: HeelHeight
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: HeelHeight
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: MenuColumn
+    _name: ClosureType
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ClosureType
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: CareInstructions
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: CareInstructions
+    dataType: STRING
+    visibleByDefault: true
+
+
+
+

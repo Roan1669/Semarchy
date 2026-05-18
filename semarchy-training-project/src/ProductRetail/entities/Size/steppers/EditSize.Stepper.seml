@@ -1,0 +1,77 @@
+_package: ProductRetail.entities.Size.steppers
+_type: Stepper
+_name: EditSize
+entity: ProductRetail.entities.Size.Size
+label: Edit Size
+rootStep:
+  _type: CollectionStep
+  _name: Sizes
+  canFinishSubLevel: true
+  childDeleteType: HARD_DELETE
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  label: Sizes
+  linear: false
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  collectionView: ProductRetail.entities.Size.collection_views.SizeCollection
+  stepTransitionValidations:
+    - onStepExit: BLOCK
+      validationType: MANDATORY
+      attribute: ProductRetail.entities.Size.Size.SizeUS
+    - onStepExit: BLOCK
+      validationType: MANDATORY
+      attribute: ProductRetail.references.SizeHasFamily.Family
+    - onStepExit: BLOCK
+      validationType: FOREIGN
+      attribute: ProductRetail.references.SizeHasFamily.Family
+  childSteps:
+    - _type: FormStep
+      _name: Size
+      canFinishSubLevel: true
+      enableMasterValuePicking: false
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      label: Size
+      formTab: ProductRetail.entities.Size.forms.SizeForm.Size
+      formStepValidations:
+        - validationType: MANDATORY
+          executedOnDataChange: true
+          executedOnFormOpen: false
+          attribute: ProductRetail.references.SizeHasFamily.Family
+        - validationType: FOREIGN
+          executedOnDataChange: true
+          executedOnFormOpen: false
+          attribute: ProductRetail.references.SizeHasFamily.Family
+        - validationType: MANDATORY
+          executedOnDataChange: true
+          executedOnFormOpen: false
+          attribute: ProductRetail.entities.Size.Size.SizeUS
+      stepTransitionValidations:
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.references.SizeHasFamily.Family
+        - onStepExit: BLOCK
+          validationType: MANDATORY
+          attribute: ProductRetail.entities.Size.Size.SizeUS
+        - onStepExit: BLOCK
+          validationType: FOREIGN
+          attribute: ProductRetail.references.SizeHasFamily.Family
+stepperFinishValidations:
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.entities.Size.Size.SizeUS
+  - onStepperFinish: BLOCK
+    validationType: FOREIGN
+    attribute: ProductRetail.references.SizeHasFamily.Family
+  - onStepperFinish: BLOCK
+    validationType: MANDATORY
+    attribute: ProductRetail.references.SizeHasFamily.Family
+

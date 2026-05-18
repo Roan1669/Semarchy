@@ -1,0 +1,10 @@
+_package: CustomerB2B.entities.Customer.validations
+_name: CheckEmailFormat
+_type: SemQLValidation
+entity: CustomerB2B.entities.Customer.Customer
+label: Email Format
+description: Validates that the Email attribute, when provided, follows a valid email format.
+# Validation only fires when Email is not null — blank emails are allowed
+condition: Email IS NULL OR REGEXP_LIKE(Email, '^[^@\s]+@[^@\s]+\.[^@\s]+$')
+validationScope: PRE_CONSO
+validationLabel: "Email address is not in a valid format (expected: user@domain.com)"

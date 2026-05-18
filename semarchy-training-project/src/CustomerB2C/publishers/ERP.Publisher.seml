@@ -1,0 +1,7 @@
+_package: CustomerB2C.publishers
+_type: Publisher
+_name: ERP
+label: ERP
+active: true
+code: ERP
+color: md:green

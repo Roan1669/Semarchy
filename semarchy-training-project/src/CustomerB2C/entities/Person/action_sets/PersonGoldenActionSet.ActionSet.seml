@@ -1,0 +1,95 @@
+_package: CustomerB2C.entities.Person.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.Person.Person
+_name: PersonGoldenActionSet
+label: Person Golden Action Set
+description: ''
+defaultActionSet: true
+actions:
+  - _type: EditAction
+    _name: EditAuthorPersons
+    useCustomLabel: true
+    label: Edit
+    description: ''
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false
+    itemsLimit: 1000
+    availableForGoldenData: true
+    availableForMasterData: true
+    availableForErrorData: true
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorPersons
+    useCustomLabel: true
+    label: Mass Update
+    description: ''
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+  - _type: DeleteAction
+    _name: DeleteAuthorPersons
+    useCustomLabel: true
+    label: Delete
+    description: ''
+    requiredRole: DataSteward
+    multipleSelectionAllowed: true
+    waitDialogEnabled: false
+    deleteType: HARD_DELETE
+  - _type: ExportAction
+    _name: Export
+    useCustomLabel: true
+    label: Export
+    description: ''
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorPersons
+    useCustomLabel: true
+    label: Import
+    description: ''
+    waitDialogEnabled: false
+    importMode: CREATE_AND_UPDATE
+    importedRecordType: GOLDEN
+    stepper: CustomerB2C.entities.Person.steppers.AuthorPersons
+    allowOtherPublishers: false
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    useCustomLabel: true
+    label: Browse Graph
+    description: ''
+    waitDialogEnabled: false
+  - _type: ExplainRecordAction
+    _name: ExplainRecord
+    useCustomLabel: true
+    label: Explain Record
+    description: ''
+    waitDialogEnabled: false
+    displayCard: CustomerB2C.entities.Person.display_cards.PersonDisplayCard
+    formTab: CustomerB2C.entities.Person.forms.PersonConfirmMatchesForm.Person
+  - _type: MergeOrSplit
+    _name: MergeOrSplitDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Merge Or Split Duplicates
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    waitDialogEnabled: false
+  - _type: ReviewAndConfirm
+    _name: ReviewAndConfirmDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Review Matches
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    mandateConfirmAll: false
+    waitDialogEnabled: false
+  - _type: ReviewSuggestions
+    _name: ReviewSuggestionsDuplicatesManageDuplicatesOnPerson
+    useCustomLabel: true
+    label: Review Suggestions
+    description: ''
+    dupsManager: CustomerB2C.entities.Person.dups_managers.ReviewSuggestionsOnPerson
+    enableEdit: true
+    waitDialogEnabled: false
+    onAcceptPromptGoldenId: false
+    mandateResolveAllSuggestions: false
+

@@ -1,0 +1,16 @@
+_package: CustomerB2C.entities.Person.dups_managers
+_type: DupsManager
+_name: ReviewSuggestionsOnPerson
+label: Review Suggestions On Person
+enableMasterValuePicking: true
+entity: CustomerB2C.entities.Person.Person
+displayCard: CustomerB2C.entities.Person.display_cards.ReviewPersonDisplayCard
+formTab: CustomerB2C.entities.Person.forms.PersonConfirmMatchesForm.Person
+tableViewCollection: CustomerB2C.entities.Person.collection_views.PersonReviewSuggestionsCollection
+collectionView: CustomerB2C.entities.Person.collection_views.PersonReviewSuggestionsCollection
+checkoutUserDefinedSortEnabled: true
+checkoutDefaultDisplayType: TABLE
+checkoutDisplayTableAllowed: true
+checkoutDisplayListAllowed: true
+checkoutDisplayGridAllowed: false
+checkoutCustomSortEnabled: false

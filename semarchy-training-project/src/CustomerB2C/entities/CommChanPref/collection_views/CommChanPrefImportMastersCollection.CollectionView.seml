@@ -1,0 +1,93 @@
+_package: CustomerB2C.entities.CommChanPref.collection_views
+_type: CollectionView
+_name: CommChanPrefImportMastersCollection
+
+default: false
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Communication Channel Preferences
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: CustomerB2C.entities.CommChanPref.display_cards.CommChanPrefDisplayCard
+
+tableColumns:
+  - _type: TextColumn
+    _name: PublisherID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: PublisherID
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: SourceID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: SourceID
+    visibleByDefault: true
+
+  - _type: MenuColumn
+    _name: CommunicationType
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: CommunicationType
+    visibleByDefault: true
+
+  - _type: MenuColumn
+    _name: ChannelFrequency
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ChannelFrequency
+    visibleByDefault: true
+
+  - _type: MenuColumn
+    _name: Preference
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Preference
+    visibleByDefault: true
+    
+  - _type: TextColumn
+    _name: FirstName
+    columnAlign: LEFT
+    dataType: STRING
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: FirstName
+    visibleByDefault: true
+
+  - _type: TextColumn
+    _name: PublisherID_Person
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: PublisherID_Person
+    visibleByDefault: true
+    
+  - _type: TextColumn
+    _name: SourceID_Person
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    dataType: STRING
+    value: SourceID_Person
+    visibleByDefault: true

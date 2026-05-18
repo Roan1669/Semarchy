@@ -11,6 +11,7 @@
 		"semarchy.seml.customTags": [
 
 		],
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"chat.useNestedAgentsMdFiles": true
 	}
 }

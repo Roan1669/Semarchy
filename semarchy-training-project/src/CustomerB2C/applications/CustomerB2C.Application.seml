@@ -1,0 +1,285 @@
+_package: CustomerB2C.applications
+_type: Application
+_name: CustomerB2C
+label: Customer B2C
+
+visibility: VISIBLE
+applicationTitle: Customer B2C
+titleColor: md:green
+avatarImageUrl: images://gs-customerb2c/account-outline-blue.svg
+logoUrl: images://gs-customerb2c/CustomerB2CLogo.png
+coverImageUrl: images://gs-customerb2c/CustomerB2CCover.jpg
+favIcon: images://gs-customerb2c/account-outline.png
+sortStrategy: POSITION
+historyBrowsingEnabled: true
+historyBrowsingRequiredRole: ''
+
+documentationConfig:
+  documentation: ''
+  documentationConfigDiagrams:
+    - _name: Diagram
+      _type: DocumentationConfigDiagram
+      modelDiagram: CustomerB2C.model_diagrams.CustomerB2CDiagram
+      label: Customer B2C Diagram
+
+navDrawer:
+    - _type: FolderNavGroup
+      _name: TopActionsNavigation
+      dividerVisible: true
+      labelVisible: false
+      linkedFolder: CustomerB2C.applications.CustomerB2C.Root.TopActions
+    - _type: FolderNavGroup
+      _name: BrowseDataNavigation
+      dividerVisible: true
+      labelVisible: true
+      linkedFolder: CustomerB2C.applications.CustomerB2C.Root.BrowseData
+    - _type: FolderNavGroup
+      _name: QuickActionsNavigation
+      dividerVisible: true
+      labelVisible: true
+      linkedFolder: CustomerB2C.applications.CustomerB2C.Root.QuickActions
+    - _type: FolderNavGroup
+      _name: DashboardsNavigation
+      dividerVisible: true
+      labelVisible: true
+      linkedFolder: CustomerB2C.applications.CustomerB2C.Root.Dashboards
+    - _type: FolderNavGroup
+      _name: Links
+      dividerVisible: true
+      labelVisible: true
+      linkedFolder: CustomerB2C.applications.CustomerB2C.Root.Links
+
+globalSearchConfig:
+  displaySearchForDropdown: true
+  sortBusinessViewsAlphabetically: false
+  globalSearchBusinessViews:
+    - _type: GlobalSearchBoView
+      _name: Person
+      viewType: GD
+      businessView: CustomerB2C.entities.Person.business_views.Person
+      searchTypeConfig: CustomerB2C.entities.Person.business_views.Person.PersonEO.TextConfig
+      maxResults: 5
+    - _type: GlobalSearchBoView
+      _name: Product
+      viewType: GD
+      businessView: CustomerB2C.entities.Product.business_views.Product
+      searchTypeConfig: CustomerB2C.entities.Product.business_views.Product.ProductEO.TextConfig
+
+defaultAction: CustomerB2C.applications.CustomerB2C.Root.TopActions.GlobalSearchConfig
+
+rootFolder:
+  _type: FolderAction
+  _name: Root
+  label: Root Folder
+  icon: images://mdi/folder.svg
+  imageAlign: MIDDLE_CENTER
+  imageMode: FIT
+
+  appActions:
+
+    - _type: FolderAction
+      _name: TopActions
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _type: GlobalSearchAction
+          _name: GlobalSearchConfig
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+        - _type: MyTasksAction
+          _name: Inbox
+          badgeVisible: true
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+        - _type: FolderAction
+          _name: StartHere
+          label: Start Here
+          requiredRole: DataSteward
+          icon: images://mdi/arrow-right.svg
+          iconColor: md:green
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          appActions:
+            - _type: ImportDataAppAction
+              _name: ImportNicknames
+              label: Import Nicknames
+              importAction: CustomerB2C.entities.Nickname.action_sets.NicknameActionSet.ImportAuthorNicknames
+              icon: images://mdi/tag-faces.svg
+              image: images://gs-customerb2c/NicknamesImport.jpg
+            - _type: ImportDataAppAction
+              _name: ImportCustomers
+              label: Import Customers
+              importAction: CustomerB2C.entities.Person.action_sets.PersonMasterActionSet.ImportAuthorPersons
+              icon: images://mdi/people.svg
+              image: images://gs-customerb2c/Customers.jpg
+            - _type: ImportDataAppAction
+              _name: ImportProducts
+              label: Import Products
+              importAction: CustomerB2C.entities.Product.action_sets.ProductActionSet.ImportAuthorProducts
+              icon: images://mdi/package-variant.svg
+              image: images://gs-customerb2c/Products.jpg
+            - _type: ImportDataAppAction
+              _name: ImportCommunicationPreferences
+              label: Import Communication Preferences
+              importAction: CustomerB2C.entities.CommChanPref.action_sets.CommChanPrefActionSet.ImportAuthorCommChanPrefs
+              icon: images://mdi/cellphone-basic.svg
+              image: images://gs-customerb2c/Communications.jpg
+            - _type: ImportDataAppAction
+              _name: ImportCustomerProducts
+              label: Import Customers' Products
+              importAction: CustomerB2C.entities.PersonProduct.action_sets.PersonProductActionSet.ImportAuthorPersonProducts
+              icon: images://mdi/ticket-account.svg
+              image: images://gs-customerb2c/CustomerProducts.jpg
+
+    - _type: FolderAction
+      _name: BrowseData
+      label: Browse Data
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _type: BrowseBusinessViewAction
+          _name: BrowsePerson
+          label: Customers
+          icon: images://mdi/people.svg
+          iconColor: md:orange
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          businessView: CustomerB2C.entities.Person.business_views.Person
+          viewType: GD
+          nbRecordsBadgeVisible: false
+        - _type: BrowseBusinessViewAction
+          _name: BrowseProduct
+          label: Products
+          icon: images://mdi/package-variant.svg
+          iconColor: md:orange
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          businessView: CustomerB2C.entities.Product.business_views.Product
+          viewType: GD
+          nbRecordsBadgeVisible: false
+        - _type: FolderAction
+          _name: ReferenceData
+          label: Reference Data
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          appActions:
+            - _type: BrowseBusinessViewAction
+              _name: BrowseNickname
+              label: Nicknames
+              icon: images://mdi/tag-faces.svg
+              image: images://gs-customerb2c/NicknamesReference.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              businessView: CustomerB2C.entities.Nickname.business_views.Nickname
+              viewType: GD
+              nbRecordsBadgeVisible: false
+        - _type: FolderAction
+          _name: Errors
+          label: Browse Errors
+          imageAlign: MIDDLE_CENTER
+          imageMode: FIT
+          icon: images://mdi/alert-octagon.svg
+          iconColor: md:red
+          appActions:
+            - _type: BrowseBusinessViewAction
+              _name: NicknameErrors
+              label: Nickname Errors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-customerb2c/NicknamesErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              businessView: CustomerB2C.entities.Nickname.business_views.Nickname
+              viewType: SAWE
+              nbRecordsBadgeVisible: true
+            - _type: BrowseBusinessViewAction
+              _name: PersonErrors
+              label: Customer Errors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-customerb2c/CustomersErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              businessView: CustomerB2C.entities.Person.business_views.Person
+              viewType: SDWE
+              nbRecordsBadgeVisible: true
+            - _type: BrowseBusinessViewAction
+              _name: ProductErrors
+              label: Product Errors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-customerb2c/ProductsErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              businessView: CustomerB2C.entities.Product.business_views.Product
+              viewType: SAWE
+              nbRecordsBadgeVisible: true
+            - _type: BrowseBusinessViewAction
+              _name: CommunicationChannelErrors
+              label: Communication Channel Errors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-customerb2c/CommunicationsErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              businessView: CustomerB2C.entities.CommChanPref.business_views.CommChanPref
+              viewType: SDWE
+              nbRecordsBadgeVisible: true
+            - _type: BrowseBusinessViewAction
+              _name: CustomerProductErrors
+              label: Customers' Product Errors
+              icon: images://mdi/alert-outline.svg
+              image: images://gs-customerb2c/CustomerProductsErrors.jpg
+              imageAlign: MIDDLE_CENTER
+              imageMode: FIT
+              businessView: CustomerB2C.entities.PersonProduct.business_views.PersonProduct
+              viewType: SAWE
+              nbRecordsBadgeVisible: true
+
+    - _type: FolderAction
+      _name: QuickActions
+      label: Quick Actions
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _type: BrowseBusinessViewAction
+          _name: ConfirmMatches
+          label: Confirm Matches
+          businessView: CustomerB2C.entities.Person.business_views.ConfirmMatches
+          nbRecordsBadgeVisible: true
+          icon: images://mdi/account-check.svg
+          viewType: GD
+        - _type: BrowseBusinessViewAction
+          _name: SuggestedMatches
+          label: Review Suggestions
+          businessView: CustomerB2C.entities.Person.business_views.ReviewSuggestions
+          nbRecordsBadgeVisible: true
+          icon: images://mdi/account-alert.svg
+          viewType: GD
+        - _type: ImportDataAppAction
+          _name: ImportMastersUpdatePerson
+          label: Update Customers
+          importAction: CustomerB2C.entities.Person.action_sets.PersonMasterActionSet.ImportAuthorPersons
+          icon: images://mdi/account-edit.svg
+
+    - _type: FolderAction
+      _name: Dashboards
+      label: Dashboards
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _type: OpenDashboardAction
+          _name: CustomerMetrics
+          label: Customer Metrics
+          dashboard: CustomerMetrics
+          dashboardApplication: CustomerB2CDashboard
+    
+    - _type: FolderAction
+      _name: Links
+      label: Links
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+        - _type: OpenDocumentationAction
+          _name: OpenModelDoc
+          label: Model Documentation
+        - _type: UrlAction
+          _name: Google
+          url: https://google.com
+          target: NEW_BROWSER_TAB

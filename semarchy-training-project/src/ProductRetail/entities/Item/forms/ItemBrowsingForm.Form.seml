@@ -1,0 +1,169 @@
+_package: ProductRetail.entities.Item.forms
+_type: Form
+_name: ItemBrowsingForm
+entity: ProductRetail.entities.Item.Item
+default: true
+description: ''
+documentation: ''
+
+formTabs:
+  - _type: FormTab
+    _name: Item
+    description: ''
+    displayFormTabAs: ICON_LABEL
+    iconUrl: images://mdi/basket-fill.svg
+    label: Item
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: FormContainer
+        _name: Container27
+        layoutDirection: ROW
+
+        content:
+          - _type: FormContainer
+            _name: Container37
+            layoutDirection: COLUMN
+
+            content:
+              - _type: IdField
+                _name: UPC
+                description: ''
+                documentation: Universal Product Code (UPC) or barcode ID for this item. Please sync-up with the Supply Chain team.
+                documentationInterpreter: LITERAL
+                value: UPC
+                dataType: STRING
+                useCustomLabel: false
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textTypography: display-1
+                  textAlign: left
+                labelProperties:
+                  position: left
+                  isVisible: '0'
+                  alignment: right
+                  typography: caption
+
+              - _type: ReferenceField
+                _name: FDN_Product
+                label: Product
+                useCustomLabel: true
+                value: FDN_Product
+                visibleValue: '1'
+                dataType: STRING
+                visibleValueInterpreter: LITERAL
+                referencedEntity: ProductRetail.entities.Product.Product
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  useAvatarInChip: '1'
+                  displayType: chip
+                  textTypography: body-1
+                labelProperties:
+                  position: left
+                  isVisible: '1'
+                  alignment: right
+                  typography: caption
+
+              - _type: ReferenceField
+                _name: FDN_Size
+                description: ''
+                documentation: Standard sizes are provided in the grid sizes for the corresponding family for the product.
+                documentationInterpreter: LITERAL
+                label: Size
+                useCustomLabel: true
+                value: FDN_Size
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                referencedEntity: ProductRetail.entities.Size.Size
+                authoringMode: auto
+                componentProperties:
+                  useSecondaryTextInChip: '1'
+                  displayType: chip
+                  textTypography: body-1
+                  textAlign: left
+                  useAvatarInChip: '1'
+                labelProperties:
+                  alignment: right
+                  isVisible: '1'
+                  typography: caption
+                  position: left
+
+              - _type: MenuField
+                _name: Color
+                description: ''
+                documentation: Standardized colors are important for SEO. Choose the closest useful match from the standpoint of a prospective customer.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: Color
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  listSort: code
+                  textAlign: left
+                  textColor: case when lower(Color) = 'white' then 'grey' else 'css:' || Color end
+                  textColorValueInterpreter: SEMQL
+                  textTypography: body-1
+                labelProperties:
+                  typography: caption
+                  position: left
+                  isVisible: '1'
+                  alignment: right
+
+              - _type: TextField
+                _name: ColorDescription
+                description: ''
+                documentation: Our detailed color and style descriptions are a competitive advantage. Make them clever and thought-provoking.
+                documentationInterpreter: LITERAL
+                useCustomLabel: false
+                value: ColorDescription
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  isCharCounterVisible: '0'
+                  multilineMinLines: '1'
+                  multilineMaxLines: '3'
+                  isMultiline: '0'
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  position: left
+                  isVisible: '1'
+                  alignment: right
+                  typography: caption
+
+          - _type: FormContainer
+            _name: Container38
+            layoutDirection: ROW
+
+            content:
+              - _type: ImageField
+                _name: MainImageURL
+                label: Primary Image
+                useCustomLabel: true
+                value: COALESCE( MainImageURL, Product.ImageURL )
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  fallbackImageType: url
+                  imageMode: fit
+                  imageAlign: middle-center
+                  imageHeight: '300'
+                  showFullSizeOnClick: '1'
+                  imageSourceType: url
+                  textTypography: body-1
+                labelProperties:
+                  position: left
+                  isVisible: '0'
+                  typography: caption
+                  alignment: right

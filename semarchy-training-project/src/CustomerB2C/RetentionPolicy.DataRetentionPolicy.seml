@@ -1,0 +1,30 @@
+_type: DataRetentionPolicy
+_name: RetentionPolicy
+deletionsType: FOREVER
+deletionsDuration: 0
+deletionsUnit: DAY
+historyType: FOREVER
+historyDuration: 0
+historyUnit: DAY
+sourceDataType: FOREVER
+sourceDataDuration: 0
+sourceDataUnit: DAY
+sourceErrorsType: FOREVER
+sourceErrorsDuration: 0
+sourceErrorsUnit: DAY
+entityRetentions:
+  - entity: CustomerB2C.entities.Person.Person
+    deletionsType: DEFAULT
+    deletionsDuration: 0
+    deletionsUnit: DAY
+    historyType: FOREVER
+    historyDuration: 0
+    historyUnit: DAY
+    sourceDataType: PERIOD
+    sourceDataDuration: 1
+    sourceDataUnit: YEAR
+    sourceErrorsType: PERIOD
+    sourceErrorsDuration: 2
+    sourceErrorsUnit: MONTH
+
+_package: CustomerB2C

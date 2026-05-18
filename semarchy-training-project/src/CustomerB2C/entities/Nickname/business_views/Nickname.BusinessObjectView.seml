@@ -1,0 +1,42 @@
+_package: CustomerB2C.entities.Nickname.business_views
+_type: BusinessView
+_name: Nickname
+label: Nicknames
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+entity: CustomerB2C.entities.Nickname.Nickname
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/tag-faces.svg
+rootDescription: ''
+rootLabel: Nickname
+rootPluralLabel: Nicknames
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: NicknameEO
+  entity: CustomerB2C.entities.Nickname.Nickname
+  collection: CustomerB2C.entities.Nickname.collection_views.NicknameCollection
+  actionSet: CustomerB2C.entities.Nickname.action_sets.NicknameActionSet
+  form: CustomerB2C.entities.Nickname.forms.NicknameForm
+  displayCard: CustomerB2C.entities.Nickname.display_cards.NicknameDisplayCard
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: false
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: false
+  tableAllowed: true
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL

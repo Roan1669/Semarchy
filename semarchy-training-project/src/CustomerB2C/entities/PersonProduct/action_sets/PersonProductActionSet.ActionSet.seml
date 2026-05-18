@@ -1,0 +1,68 @@
+_package: CustomerB2C.entities.PersonProduct.action_sets
+_type: ActionSet
+entity: CustomerB2C.entities.PersonProduct.PersonProduct
+_name: PersonProductActionSet
+label: Person Product Action Set
+description: ''
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorPersonProducts
+    useCustomLabel: true
+    label: Create
+    description: ''
+    createdRecordType: GOLDEN
+    allowOtherPublishers: true
+    waitDialogEnabled: false
+    createMultiple: false
+    stepper: CustomerB2C.entities.PersonProduct.steppers.AuthorPersonProducts
+  - _type: EditAction
+    _name: EditAuthorPersonProducts
+    useCustomLabel: true
+    label: Edit
+    description: ''
+    multipleSelectionAllowed: true
+    itemsLimit: 1000
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.PersonProduct.steppers.AuthorPersonProducts
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthorPersonProducts
+    useCustomLabel: true
+    label: Mass Update
+    description: ''
+    availableForGoldenData: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.PersonProduct.steppers.AuthorPersonProducts
+  - _type: DeleteAction
+    _name: Delete
+    useCustomLabel: true
+    label: Delete
+    description: ''
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    availableForGoldenData: true
+    waitDialogEnabled: false
+  - _type: ExportAction
+    _name: Export
+    useCustomLabel: true
+    label: Export
+    description: ''
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthorPersonProducts
+    useCustomLabel: true
+    label: Import
+    description: ''
+    importMode: CREATE_AND_UPDATE
+    importedRecordType: GOLDEN
+    allowOtherPublishers: true
+    waitDialogEnabled: false
+    stepper: CustomerB2C.entities.PersonProduct.steppers.AuthorPersonProducts
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    useCustomLabel: true
+    label: Browse Graph
+    description: ''
+    waitDialogEnabled: false
+

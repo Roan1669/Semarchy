@@ -58,6 +58,14 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
 
+  - _name: Email
+    _type: TextColumn
+    value: Email
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
   - _name: TotalRevenue
     _type: TextColumn
     value: TotalRevenue

@@ -1,0 +1,50 @@
+_package: CustomerB2C.entities.PersonProduct
+_type: Entity
+_name: PersonProduct
+entityType: BASIC
+physicalTableName: PERSON_PRODUCT
+iconUrl: images://mdi/ticket-account.svg
+label: Person Product
+pluralLabel: Person Products
+enableDelete: true
+dataEntryAllowed: true
+historizeGolden: false
+historizeMaster: false
+
+attributes:
+  - _type: EntityAttribute
+    _name: ID
+    label: ID
+    dataType: String
+    mandatory: true
+    physicalName: ID
+    valueSeparator: ''
+    searchable: true
+    length: 128
+  - _type: EntityAttribute
+    _name: PurchaseDate
+    label: Purchase Date
+    dataType: Date
+    searchable: true
+    mandatory: false
+    mandatoryValidationLabel: ''
+    physicalName: PURCHASE_DATE
+    valueSeparator: ''
+    length: 0
+  - _type: EntityAttribute
+    _name: RegistrationDate
+    dataType: Date
+    label: Registration Date
+    searchable: true
+    mandatory: false
+    mandatoryValidationLabel: ''
+    physicalName: REGISTRATION_DATE
+    valueSeparator: ''
+    length: 0
+
+primaryKey: CustomerB2C.entities.PersonProduct.PersonProduct.ID
+
+sourceIdGeneration:
+  mode: SEMQL
+  idExpression: COALESCE(FID_Product || '_' || FID_Person,'abc123')
+  startWith: 1

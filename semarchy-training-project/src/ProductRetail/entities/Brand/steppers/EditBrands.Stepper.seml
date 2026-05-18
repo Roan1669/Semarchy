@@ -1,0 +1,46 @@
+_package: ProductRetail.entities.Brand.steppers
+_type: Stepper
+_name: EditBrands
+label: Edit Brands
+entity: ProductRetail.entities.Brand.Brand
+rootStep:
+  _type: CollectionStep
+  _name: Brands
+  label: Brands
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  childDeleteType: HARD_DELETE
+  collectionView: ProductRetail.entities.Brand.collection_views.BrandCollection
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  displayGridAllowed: true
+  displayListAllowed: true
+  displayTableAllowed: true
+  linear: true
+  userDefinedSortEnabled: false
+  useCustomCollectionLabel: false
+  formFieldsMode: AUTO
+  stepTransitionValidations:
+    - onStepExit: BLOCK
+      validationType: MANDATORY
+      attribute: ProductRetail.entities.Brand.Brand.Name
+  childSteps:
+    - _type: FormStep
+      _name: Brand
+      label: Brand
+      canFinishSubLevel: true
+      enableMasterValuePicking: false
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      formTab: ProductRetail.entities.Brand.forms.BrandEditingForm.Brand
+      formStepValidations:
+        - validationType: MANDATORY
+          executedOnDataChange: true
+          executedOnFormOpen: false
+          attribute: ProductRetail.entities.Brand.Brand.Name
+stepperFinishValidations:
+  - onStepperFinish: SKIP
+    validationType: MANDATORY
+    attribute: ProductRetail.entities.Brand.Brand.Name

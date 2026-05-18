@@ -1,0 +1,106 @@
+_package: ProductRetail.entities.Item.collection_views
+_type: CollectionView
+_name: ItemCollection
+
+entity: ProductRetail.entities.Item.Item
+default: true
+description: ''
+gridAllowed: true
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 2
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: true
+listShowDivider: false
+tableAllowed: true
+tableDisplayCardColumnLabel: Item
+tableRowLines: 2
+tableShowDisplayCard: true
+displayCard: ProductRetail.entities.Item.display_cards.ItemDisplayCard
+
+tableColumns:
+  - _type: IdColumn
+    _name: UPC
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: UPC
+    dataType: STRING
+    visibleByDefault: true
+
+  - _type: ReferenceColumn
+    _name: FDN_Size
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Size
+    useCustomLabel: true
+    value: FDN_Size
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Size.Size
+    componentProperties:
+      displayType: hyperlink
+
+  - _type: MenuColumn
+    _name: Color
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: Color
+    dataType: STRING
+    visibleByDefault: true
+    componentProperties:
+      textColor: case when lower(Color) = 'white' then 'grey' else 'css:' || Color end
+      textColorValueInterpreter: SEMQL
+
+  - _type: TextColumn
+    _name: ColorDescription
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Color Description
+    useCustomLabel: true
+    value: ColorDescription
+    dataType: STRING
+    visibleByDefault: true
+      
+  - _type: TextColumn
+    _name: MainImageURL
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: MainImageURL
+    dataType: STRING
+    visibleByDefault: false
+    
+  - _type: ReferenceColumn
+    _name: FDN_Product
+    columnAlign: LEFT
+    description: ''
+    documentation: ''
+    documentationInterpreter: LITERAL
+    label: Product
+    useCustomLabel: true
+    value: FDN_Product
+    dataType: STRING
+    visibleByDefault: true
+    referencedEntity: ProductRetail.entities.Product.Product
+    componentProperties:
+      displayType: hyperlink
+
+
+
+
+
+

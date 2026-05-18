@@ -1,0 +1,153 @@
+_package: ProductRetail.entities.Family.forms
+_type: Form
+_name: FamilyBrowsingForm
+default: true
+entity: ProductRetail.entities.Family.Family
+
+formTabs:
+  - _type: FormTab
+    _name: Family
+    label: Family
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: ICON_LABEL
+    documentation: ''
+    documentationInterpreter: LITERAL
+    iconUrl: images://mdi/people.svg
+
+    content:
+      - _type: FormContainer
+        _name: Container23
+        layoutDirection: ROW
+
+        content:
+          - _type: FormContainer
+            _name: Container35
+            layoutDirection: COLUMN
+
+            content:
+              - _type: TextField
+                _name: Name
+                useCustomLabel: false
+                value: Name
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  isCharCounterVisible: '0'
+                  isMultiline: '0'
+                  multilineMaxLines: '3'
+                  multilineMinLines: '1'
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  isVisible: '1'
+                  position: left
+                  typography: caption
+                  alignment: right
+
+              - _type: IdField
+                _name: ID
+                useCustomLabel: false
+                value: ID
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  textAlign: left
+                  textTypography: body-1
+                labelProperties:
+                  typography: caption
+                  position: left
+                  isVisible: '1'
+                  alignment: right
+
+              - _type: TextField
+                _name: ImageURL
+                dataType: STRING
+                useCustomLabel: false
+                value: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  multilineMaxLines: '3'
+                  textTypography: body-1
+                  multilineMinLines: '1'
+                  isMultiline: '1'
+                  textAlign: left
+                  isCharCounterVisible: '0'
+                labelProperties:
+                  typography: caption
+                  position: left
+                  isVisible: '1'
+
+              - _type: TextField
+                _name: CreationDate
+                useCustomLabel: false
+                value: CreationDate
+                dataType: TIMESTAMP
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  multilineMaxLines: '3'
+                  textAlign: left
+                  isCharCounterVisible: '0'
+                  multilineMinLines: '1'
+                  textTypography: body-1
+                  isMultiline: '0'
+                labelProperties:
+                  isVisible: '1'
+                  alignment: right
+                  position: left
+                  typography: caption
+
+              - _type: TextField
+                _name: Creator
+                useCustomLabel: false
+                value: Creator
+                dataType: STRING
+                visibleValue: '1'
+                visibleValueInterpreter: LITERAL
+                authoringMode: auto
+                componentProperties:
+                  isMultiline: '0'
+                  multilineMinLines: '1'
+                  multilineMaxLines: '3'
+                  textAlign: left
+                  textTypography: body-1
+                  isCharCounterVisible: '0'
+                labelProperties:
+                  alignment: right
+                  typography: caption
+                  isVisible: '1'
+                  position: left
+
+      - _type: FormContainer
+        _name: Container36
+        layoutDirection: COLUMN
+
+        content:
+          - _type: ImageField
+            _name: Image
+            useCustomLabel: false
+            value: ImageURL
+            dataType: STRING
+            visibleValue: '1'
+            visibleValueInterpreter: LITERAL
+            authoringMode: auto
+            componentProperties:
+              imageMode: fit
+              imageHeight: '300'
+              imageSourceType: url
+              textTypography: body-1
+              imageAlign: top-left
+              showFullSizeOnClick: '1'
+              fallbackImage: url
+            labelProperties:
+              typography: caption
+              alignment: right
+              isVisible: '0'
+              position: left

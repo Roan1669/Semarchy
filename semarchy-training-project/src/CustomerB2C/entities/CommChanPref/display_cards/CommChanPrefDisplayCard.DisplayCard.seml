@@ -1,0 +1,23 @@
+_package: CustomerB2C.entities.CommChanPref.display_cards
+_type: DisplayCard
+_name: CommChanPrefDisplayCard
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+default: true
+primaryTextExpression: |
+  CASE
+    WHEN CommunicationType = 'EMAIL' THEN Person.CleansedEmail 
+    WHEN CommunicationType = 'PHONE' THEN Person.StandardizedPhone 
+    WHEN CommunicationType = 'MAILING' THEN Person.Address
+    ELSE FirstName 
+  END
+secondaryTextExpression: Preference
+primaryImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+primaryImageFallbackValueInterpreter: LITERAL
+avatarImageSourceType: CONTENT
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
+avatarImageValueInterpreter: LITERAL

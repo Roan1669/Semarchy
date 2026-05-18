@@ -1,0 +1,47 @@
+_package: CustomerB2C.entities.PersonProduct.business_views
+_type: BusinessView
+_name: PersonProduct
+label: Person Products
+displayRootNodeAs: ICON_LABEL
+enableHierarchyView: false
+entity: CustomerB2C.entities.PersonProduct.PersonProduct
+rootFilter: 1 = 1
+rootIconUrl: images://mdi/ticket-account.svg
+rootDescription: ''
+rootLabel: Person Product
+rootPluralLabel: Person Products
+useHierarchyOnOpen: false
+
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: PersonProductEO
+  entity: CustomerB2C.entities.PersonProduct.PersonProduct
+  collection: CustomerB2C.entities.PersonProduct.collection_views.PersonProductBrowseCollection
+  actionSet: CustomerB2C.entities.PersonProduct.action_sets.PersonProductActionSet
+  form: CustomerB2C.entities.PersonProduct.forms.PersonProductForm
+  displayCard: CustomerB2C.entities.PersonProduct.display_cards.PersonProductDisplayCard
+  displayRecordCount: ALWAYS
+  enableUserDefinedSort: false
+  gridAllowed: true
+  listAllowed: true
+  outlineVisible: false
+  overrideDefaultSort: false
+  tableAllowed: true
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  referenceAttributeNavigationConfigs:
+    - formField: CustomerB2C.entities.PersonProduct.forms.PersonProductForm.PersonProduct.FDN_Product
+      navigationMode: MODAL_FORM
+    - formField: CustomerB2C.entities.PersonProduct.forms.PersonProductForm.PersonProduct.FDN_Person
+      navigationMode: MODAL_FORM

@@ -1,0 +1,52 @@
+_package: ProductRetail.entities.Size
+_type: Entity
+_name: Size
+label: Size
+dataEntryAllowed: true
+enableDelete: true
+entityType: BASIC
+historizeGolden: false
+historizeMaster: false
+iconUrl: images://mdi/format-size.svg
+physicalTableName: SIZES
+pluralLabel: Sizes
+
+attributes:
+  - _type: EntityAttribute
+    _name: ID
+    label: ID
+    physicalName: ID
+    dataType: String
+    length: 128
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    searchable: false
+  - _type: EntityAttribute
+    _name: SizeUS
+    label: Size (US)
+    length: 128
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
+    mandatoryValidationLabel: ''
+    physicalName: SIZE_US
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+  - _type: EntityAttribute
+    _name: SizeEU
+    label: Size (EU)
+    length: 128
+    mandatory: false
+    mandatoryValidationLabel: ''
+    multiValued: false
+    physicalName: SIZE_EU
+    searchable: true
+    valueSeparator: ','
+    dataType: String
+
+primaryKey: ProductRetail.entities.Size.Size.ID
+
+sourceIdGeneration:
+  mode: SEMQL
+  idExpression: FID_Family || '.' || SizeUS
+  startWith: 1

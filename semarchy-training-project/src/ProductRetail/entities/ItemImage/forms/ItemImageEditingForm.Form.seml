@@ -1,0 +1,103 @@
+_package: ProductRetail.entities.ItemImage.forms
+_type: Form
+_name: ItemImageEditingForm
+entity: ProductRetail.entities.ItemImage.ItemImage
+default: false
+description: ''
+documentation: ''
+
+formTabs:
+  - _type: FormTab
+    _name: ItemImage
+    description: ''
+    displayFormTabAs: ICON_LABEL
+    iconUrl: images://mdi/folder-multiple-image.svg
+    label: Item Image
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: TextField
+        _name: Label
+        useCustomLabel: false
+        value: Label
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        helperText: Use descriptive and attractive labels for images
+        componentProperties:
+          textTypography: display-1
+          textAlign: left
+          multilineMinLines: '1'
+          multilineMaxLines: '3'
+          isCharCounterVisible: '0'
+          isMultiline: '0'
+        labelProperties:
+          isVisible: '1'
+          isFloating: '1'
+          alignment: right
+          position: left
+          typography: caption
+
+      - _type: ImageField
+        _name: ImageURL
+        useCustomLabel: false
+        value: ImageURL
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          textTypography: body-1
+          showFullSizeOnClick: '1'
+          imageAlign: middle-center
+          imageSourceType: url
+          fallbackImageType: url
+          imageHeight: '300'
+          imageMode: fit
+        labelProperties:
+          isVisible: '1'
+          position: left
+          alignment: right
+          isFloating: '1'
+          typography: caption
+
+      - _type: IdField
+        _name: ID
+        useCustomLabel: false
+        value: ID
+        dataType: LONG_INTEGER
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: force-read-only
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+        labelProperties:
+          alignment: right
+          isVisible: '1'
+          typography: caption
+          position: left
+          
+      - _type: ReferenceField
+        _name: FDN_Item
+        label: Item
+        useCustomLabel: true
+        value: FDN_Item
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        referencedEntity: ProductRetail.entities.Item.Item
+        authoringMode: force-read-only
+        componentProperties:
+          textTypography: body-1
+          textAlign: left
+          useSecondaryTextInChip: '1'
+          displayType: chip
+          useAvatarInChip: '1'
+        labelProperties:
+          alignment: right
+          position: left
+          typography: caption
+          isVisible: '1'

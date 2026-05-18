@@ -1,0 +1,55 @@
+_package: ProductRetail.entities.Brand.collection_views
+_type: CollectionView
+_name: BrandCollection
+
+default: true
+entity: ProductRetail.entities.Brand.Brand
+gridAllowed: true
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+tableAllowed: true
+tableDisplayCardColumnLabel: Brand
+tableRowLines: 2
+tableShowDisplayCard: true
+listAllowed: true
+listItemLines: 2
+listShowDisplayCardAvatar: true
+listShowDivider: false
+displayCard: ProductRetail.entities.Brand.display_cards.BrandDisplayCard
+description: ''
+
+tableColumns:
+  - _type: ImageColumn
+    _name: LogoURL
+    value: LogoURL
+    useCustomLabel: false
+    visibleByDefault: true
+    dataType: STRING
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    componentProperties:
+      imageMode: fit
+      imageAlign: middle_center
+      imageSourceType: url
+      fallbackImageType: url
+      showFullSizeOnClick: '1'
+
+  - _type: TextColumn
+    _name: Name
+    value: Name
+    useCustomLabel: false
+    visibleByDefault: true
+    dataType: STRING
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    
+  - _type: IdColumn
+    _name: ID
+    columnAlign: LEFT
+    documentationInterpreter: LITERAL
+    useCustomLabel: false
+    value: ID
+    visibleByDefault: true
+    dataType: STRING

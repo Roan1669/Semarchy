@@ -1,0 +1,76 @@
+_package: ProductRetail.entities.Family.forms
+_type: Form
+_name: FamilyDataEntryForm
+default: false
+entity: ProductRetail.entities.Family.Family
+
+formTabs:
+  - _type: FormTab
+    _name: Family
+    label: Family
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: FormContainer
+        _name: Container22
+        layoutDirection: COLUMN
+
+        content:
+          - _type: IdField
+            _name: ID
+            useCustomLabel: false
+            value: ID
+            dataType: STRING
+            visibleValue: '1'
+            visibleValueInterpreter: LITERAL
+            authoringMode: auto
+            componentProperties:
+              textAlign: left
+              textTypography: body-1
+            labelProperties:
+              typography: caption
+              position: top
+              isVisible: '1'
+              alignment: left
+
+          - _type: TextField
+            _name: Name
+            useCustomLabel: false
+            value: Name
+            dataType: STRING
+            visibleValue: '1'
+            visibleValueInterpreter: LITERAL
+            authoringMode: auto
+            componentProperties:
+              isCharCounterVisible: '0'
+              textAlign: lead
+              textTypography: body-1
+              multilineMinLines: '1'
+              isMultiline: '0'
+              multilineMaxLines: '3'
+            labelProperties:
+              position: right
+              isVisible: '1'
+              typography: caption
+              alignment: right
+
+          - _type: ImageField
+            _name: ImageURL
+            dataType: STRING
+            useCustomLabel: false
+            value: ImageURL
+            visibleValueInterpreter: LITERAL
+            authoringMode: auto
+            componentProperties:
+              imageAlign: middle-center
+              imageHeight: '300'
+              showFullSizeOnClick: '1'
+              imageSourceType: url
+              textTypography: body-1
+              fallbackImage: url
+            labelProperties:
+              position: left
+              typography: caption
+              alignment: right
+              isVisible: '1'

@@ -1,0 +1,103 @@
+_package: CustomerB2C.entities.CommChanPref
+_type: Entity
+_name: CommChanPref
+entityType: FUZZY_MATCHED
+physicalTableName: COMM_CHAN_PREF
+iconUrl: images://mdi/cellphone-basic.svg
+label: Communication Channel Preference
+matcher:
+  _type: SemQLMatcher
+  _name: CommChanPref
+  description: Strategies for matching customer 's communication channel preferences
+  matchRules:
+    - _name: DeduplicateCommunicationTypes
+      _type: SemQLMatchRule
+      label: De-duplicate Communication Types
+      condition: Record1.Person.Gold_ID = Record2.Person.Gold_ID  AND Record1.CommunicationType
+        = Record2.CommunicationType
+      matchScore: 100
+  useTransitiveMatchScore: false
+  useMultiIterationGrouping: false
+  mergeThresholdNewGroup: 0
+  mergeThresholdMergingUnconfirmed: 0
+  mergeThresholdMergingConfirmed: 0
+  mergeThresholdMergingConfirmedWithUnconfirmed: 0
+  mergeThresholdMergingUnconfirmedWithNewMasters: 0
+  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false
+pluralLabel: Communication Channel Preferences
+description: ''
+documentation: ''
+enableDelete: true
+dataEntryAllowed: true
+historizeGolden: true
+historizeMaster: true
+
+attributes:
+  - _name: ID
+    _type: EntityAttribute
+    label: ID
+    description: ''
+    documentation: ''
+    physicalName: ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    valueSeparator: ''
+    searchable: true
+  - _name: CommunicationType
+    _type: EntityAttribute
+    label: Communication Type
+    description: ''
+    documentation: The communication vehicle, e.g. email, phone call, or mailing
+    dataType: CustomerB2C.list_of_values.CommunicationType
+    physicalName: COMMUNICATION_TYPE
+    lovValidationScope: PRE_CONSO
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+  - _name: ChannelFrequency
+    _type: EntityAttribute
+    label: Channel Frequency
+    description: Use Channel Frequency to determine how frequently to connect with
+      customers and prospects.
+    documentation: QUARTER, MONTH, and WEEK to determine frequency of communications.
+    dataType: CustomerB2C.list_of_values.FrequencyType
+    physicalName: CHANNEL_FREQUENCY
+    lovValidationScope: NONE
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+  - _name: Preference
+    _type: EntityAttribute
+    label: Preference
+    description: Determines whether a customer or prospect has opted in or opted out
+      of communications.
+    documentation: OPTIN or OPTOUT are valid codes
+    dataType: CustomerB2C.list_of_values.OptInType
+    physicalName: PREFERENCE
+    lovValidationScope: NONE
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+  - _name: FirstName
+    _type: EntityAttribute
+    label: Preferred first name
+    description: ''
+    documentation: Use this first name to address customer/prospect
+    dataType: String
+    physicalName: FIRST_NAME
+    mandatory: false
+    mandatoryValidationLabel: ''
+    valueSeparator: ','
+    length: 128
+
+primaryKey: CustomerB2C.entities.CommChanPref.CommChanPref.ID
+sourceIdGeneration:
+  mode: MANUAL
+  startWith: 1
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 20001

@@ -1,0 +1,17 @@
+_package: CustomerB2B.entities.Contact.display_cards
+_type: DisplayCard
+_name: ContactDisplayCard
+entity: CustomerB2B.entities.Contact.Contact
+default: true
+primaryTextExpression: FirstName || ' ' || LastName
+secondaryTextExpression: JobTitle || ' — ' || Email
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

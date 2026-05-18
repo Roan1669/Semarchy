@@ -1,0 +1,14 @@
+_package: CustomerB2C.list_of_values
+_type: LOVType
+_name: OptInType
+label: Opt In Type
+description: ''
+length: 128
+validationLabel: ''
+lovValues:
+  - code: OPTIN
+    label: Opt-in
+    description: ''
+  - code: OPTOUT
+    label: Opt-out
+    description: ''

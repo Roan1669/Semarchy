@@ -1,0 +1,17 @@
+_package: CustomerB2C.list_of_values
+_type: LOVType
+_name: CommunicationType
+label: Communication Type
+description: ''
+length: 128
+validationLabel: ''
+lovValues:
+  - code: EMAIL
+    label: Email
+    description: ''
+  - code: MAILING
+    label: Mailing
+    description: ''
+  - code: PHONE
+    label: Phone
+    description: ''

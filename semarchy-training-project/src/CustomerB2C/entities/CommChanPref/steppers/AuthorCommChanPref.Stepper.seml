@@ -1,0 +1,34 @@
+_package: CustomerB2C.entities.CommChanPref.steppers
+_type: Stepper
+_name: AuthorCommChanPref
+label: Author CommChanPrefs
+iconUrl: images://mdi/package-variant.svg
+entity: CustomerB2C.entities.CommChanPref.CommChanPref
+rootStep:
+  _type: CollectionStep
+  _name: CommChanPrefs
+  label: CommChanPrefs
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: CustomerB2C.entities.CommChanPref.collection_views.CommChanPrefImportMastersCollection
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayTableAllowed: true
+  displayListAllowed: true
+  displayGridAllowed: false
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: CommChanPref
+      label: CommChanPref
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: CustomerB2C.entities.CommChanPref.forms.CommChanPrefForm.CommChanPref

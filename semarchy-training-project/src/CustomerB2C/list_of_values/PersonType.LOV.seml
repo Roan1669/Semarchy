@@ -1,0 +1,14 @@
+_package: CustomerB2C.list_of_values
+_type: LOVType
+_name: PersonType
+label: Person Type
+description: ''
+length: 128
+validationLabel: ''
+lovValues:
+  - code: CUSTOMER
+    label: Customer
+    description: ''
+  - code: PROSPECT
+    label: Prospect
+    description: ''

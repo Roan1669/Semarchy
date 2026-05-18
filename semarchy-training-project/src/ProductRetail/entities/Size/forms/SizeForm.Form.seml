@@ -1,0 +1,95 @@
+_package: ProductRetail.entities.Size.forms
+_type: Form
+_name: SizeForm
+entity: ProductRetail.entities.Size.Size
+default: true
+
+formTabs:
+  - _type: FormTab
+    _name: Size
+    displayFormTabAs: LABEL
+    label: Size
+    visibleValue: '1'
+    visibleValueInterpreter: LITERAL
+
+    content:
+      - _type: IdField
+        _name: ID
+        useCustomLabel: false
+        value: ID
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          textTypography: body-1
+          textAlign: left
+        labelProperties:
+          alignment: right
+          position: left
+          isVisible: '1'
+          typography: caption
+
+      - _type: TextField
+        _name: SizeUS
+        useCustomLabel: false
+        value: SizeUS
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          textTypography: body-1
+          multilineMaxLines: '3'
+          multilineMinLines: '1'
+          textAlign: left
+          isMultiline: '0'
+          isCharCounterVisible: '0'
+        labelProperties:
+          position: left
+          typography: caption
+          isVisible: '1'
+          alignment: right
+
+      - _type: TextField
+        _name: SizeEU
+        useCustomLabel: false
+        value: SizeEU
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        authoringMode: auto
+        componentProperties:
+          textAlign: left
+          textTypography: body-1
+          isMultiline: '0'
+          isCharCounterVisible: '0'
+          multilineMinLines: '1'
+          multilineMaxLines: '3'
+        labelProperties:
+          isVisible: '1'
+          typography: caption
+          alignment: right
+          position: left
+          
+      - _type: ReferenceField
+        _name: FDN_Family
+        label: Family
+        useCustomLabel: true
+        value: FDN_Family
+        dataType: STRING
+        visibleValue: '1'
+        visibleValueInterpreter: LITERAL
+        referencedEntity: ProductRetail.entities.Family.Family
+        authoringMode: auto
+        componentProperties:
+          displayType: chip
+          textTypography: body-1
+          useAvatarInChip: '1'
+          useSecondaryTextInChip: '1'
+          textAlign: left
+        labelProperties:
+          typography: caption
+          position: left
+          isVisible: '1'
+          alignment: right
